@@ -5,9 +5,10 @@ import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { Progress } from "@/components/ui/progress"
 import { Badge } from "@/components/ui/badge"
-import { Code2, BookOpen, Terminal, Award, Bot, User, Home, Clock, TrendingUp, Play } from "lucide-react"
+import { BookOpen, Award, Clock, TrendingUp, Play, Terminal } from "lucide-react"
 import { useUser } from "@/context/user-context"
 import { useCourses } from "@/hooks/use-courses"
+import { motion } from "framer-motion"
 
 export default function DashboardPage() {
   const { user } = useUser()
@@ -74,225 +75,157 @@ export default function DashboardPage() {
 
   return (
     <div className="min-h-screen flex">
-      {/* Sidebar */}
-      <aside className="w-64 border-r border-border bg-sidebar flex-shrink-0 sticky top-0 h-screen">
-        <div className="p-6 border-b border-sidebar-border">
-          <div className="flex items-center gap-2">
-            <Code2 className="h-6 w-6 text-sidebar-primary" />
-            <span className="text-xl font-bold">CodeZen</span>
-          </div>
-        </div>
-
-        <nav className="p-4 space-y-2">
-          <Link
-            href="/dashboard"
-            className="flex items-center gap-3 px-4 py-3 rounded-lg bg-sidebar-accent text-sidebar-accent-foreground font-medium"
-          >
-            <Home className="h-5 w-5" />
-            <span>Home</span>
-          </Link>
-          <Link
-            href="/dashboard/courses"
-            className="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-sidebar-accent text-sidebar-foreground transition-colors"
-          >
-            <BookOpen className="h-5 w-5" />
-            <span>Courses</span>
-          </Link>
-          <Link
-            href="/dashboard/compiler"
-            className="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-sidebar-accent text-sidebar-foreground transition-colors"
-          >
-            <Terminal className="h-5 w-5" />
-            <span>Compilers</span>
-          </Link>
-          <Link
-            href="/dashboard/certificates"
-            className="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-sidebar-accent text-sidebar-foreground transition-colors"
-          >
-            <Award className="h-5 w-5" />
-            <span>Certificates</span>
-          </Link>
-          <Link
-            href="/dashboard/ai-assistant"
-            className="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-sidebar-accent text-sidebar-foreground transition-colors"
-          >
-            <Bot className="h-5 w-5" />
-            <span>AI Assistant</span>
-          </Link>
-          <Link
-            href="/dashboard/profile"
-            className="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-sidebar-accent text-sidebar-foreground transition-colors"
-          >
-            <User className="h-5 w-5" />
-            <span>Profile</span>
-          </Link>
-        </nav>
-
-        <div className="absolute bottom-0 left-0 right-0 p-4 border-t border-sidebar-border">
-          <div className="flex items-center gap-3 px-2">
-            <div className="w-10 h-10 rounded-full bg-sidebar-primary flex items-center justify-center text-sidebar-primary-foreground font-semibold">
-              {user.name
-                .split(" ")
-                .map((n) => n[0])
-                .join("")}
-            </div>
-            <div className="flex-1 min-w-0">
-              <div className="text-sm font-medium truncate">{user.name}</div>
-              <div className="text-xs text-sidebar-foreground/60">Premium Member</div>
-            </div>
-          </div>
-        </div>
-      </aside>
-
       {/* Main Content */}
-      <main className="flex-1 overflow-auto">
-        <div className="p-8 space-y-8">
+      <main className="flex-1 overflow-auto max-w-7xl mx-auto">
+        <div className="p-8 space-y-10">
           {/* Header */}
-          <div>
-            <h1 className="text-3xl font-bold mb-2">Welcome back, {user.name.split(" ")[0]}!</h1>
-            <p className="text-muted-foreground">Continue your learning journey and track your progress</p>
-          </div>
+          <motion.div initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }}>
+            <h1 className="text-4xl font-bold mb-2 tracking-tight">Welcome back, {user.name.split(" ")[0]}!</h1>
+            <p className="text-muted-foreground text-lg">Your progress is looking great. Ready for the next lesson?</p>
+          </motion.div>
 
           {/* Stats Cards */}
-          <div className="grid md:grid-cols-4 gap-6">
-            <Card className="p-6">
-              <div className="flex items-center justify-between mb-2">
-                <div className="text-sm font-medium text-muted-foreground">Active Courses</div>
-                <BookOpen className="h-5 w-5 text-primary" />
-              </div>
-              <div className="text-3xl font-bold">{user.progress.length}</div>
-              <div className="text-xs text-muted-foreground mt-1">
-                {user.progress.filter((p) => !p.certificateIssued).length} to complete
-              </div>
-            </Card>
-
-            <Card className="p-6">
-              <div className="flex items-center justify-between mb-2">
-                <div className="text-sm font-medium text-muted-foreground">Certificates Earned</div>
-                <Award className="h-5 w-5 text-primary" />
-              </div>
-              <div className="text-3xl font-bold">{user.totalCertificates}</div>
-              <div className="text-xs text-muted-foreground mt-1">View in profile</div>
-            </Card>
-
-            <Card className="p-6">
-              <div className="flex items-center justify-between mb-2">
-                <div className="text-sm font-medium text-muted-foreground">Hours Coded</div>
-                <TrendingUp className="h-5 w-5 text-primary" />
-              </div>
-              <div className="text-3xl font-bold">142</div>
-              <div className="text-xs text-muted-foreground mt-1">+18 this week</div>
-            </Card>
-
-            <Card className="p-6">
-              <div className="flex items-center justify-between mb-2">
-                <div className="text-sm font-medium text-muted-foreground">Current Streak</div>
-                <Clock className="h-5 w-5 text-primary" />
-              </div>
-              <div className="text-3xl font-bold">{user.streak}</div>
-              <div className="text-xs text-muted-foreground mt-1">days in a row</div>
-            </Card>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              { label: "Active Courses", val: user.progress.length, icon: BookOpen, desc: "In progress" },
+              { label: "Certificates", val: user.totalCertificates, icon: Award, desc: "Earned so far" },
+              { label: "Hours Coded", val: 142, icon: TrendingUp, desc: "+18 this week" },
+              { label: "Streak", val: user.streak, icon: Clock, desc: "Days in a row" },
+            ].map((stat, i) => (
+              <motion.div
+                key={stat.label}
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: i * 0.1 }}
+              >
+                <Card className="p-6 border-white/5 bg-card/40 backdrop-blur-sm group hover:border-primary/20 transition-all">
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="text-sm font-semibold text-muted-foreground uppercase tracking-wider">
+                      {stat.label}
+                    </div>
+                    <stat.icon className="h-5 w-5 text-primary group-hover:glow-cyan transition-all" />
+                  </div>
+                  <div className="text-4xl font-bold mb-1">{stat.val}</div>
+                  <div className="text-xs text-muted-foreground font-medium">{stat.desc}</div>
+                </Card>
+              </motion.div>
+            ))}
           </div>
 
           {/* Active Courses */}
-          <div>
-            <div className="flex items-center justify-between mb-4">
-              <h2 className="text-2xl font-bold">Continue Learning</h2>
-              <Button variant="ghost" asChild>
-                <Link href="/dashboard/courses">View All</Link>
+          <section>
+            <div className="flex items-center justify-between mb-6">
+              <h2 className="text-2xl font-bold tracking-tight">Continue Learning</h2>
+              <Button variant="link" className="text-primary font-semibold" asChild>
+                <Link href="/dashboard/courses">View All Courses</Link>
               </Button>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {displayCourses.map((course) => (
-                <Card key={course.id} className="p-6 hover:border-primary transition-colors">
-                  <div className="flex items-start justify-between mb-4">
-                    <Badge variant="secondary">{course.language}</Badge>
-                    <span className="text-sm text-primary font-semibold">{course.progress}%</span>
-                  </div>
-                  <h3 className="font-semibold text-lg mb-2">{course.title}</h3>
-                  <Progress value={course.progress} className="mb-4" />
-                  <div className="flex items-center justify-between">
-                    <span className="text-sm text-muted-foreground truncate max-w-[150px]">
-                      Next: {course.nextLesson}
-                    </span>
-                    <Button size="sm" asChild>
-                      <Link href={`/dashboard/courses/${course.id}`}>
-                        <Play className="h-4 w-4 mr-1" />
-                        Continue
-                      </Link>
-                    </Button>
-                  </div>
-                </Card>
-              ))}
-            </div>
-          </div>
-
-          {/* Two Column Layout */}
-          <div className="grid lg:grid-cols-2 gap-6">
-            {/* Recently Used Compilers */}
-            <Card className="p-6">
-              <h3 className="text-xl font-semibold mb-4">Recently Used Compilers</h3>
-              <div className="space-y-4">
-                {recentCompilers.map((compiler) => (
-                  <div
-                    key={compiler.id}
-                    className="flex items-center justify-between p-4 rounded-lg bg-muted/50 hover:bg-muted transition-colors"
-                  >
-                    <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
-                        <Terminal className="h-5 w-5 text-primary" />
-                      </div>
-                      <div>
-                        <div className="font-medium">{compiler.fileName}</div>
-                        <div className="text-sm text-muted-foreground">{compiler.language}</div>
-                      </div>
+              {displayCourses.map((course, i) => (
+                <motion.div
+                  key={course.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.2 + i * 0.1 }}
+                >
+                  <Card className="p-6 hover:border-primary/30 transition-all border-white/5 bg-card/40 group relative overflow-hidden">
+                    <div className="flex items-start justify-between mb-6">
+                      <Badge variant="secondary" className="bg-primary/10 text-primary border-primary/20">
+                        {course.language}
+                      </Badge>
+                      <span className="text-sm text-primary font-bold tracking-tighter">{course.progress}%</span>
                     </div>
-                    <div className="text-right">
-                      <div className="text-sm text-muted-foreground">{compiler.lastUsed}</div>
-                      <Button size="sm" variant="ghost" asChild>
-                        <Link href={`/dashboard/compiler?lang=${compiler.language}`}>Open</Link>
+                    <h3 className="font-bold text-xl mb-3 group-hover:text-primary transition-colors">
+                      {course.title}
+                    </h3>
+                    <Progress value={course.progress} className="h-1.5 mb-6" />
+                    <div className="flex items-center justify-between">
+                      <span className="text-xs text-muted-foreground font-medium truncate max-w-[140px]">
+                        Next: {course.nextLesson}
+                      </span>
+                      <Button
+                        size="sm"
+                        className="rounded-full px-5 h-9 bg-primary text-black font-bold hover:bg-primary/90 glow-cyan"
+                        asChild
+                      >
+                        <Link href={`/dashboard/courses/${course.id}`}>
+                          <Play className="h-3.5 w-3.5 mr-1.5 fill-current" />
+                          Resume
+                        </Link>
                       </Button>
                     </div>
-                  </div>
-                ))}
-              </div>
-              <Button variant="outline" className="w-full mt-4 bg-transparent" asChild>
-                <Link href="/dashboard/compiler">Open New Compiler</Link>
-              </Button>
-            </Card>
+                  </Card>
+                </motion.div>
+              ))}
+            </div>
+          </section>
 
-            {/* Upcoming Tests */}
-            <Card className="p-6">
-              <h3 className="text-xl font-semibold mb-4">Upcoming Tests</h3>
-              <div className="space-y-4">
-                {upcomingTests.map((test) => (
-                  <div key={test.id} className="p-4 rounded-lg bg-muted/50 border border-border">
-                    <div className="flex items-start justify-between mb-2">
-                      <div>
-                        <div className="font-medium">{test.course}</div>
-                        <div className="text-sm text-muted-foreground">{test.type}</div>
-                      </div>
-                      <Badge variant="outline">{test.date}</Badge>
+          {/* Recently Used Compilers */}
+          <Card className="p-6">
+            <h3 className="text-xl font-semibold mb-4">Recently Used Compilers</h3>
+            <div className="space-y-4">
+              {recentCompilers.map((compiler) => (
+                <div
+                  key={compiler.id}
+                  className="flex items-center justify-between p-4 rounded-lg bg-muted/50 hover:bg-muted transition-colors"
+                >
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                      <Terminal className="h-5 w-5 text-primary" />
                     </div>
-                    <Button size="sm" className="mt-2" asChild>
-                      <Link href={`/dashboard/tests/${test.id}`}>Prepare Now</Link>
+                    <div>
+                      <div className="font-medium">{compiler.fileName}</div>
+                      <div className="text-sm text-muted-foreground">{compiler.language}</div>
+                    </div>
+                  </div>
+                  <div className="text-right">
+                    <div className="text-sm text-muted-foreground">{compiler.lastUsed}</div>
+                    <Button size="sm" variant="ghost" asChild>
+                      <Link href={`/dashboard/compiler?lang=${compiler.language}`}>Open</Link>
                     </Button>
                   </div>
-                ))}
-              </div>
-            </Card>
-          </div>
+                </div>
+              ))}
+            </div>
+            <Button variant="outline" className="w-full mt-4 bg-transparent" asChild>
+              <Link href="/dashboard/compiler">Open New Compiler</Link>
+            </Button>
+          </Card>
+
+          {/* Upcoming Tests */}
+          <Card className="p-6">
+            <h3 className="text-xl font-semibold mb-4">Upcoming Tests</h3>
+            <div className="space-y-4">
+              {upcomingTests.map((test) => (
+                <div key={test.id} className="p-4 rounded-lg bg-muted/50 border border-border">
+                  <div className="flex items-start justify-between mb-2">
+                    <div>
+                      <div className="font-medium">{test.course}</div>
+                      <div className="text-sm text-muted-foreground">{test.type}</div>
+                    </div>
+                    <Badge variant="outline">{test.date}</Badge>
+                  </div>
+                  <Button size="sm" className="mt-2" asChild>
+                    <Link href={`/dashboard/tests/${test.id}`}>Prepare Now</Link>
+                  </Button>
+                </div>
+              ))}
+            </div>
+          </Card>
 
           {/* Recommended Courses */}
           <div>
             <h2 className="text-2xl font-bold mb-4">Recommended for You</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {recommendedCourses.map((course) => (
-                <Card key={course.id} className="p-6 hover:border-primary transition-colors">
-                  <Badge variant="secondary" className="mb-3">
+                <Card
+                  key={course.id}
+                  className="p-6 hover:border-primary/30 transition-all border-white/5 bg-card/40 group relative overflow-hidden"
+                >
+                  <Badge variant="secondary" className="bg-primary/10 text-primary border-primary/20 mb-3">
                     {course.language}
                   </Badge>
-                  <h3 className="font-semibold mb-2">{course.name}</h3>
+                  <h3 className="font-bold text-xl mb-3 group-hover:text-primary transition-colors">{course.name}</h3>
                   <div className="space-y-2 text-sm text-muted-foreground mb-4">
                     <div className="flex items-center justify-between">
                       <span>Level:</span>

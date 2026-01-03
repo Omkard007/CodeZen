@@ -11,24 +11,42 @@ const jetbrainsMono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-mon
 export const metadata: Metadata = {
   title: "CodeZen - Learn. Code. Compile. Certify.",
   description:
-    "A modern coding and learning platform with integrated compiler, AI assistant, and certifications for 10+ programming languages.",
+    "The all-in-one platform to master 10+ programming languages with interactive courses, integrated compilers, AI mentoring, and verified certificates.",
   generator: "v0.app",
+  keywords: [
+    "coding platform",
+    "learn programming",
+    "online compiler",
+    "coding courses",
+    "programming certificates",
+    "AI coding mentor",
+    "Python courses",
+    "JavaScript courses",
+    "coding tutorials",
+  ],
+  authors: [{ name: "CodeZen Team" }],
+  creator: "CodeZen",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://codezen.com",
+    title: "CodeZen - Learn. Code. Compile. Certify.",
+    description: "Master programming with interactive courses, AI mentoring, and verified certificates.",
+    siteName: "CodeZen",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "CodeZen - Learn. Code. Compile. Certify.",
+    description: "Master programming with interactive courses, AI mentoring, and verified certificates.",
+    creator: "@codezen",
+  },
   icons: {
     icon: [
-      {
-        url: "/icon-light-32x32.png",
-        media: "(prefers-color-scheme: light)",
-      },
-      {
-        url: "/icon-dark-32x32.png",
-        media: "(prefers-color-scheme: dark)",
-      },
-      {
-        url: "/icon.svg",
-        type: "image/svg+xml",
-      },
+      { url: "/logo.svg", type: "image/svg+xml" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
     ],
-    apple: "/apple-icon.png",
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
   },
 }
 

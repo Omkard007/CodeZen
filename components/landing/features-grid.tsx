@@ -1,52 +1,72 @@
+"use client"
+
 import { Card } from "@/components/ui/card"
 import { Terminal, Award, BookOpen, Bot, Zap, Shield } from "lucide-react"
+import { motion } from "framer-motion"
 
 const features = [
   {
     title: "Interactive Courses",
-    desc: "Learn 10+ languages with structured paths and real-time validation.",
+    desc: "Master 10+ languages with structured beginner-to-pro paths.",
     icon: BookOpen,
   },
   {
-    title: "Online Compiler",
-    desc: "Write, run and test code directly in your browser without any setup.",
+    title: "Cloud Compiler",
+    desc: "Zero-setup execution in 10 languages directly in your browser.",
     icon: Terminal,
   },
   {
-    title: "Zen AI Mentor",
-    desc: "Instant help with debugging and conceptual explanations 24/7.",
+    title: "AI Mentor",
+    desc: "Context-aware debugging and conceptual help available 24/7.",
     icon: Bot,
   },
   {
     title: "Verified Certificates",
-    desc: "Industry-recognized credentials upon passing final assessments.",
+    desc: "Earn industry-recognized credentials as you level up.",
     icon: Award,
   },
   {
-    title: "Real-time Execution",
-    desc: "High-performance environment for instant code execution results.",
+    title: "Lightning Fast",
+    desc: "Optimized environment for instant code execution results.",
     icon: Zap,
   },
   {
-    title: "Skill Assessments",
-    desc: "Test your proficiency with timed challenges and expert reviews.",
+    title: "Safe Practice",
+    desc: "Secure sandbox environments for all your coding experiments.",
     icon: Shield,
   },
 ]
 
 export function FeaturesGrid() {
   return (
-    <section className="container mx-auto px-4 py-24 border-t border-white/5">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1 px-4">
+    <section className="container mx-auto px-4 py-32 relative">
+      <div className="text-center mb-20 space-y-4">
+        <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight">Everything you need to ship.</h2>
+        <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+          We've built the ultimate developer experience for learning and building at speed.
+        </p>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {features.map((feature, i) => (
-          <Card
+          <motion.div
             key={i}
-            className="group p-8 bg-transparent border border-white/10 hover:border-white/20 transition-all rounded-none first:rounded-tl-2xl last:rounded-br-2xl"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: i * 0.1 }}
           >
-            <feature.icon className="h-8 w-8 text-white mb-6 group-hover:scale-110 transition-transform" />
-            <h3 className="text-lg font-semibold text-white mb-2">{feature.title}</h3>
-            <p className="text-sm text-muted-foreground leading-relaxed">{feature.desc}</p>
-          </Card>
+            <Card className="group p-8 bg-zinc-900/40 border-white/5 hover:border-primary/20 hover:bg-zinc-900/60 transition-all relative overflow-hidden h-full">
+              {/* Subtle hover glow */}
+              <div className="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity blur-[40px] -z-10" />
+
+              <div className="p-3 rounded-xl bg-white/5 border border-white/5 w-fit mb-6 group-hover:glow-cyan group-hover:border-primary/20 transition-all">
+                <feature.icon className="h-6 w-6 text-primary" />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
+              <p className="text-muted-foreground leading-relaxed font-medium">{feature.desc}</p>
+            </Card>
+          </motion.div>
         ))}
       </div>
     </section>

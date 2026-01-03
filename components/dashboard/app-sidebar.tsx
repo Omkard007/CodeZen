@@ -28,13 +28,13 @@ const accountItems = [
 
 export function AppSidebar() {
   return (
-    <Sidebar collapsible="icon" className="border-r border-border bg-card">
+    <Sidebar collapsible="icon" className="border-r border-border bg-sidebar">
       <SidebarHeader className="p-4">
-        <Link href="/" className="flex items-center gap-3 px-2">
-          <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-primary-foreground">
+        <Link href="/" className="flex items-center gap-3 px-2 group">
+          <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-primary-foreground group-hover:glow-cyan transition-all">
             <Code2 className="h-5 w-5" />
           </div>
-          <span className="text-lg font-bold tracking-tight">CodeZen</span>
+          <span className="text-xl font-bold tracking-tighter text-white">CodeZen</span>
         </Link>
       </SidebarHeader>
       <SidebarContent>
