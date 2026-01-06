@@ -123,7 +123,7 @@ export default function DashboardPage() {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {displayCourses.map((course, i) => (
                 <motion.div
-                  key={course.id}
+                  key={i}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.2 + i * 0.1 }}

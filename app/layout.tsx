@@ -5,6 +5,7 @@ import { Analytics } from "@vercel/analytics/next"
 import { UserProvider } from "@/context/user-context"
 import "./globals.css"
 
+
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" })
 const jetbrainsMono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-mono" })
 

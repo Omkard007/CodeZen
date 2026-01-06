@@ -11,10 +11,10 @@ import { Skeleton } from "@/components/ui/skeleton"
 import { BookOpen, Award, CheckCircle2 } from "lucide-react"
 
 export default function CoursesPage() {
-  const { courses, loading } = useCourses()
+  const { courses, isLoading} = useCourses()
   const { user, getCourseProgress } = useUser()
 
-  if (loading) {
+  if (isLoading) {
     return (
       <div className="p-8 space-y-8">
         <h1 className="text-3xl font-bold">All Courses</h1>

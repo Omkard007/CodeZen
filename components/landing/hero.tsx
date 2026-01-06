@@ -57,7 +57,7 @@ export function Hero() {
               asChild
             >
               <Link href="/dashboard">
-                Start Coding Free
+                Start Learning
                 <ChevronRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Link>
             </Button>
@@ -67,8 +67,8 @@ export function Hero() {
               className="border-white/10 bg-white/5 hover:bg-white/10 px-10 rounded-full h-14 text-lg font-medium gap-3 backdrop-blur-sm"
               asChild
             >
-              <Link href="/demo">
-                <Play className="h-5 w-5 fill-current" /> Watch Preview
+              <Link href="/dashboard/compiler">
+                <Play className="h-5 w-5 fill-current" />Start Code
               </Link>
             </Button>
           </motion.div>

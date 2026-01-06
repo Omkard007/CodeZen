@@ -10,10 +10,10 @@ import { ChevronLeft } from "lucide-react"
 
 export default function CourseLearnPage() {
   const { id } = useParams()
-  const { getCourseById, loading } = useCourses()
+  const { getCourseById, isLoading } = useCourses()
   const course = getCourseById(id as string)
 
-  if (loading) {
+  if (isLoading) {
     return (
       <div className="p-8 space-y-8">
         <div className="flex items-center gap-4">
