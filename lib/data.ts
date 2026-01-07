@@ -1,928 +1,733 @@
 // Mock data for CodeZen platform - 10 programming language courses
 
 export interface Lesson {
-  id: string
-  title: string
-  duration: number // in minutes
-  videoUrl: string
-  notes: string
-  codeExample: string
-  language: string
+  id: string;
+  title: string;
+  duration: number; // in minutes
+  videoUrl: string;
+  notes: string;
+  codeExample: string;
+  language: string;
 }
 
 export interface TestQuestion {
-  id: string
-  question: string
-  options: string[]
-  correctAnswer: number
-  explanation: string
+  id: string;
+  question: string;
+  options: string[];
+  correctAnswer: number; // index of correct option
+  explanation: string;
 }
 
 export interface Course {
-  id: string
-  title: string
-  description: string
-  language: string
-  difficulty: 'beginner' | 'intermediate' | 'advanced'
-  duration: number // total hours
-  thumbnail: string
-  instructor: string
-  lessons: Lesson[]
-  test: TestQuestion[]
-  totalLessons: number
+  id: string;
+  title: string;
+  description: string;
+  language: string;
+  difficulty: "beginner" | "intermediate" | "advanced";
+  duration: number;
+  thumbnail: string;
+  instructor: string;
+  notes: string; // MDX content
+  test: TestQuestion[];
 }
 
 export const COURSES: Course[] = [
   {
-    id: 'python-beginner',
-    title: 'Python Programming for Beginners',
-    description: 'Master Python from scratch with hands-on examples and projects. Learn data types, control structures, functions, and OOP.',
-    language: 'Python',
-    difficulty: 'beginner',
+    id: "python-beginner",
+    title: "Python Programming for Beginners",
+    description:
+      "Master Python from absolute basics to functional programming concepts with real-world logic building, problem solving, and practical coding experience.",
+    language: "Python",
+    difficulty: "beginner",
     duration: 12,
-    thumbnail: '/placeholder.svg?key=ld672',
-    instructor: 'Dr. Sarah Chen',
-    totalLessons: 15,
-    lessons: [
-      {
-        id: 'py-1',
-        title: 'Introduction to Python',
-        duration: 25,
-        videoUrl: 'https://www.youtube.com/embed/rfscVS0vtbw',
-        notes: `# Introduction to Python
-
-Python is a high-level, interpreted programming language known for its simplicity and readability. It's perfect for beginners and professionals alike.
-
-## Why Learn Python?
-
-- **Easy to Learn**: Clear and readable syntax
-- **Versatile**: Web development, data science, automation, AI/ML
-- **Large Community**: Extensive libraries and frameworks
-- **High Demand**: One of the most sought-after skills in tech
-
-## Your First Python Program
-
-Let's start with the traditional "Hello, World!" program. This simple program displays text on the screen.
-
-## Key Concepts
-
-- **print()**: Built-in function to display output
-- **Strings**: Text enclosed in quotes
-- **Comments**: Lines starting with # are ignored by Python`,
-        codeExample: `# Your first Python program
-print("Hello, World!")
-
-# Try printing your name
-print("My name is CodeZen")
-
-# You can print numbers too
-print(2024)`,
-        language: 'python'
-      },
-      {
-        id: 'py-2',
-        title: 'Variables and Data Types',
-        duration: 30,
-        videoUrl: 'https://www.youtube.com/embed/rfscVS0vtbw',
-        notes: `# Variables and Data Types
-
-Variables are containers for storing data values. Python has various data types to represent different kinds of information.
-
-## Variable Assignment
-
-You don't need to declare variable types in Python - it's dynamically typed!
-
-## Common Data Types
-
-- **int**: Integer numbers (1, 42, -5)
-- **float**: Decimal numbers (3.14, -0.5)
-- **str**: Strings/text ("hello")
-- **bool**: Boolean (True, False)
-
-## Type Conversion
-
-You can convert between types using functions like int(), float(), str()`,
-        codeExample: `# Variable assignment
-name = "Alice"
-age = 25
-height = 5.6
-is_student = True
-
-# Print variables
-print("Name:", name)
-print("Age:", age)
-print("Height:", height)
-print("Student:", is_student)
-
-# Type conversion
-age_str = str(age)
-print("Age as string:", age_str)`,
-        language: 'python'
-      },
-      {
-        id: 'py-3',
-        title: 'Control Flow - If Statements',
-        duration: 35,
-        videoUrl: 'https://www.youtube.com/embed/rfscVS0vtbw',
-        notes: `# Control Flow - If Statements
-
-Control flow statements allow your program to make decisions and execute different code based on conditions.
-
-## If Statement Syntax
-
-Python uses indentation (4 spaces) to define code blocks.
-
-## Comparison Operators
-
-- == (equal to)
-- != (not equal to)
-- > (greater than)
-- < (less than)
-- >= (greater than or equal to)
-- <= (less than or equal to)
-
-## Logical Operators
-
-- and: Both conditions must be true
-- or: At least one condition must be true
-- not: Negates the condition`,
-        codeExample: `# If statement
-age = 18
-
-if age >= 18:
-    print("You are an adult")
-elif age >= 13:
-    print("You are a teenager")
-else:
-    print("You are a child")
-
-# Logical operators
-score = 85
-if score >= 90:
-    print("Grade: A")
-elif score >= 80 and score < 90:
-    print("Grade: B")
-else:
-    print("Grade: C or below")`,
-        language: 'python'
-      }
-    ],
+    thumbnail: "/placeholder.svg?key=ld672",
+    instructor: "Dr. Sarah Chen",
+    notes:
+      "# Python Programming for Beginners\n\nPython is a beginner-friendly, powerful, and highly versatile programming language trusted by developers worldwide.\nIt is widely used in **Web Development**, **Data Science**, **Machine Learning**, **AI**, **Automation**, **Cybersecurity**, **Scripting**, and **Backend Development**.\n\n## Why Python is Loved\n- Simple and readable syntax\n- Huge community support\n- Rich standard library\n- Cross-platform and portable\n- Great for beginners and professionals\n\n## What You Will Learn\n- Installing Python & environment setup\n- Variables, data types, and operators\n- Input and output handling\n- Conditional statements and loops\n- Functions and reusable logic\n- Lists, Tuples, Dictionaries\n- Basics of Object-Oriented Programming\n- File handling basics\n\n## Real-World Uses\n- Instagram, YouTube, Netflix backend\n- Machine Learning & AI (TensorFlow, PyTorch)\n- Data Analysis (Pandas, NumPy)\n- Automation & Scripting\n- Web Development (Django, Flask)\n\n## Outcome\nBy the end of this course, you'll confidently write Python programs, solve logical problems, understand real-world applications, and be ready to explore **Web Development**, **Machine Learning**, or **Automation**.",
     test: [
       {
-        id: 'py-q1',
-        question: 'What is the correct way to print "Hello" in Python?',
-        options: ['echo("Hello")', 'print("Hello")', 'console.log("Hello")', 'printf("Hello")'],
+        id: "py-q1",
+        question: "Python is classified as which type of programming language?",
+        options: ["Compiled", "Interpreted", "Assembly", "Low Level"],
         correctAnswer: 1,
-        explanation: 'print() is the built-in function in Python used to display output to the console.'
+        explanation:
+          "Python is an interpreted language which executes code line-by-line.",
       },
       {
-        id: 'py-q2',
-        question: 'Which of these is NOT a valid Python data type?',
-        options: ['int', 'float', 'char', 'str'],
+        id: "py-q2",
+        question: "Which function is used to display output in Python?",
+        options: ["echo()", "display()", "print()", "out()"],
         correctAnswer: 2,
-        explanation: 'Python does not have a char data type. Single characters are represented as strings.'
+        explanation: "print() is the built-in output function.",
       },
       {
-        id: 'py-q3',
-        question: 'What does the == operator do in Python?',
-        options: ['Assigns a value', 'Compares for equality', 'Adds two numbers', 'Concatenates strings'],
+        id: "py-q3",
+        question: "Which of the following represents a string in Python?",
+        options: [
+          "name = Alice",
+          'name = "Alice"',
+          "name = str()",
+          "name = text",
+        ],
         correctAnswer: 1,
-        explanation: 'The == operator is used to compare two values for equality. Use = for assignment.'
-      }
-    ]
+        explanation:
+          "Python strings must be enclosed in single or double quotes.",
+      },
+      {
+        id: "py-q4",
+        question: "Which symbol is used for comments in Python?",
+        options: ["//", "#", "/* */", "--"],
+        correctAnswer: 1,
+        explanation: "Python uses # for single-line comments.",
+      },
+      {
+        id: "py-q5",
+        question: "Which keyword is used to define a function in Python?",
+        options: ["func", "function", "define", "def"],
+        correctAnswer: 3,
+        explanation: "Functions in Python are declared using the def keyword.",
+      },
+    ],
   },
   {
-    id: 'javascript-beginner',
-    title: 'JavaScript Fundamentals',
-    description: 'Learn modern JavaScript from basics to advanced concepts including ES6+ features, DOM manipulation, and async programming.',
-    language: 'JavaScript',
-    difficulty: 'beginner',
+    id: "javascript-beginner",
+    title: "JavaScript Fundamentals",
+    description:
+      "Learn modern JavaScript from the ground up — build logic, understand core programming concepts, and create interactive web functionality.",
+    language: "JavaScript",
+    difficulty: "beginner",
     duration: 14,
-    thumbnail: '/placeholder.svg?key=h1qs8',
-    instructor: 'Michael Rodriguez',
-    totalLessons: 16,
-    lessons: [
-      {
-        id: 'js-1',
-        title: 'Getting Started with JavaScript',
-        duration: 20,
-        videoUrl: 'https://www.youtube.com/embed/W6NZfCO5SIk',
-        notes: `# Getting Started with JavaScript
-
-JavaScript is the programming language of the web. It makes websites interactive and dynamic.
-
-## What Can JavaScript Do?
-
-- **Manipulate HTML/CSS**: Change content and styles dynamically
-- **Handle Events**: Respond to user actions (clicks, typing, etc.)
-- **Communicate with Servers**: Fetch data without page reload
-- **Build Applications**: From web apps to mobile apps and servers
-
-## Your First JavaScript Program
-
-JavaScript can be run in the browser console or in HTML files.
-
-## Key Concepts
-
-- **console.log()**: Display output in the browser console
-- **Variables**: Store data with let, const, or var
-- **Semicolons**: Optional but recommended for clarity`,
-        codeExample: `// Your first JavaScript program
-console.log("Hello, JavaScript!");
-
-// Variables
-let name = "CodeZen";
-const year = 2024;
-
-console.log("Welcome to " + name);
-console.log("Year: " + year);
-
-// Simple calculation
-let x = 10;
-let y = 5;
-console.log("Sum:", x + y);`,
-        language: 'javascript'
-      },
-      {
-        id: 'js-2',
-        title: 'Variables and Data Types',
-        duration: 25,
-        videoUrl: 'https://www.youtube.com/embed/W6NZfCO5SIk',
-        notes: `# Variables and Data Types
-
-JavaScript has several ways to declare variables and supports multiple data types.
-
-## Variable Declaration
-
-- **let**: Block-scoped, can be reassigned
-- **const**: Block-scoped, cannot be reassigned
-- **var**: Function-scoped (legacy, avoid in modern code)
-
-## Primitive Data Types
-
-- **Number**: 42, 3.14, -5
-- **String**: "hello", 'world'
-- **Boolean**: true, false
-- **Undefined**: Variable declared but not assigned
-- **Null**: Intentional absence of value
-
-## Template Literals
-
-Use backticks for multi-line strings and variable interpolation.`,
-        codeExample: `// Variable declarations
-let age = 25;
-const name = "Alice";
-var oldStyle = "avoid this";
-
-// Data types
-let number = 42;
-let text = "Hello";
-let isActive = true;
-let notDefined;
-let empty = null;
-
-// Template literals
-let greeting = \`Hello, \${name}! You are \${age} years old.\`;
-console.log(greeting);
-
-// Type checking
-console.log(typeof number);  // "number"
-console.log(typeof text);    // "string"`,
-        language: 'javascript'
-      },
-      {
-        id: 'js-3',
-        title: 'Functions and Arrow Functions',
-        duration: 30,
-        videoUrl: 'https://www.youtube.com/embed/W6NZfCO5SIk',
-        notes: `# Functions and Arrow Functions
-
-Functions are reusable blocks of code that perform specific tasks.
-
-## Function Declaration
-
-Traditional way to define a function.
-
-## Function Expression
-
-Assigning a function to a variable.
-
-## Arrow Functions (ES6+)
-
-Shorter syntax for writing functions. Great for callbacks and simple operations.
-
-## Parameters and Return Values
-
-Functions can accept inputs (parameters) and return outputs.`,
-        codeExample: `// Function declaration
-function greet(name) {
-  return "Hello, " + name + "!";
-}
-
-console.log(greet("Alice"));
-
-// Arrow function
-const add = (a, b) => a + b;
-console.log("Sum:", add(5, 3));
-
-// Function with multiple statements
-const calculateArea = (width, height) => {
-  const area = width * height;
-  return area;
-};
-
-console.log("Area:", calculateArea(5, 10));`,
-        language: 'javascript'
-      }
-    ],
+    thumbnail: "/placeholder.svg?key=h1qs8",
+    instructor: "Michael Rodriguez",
+    notes:
+      "# JavaScript Fundamentals\n\nJavaScript is the **programming language of the web**, responsible for making websites interactive, dynamic, and functional. It powers modern web applications, browsers, servers, mobile apps, and even games.\n\n## Why JavaScript is Important\n- Runs in every web browser\n- Used in Frontend, Backend, Mobile, and Desktop apps\n- Core of modern frameworks like React, Angular, Vue\n- Massive community and ecosystem\n\n## What You Will Learn\n- JavaScript syntax and execution\n- Variables: var, let, const\n- Data types and operators\n- Conditional statements and loops\n- Functions and Arrow Functions (ES6)\n- Arrays and Objects basics\n- Basic DOM manipulation\n- Introduction to asynchronous programming\n\n## Real-World Uses\n- Interactive web interfaces\n- Dynamic UI behavior\n- Backend development using Node.js\n- Single Page Applications (React, Next.js)\n- APIs and real-time applications\n\n## Outcome\nBy the end of this course, you will be confident in writing JavaScript code, understanding logic building, and building interactive web features.",
     test: [
       {
-        id: 'js-q1',
-        question: 'Which keyword should you use for a variable that won\'t be reassigned?',
-        options: ['var', 'let', 'const', 'static'],
+        id: "js-q1",
+        question: "Which keyword declares a constant variable?",
+        options: ["var", "let", "const", "static"],
         correctAnswer: 2,
-        explanation: 'const is used for variables that should not be reassigned after initialization.'
+        explanation: "const is used for values that cannot be reassigned.",
       },
       {
-        id: 'js-q2',
-        question: 'What is the output of: console.log(typeof "42")?',
-        options: ['number', 'string', 'text', 'undefined'],
+        id: "js-q2",
+        question: "What is the result of typeof '42'?",
+        options: ["number", "string", "text", "undefined"],
         correctAnswer: 1,
-        explanation: 'The value "42" is wrapped in quotes, making it a string, not a number.'
+        explanation:
+          "Anything inside quotes in JavaScript is treated as a string.",
       },
       {
-        id: 'js-q3',
-        question: 'Which is the correct arrow function syntax?',
-        options: ['function => (x) { return x * 2 }', '(x) => { return x * 2 }', '(x) -> { return x * 2 }', '=> (x) { return x * 2 }'],
+        id: "js-q3",
+        question:
+          "Arrow functions were introduced in which version of JavaScript?",
+        options: ["ES5", "ES6", "ES7", "ES8"],
         correctAnswer: 1,
-        explanation: 'Arrow functions use the syntax: (parameters) => { function body }'
-      }
-    ]
+        explanation: "Arrow functions were added in ES6 (2015).",
+      },
+      {
+        id: "js-q4",
+        question: "Which operator checks both value and type?",
+        options: ["==", "===", "=", "!="],
+        correctAnswer: 1,
+        explanation: "=== checks both value and data type.",
+      },
+      {
+        id: "js-q5",
+        question: "console.log() is used to:",
+        options: [
+          "Display popup",
+          "Print to console",
+          "Save data",
+          "Debug browser",
+        ],
+        correctAnswer: 1,
+        explanation: "console.log() prints output to the browser console.",
+      },
+    ],
   },
   {
-    id: 'java-beginner',
-    title: 'Java Programming Essentials',
-    description: 'Learn Java programming from ground up. Cover OOP principles, data structures, and build real-world applications.',
-    language: 'Java',
-    difficulty: 'beginner',
+    id: "java-beginner",
+    title: "Java Programming Essentials",
+    description:
+      "Learn Java fundamentals including syntax, OOP concepts, logic building, and structured programming to build real-world applications.",
+    language: "Java",
+    difficulty: "beginner",
     duration: 16,
-    thumbnail: '/placeholder.svg?key=r6sqa',
-    instructor: 'Prof. David Kim',
-    totalLessons: 18,
-    lessons: [
-      {
-        id: 'java-1',
-        title: 'Introduction to Java',
-        duration: 30,
-        videoUrl: 'https://www.youtube.com/embed/eIrMbAQSU34',
-        notes: `# Introduction to Java
-
-Java is a powerful, object-oriented programming language used for building enterprise applications, Android apps, and more.
-
-## Why Learn Java?
-
-- **Platform Independent**: Write once, run anywhere (WORA)
-- **Object-Oriented**: Organize code with classes and objects
-- **Robust**: Strong type checking and exception handling
-- **Widely Used**: Enterprise applications, Android development
-
-## Your First Java Program
-
-Every Java program starts with a class and a main method.
-
-## Key Concepts
-
-- **class**: Blueprint for creating objects
-- **public static void main**: Entry point of the program
-- **System.out.println**: Print output to console`,
-        codeExample: `// Your first Java program
-public class HelloWorld {
-    public static void main(String[] args) {
-        System.out.println("Hello, Java!");
-        System.out.println("Welcome to CodeZen");
-        
-        // Simple calculation
-        int x = 10;
-        int y = 5;
-        System.out.println("Sum: " + (x + y));
-    }
-}`,
-        language: 'java'
-      },
-      {
-        id: 'java-2',
-        title: 'Variables and Data Types',
-        duration: 35,
-        videoUrl: 'https://www.youtube.com/embed/eIrMbAQSU34',
-        notes: `# Variables and Data Types
-
-Java is a statically-typed language, meaning you must declare variable types.
-
-## Primitive Data Types
-
-- **int**: Integer numbers (-2^31 to 2^31-1)
-- **double**: Floating-point numbers
-- **boolean**: true or false
-- **char**: Single character ('A')
-- **byte, short, long, float**: Other numeric types
-
-## Variable Declaration
-
-Always specify the type when declaring a variable.
-
-## Naming Conventions
-
-- Variables: camelCase (myVariable)
-- Classes: PascalCase (MyClass)
-- Constants: UPPER_SNAKE_CASE (MAX_VALUE)`,
-        codeExample: `public class DataTypes {
-    public static void main(String[] args) {
-        // Variable declarations
-        int age = 25;
-        double price = 19.99;
-        boolean isStudent = true;
-        char grade = 'A';
-        String name = "Alice";
-        
-        // Print variables
-        System.out.println("Name: " + name);
-        System.out.println("Age: " + age);
-        System.out.println("Price: $" + price);
-        System.out.println("Student: " + isStudent);
-        System.out.println("Grade: " + grade);
-    }
-}`,
-        language: 'java'
-      }
-    ],
+    thumbnail: "/placeholder.svg?key=r6sqa",
+    instructor: "Prof. David Kim",
+    notes:
+      "# Java Programming Essentials\n\nJava is a powerful, object-oriented programming language widely used in enterprise systems, Android development, finance, and large-scale applications. It is known for its reliability, performance, and security.\n\n## Why Learn Java?\n- Platform Independent (Write Once, Run Anywhere)\n- Strongly Typed and Structured\n- Backbone of many enterprise systems\n- Used in Android apps, banking systems, backend APIs\n\n## What You Will Learn\n- Java syntax and program structure\n- Variables, data types, and operators\n- Control flow: if, loops, switches\n- Functions (methods) and parameters\n- Classes, Objects, and OOP basics\n- Introduction to error handling\n\n## Real-World Uses\n- Android application development\n- Enterprise applications\n- Banking and finance systems\n- Backend REST APIs\n\n## Outcome\nBy the end of this course, you’ll understand how Java programs execute, write structured code, and be prepared for Object-Oriented and advanced Java development.",
     test: [
       {
-        id: 'java-q1',
-        question: 'What is the correct signature for the main method in Java?',
-        options: ['public void main(String[] args)', 'public static void main(String[] args)', 'static void main(String args)', 'public main(String[] args)'],
+        id: "java-q1",
+        question: "What does JVM stand for?",
+        options: [
+          "Java Visual Machine",
+          "Java Virtual Machine",
+          "Java Version Manager",
+          "Java Variable Machine",
+        ],
         correctAnswer: 1,
-        explanation: 'The main method must be public static void main(String[] args) to be recognized as the entry point.'
+        explanation: "JVM executes Java bytecode on any platform.",
       },
       {
-        id: 'java-q2',
-        question: 'Which data type would you use for storing a decimal number?',
-        options: ['int', 'double', 'boolean', 'char'],
+        id: "java-q2",
+        question: "Which method acts as the entry point of Java programs?",
+        options: [
+          "main()",
+          "public main()",
+          "public static void main()",
+          "start()",
+        ],
+        correctAnswer: 2,
+        explanation:
+          "Java programs start execution from public static void main().",
+      },
+      {
+        id: "java-q3",
+        question: "Which data type is used to store decimal values?",
+        options: ["int", "double", "boolean", "char"],
         correctAnswer: 1,
-        explanation: 'double is used for floating-point numbers with decimal places.'
-      }
-    ]
+        explanation: "double is used for floating-point numbers.",
+      },
+      {
+        id: "java-q4",
+        question: "Java is:",
+        options: [
+          "Compiled",
+          "Interpreted",
+          "Both compiled and interpreted",
+          "None",
+        ],
+        correctAnswer: 2,
+        explanation: "Java compiles to bytecode and JVM interprets it.",
+      },
+      {
+        id: "java-q5",
+        question: "String in Java is:",
+        options: ["Primitive type", "Object", "Keyword", "Operator"],
+        correctAnswer: 1,
+        explanation: "String is a class object in Java.",
+      },
+    ],
   },
   {
-    id: 'cpp-beginner',
-    title: 'C++ Programming Basics',
-    description: 'Master C++ fundamentals including pointers, memory management, STL, and object-oriented programming concepts.',
-    language: 'C++',
-    difficulty: 'beginner',
+    id: "cpp-beginner",
+    title: "C++ Programming Basics",
+    description:
+      "Learn C++ fundamentals, memory concepts, logic building, and the foundation required for performance-critical applications and system programming.",
+    language: "C++",
+    difficulty: "beginner",
     duration: 15,
-    thumbnail: '/placeholder.svg?key=ox15q',
-    instructor: 'Dr. Emily Watson',
-    totalLessons: 17,
-    lessons: [
-      {
-        id: 'cpp-1',
-        title: 'Getting Started with C++',
-        duration: 28,
-        videoUrl: 'https://www.youtube.com/embed/vLnPwxZdW4Y',
-        notes: `# Getting Started with C++
-
-C++ is a powerful, high-performance language used for system software, game development, and applications requiring speed.
-
-## Why Learn C++?
-
-- **High Performance**: Close to hardware, fast execution
-- **Control**: Direct memory management
-- **Versatile**: Games, operating systems, embedded systems
-- **Foundation**: Understanding C++ helps learn other languages
-
-## Your First C++ Program
-
-C++ programs consist of functions, with main() being the entry point.
-
-## Key Concepts
-
-- **#include**: Import libraries
-- **iostream**: Input/output stream library
-- **std::cout**: Print to console
-- **std::endl**: End line/newline`,
-        codeExample: `#include <iostream>
-
-int main() {
-    std::cout << "Hello, C++!" << std::endl;
-    std::cout << "Welcome to CodeZen" << std::endl;
-    
-    // Simple calculation
-    int x = 10;
-    int y = 5;
-    std::cout << "Sum: " << (x + y) << std::endl;
-    
-    return 0;
-}`,
-        language: 'cpp'
-      }
-    ],
+    thumbnail: "/placeholder.svg?key=ox15q",
+    instructor: "Dr. Emily Watson",
+    notes:
+      "# C++ Programming Basics\n\nC++ is a high-performance programming language widely used in game development, system programming, embedded systems, finance, and applications that require speed and efficiency.\n\n## Why Learn C++?\n- Extremely fast and powerful\n- Close to hardware yet high-level capability\n- Strong control over memory management\n- Used in game engines, operating systems, and performance systems\n\n## What You Will Learn\n- C++ syntax and structure\n- Input and output using iostream\n- Variables, data types, and operators\n- Conditional statements and loops\n- Functions and modular programming\n- Basic introduction to Object-Oriented Programming\n\n## Real-World Uses\n- Game engines (Unreal Engine)\n- Operating systems and drivers\n- High-speed trading systems\n- Embedded and real-time applications\n\n## Outcome\nBy the end of this course, you will understand how C++ works, write efficient programs, and build a strong foundation for advanced C++ development like OOP, STL, and memory handling.",
     test: [
       {
-        id: 'cpp-q1',
-        question: 'What is the purpose of #include <iostream>?',
-        options: ['To include input/output functionality', 'To declare the main function', 'To end the program', 'To define variables'],
+        id: "cpp-q1",
+        question: "What is the purpose of #include <iostream>?",
+        options: [
+          "File handling",
+          "Input/Output operations",
+          "Math operations",
+          "Memory management",
+        ],
+        correctAnswer: 1,
+        explanation:
+          "iostream is used for input and output operations using cin and cout.",
+      },
+      {
+        id: "cpp-q2",
+        question: "Which operator is used to output data in C++?",
+        options: ["<<", ">>", "::", ":"],
         correctAnswer: 0,
-        explanation: '#include <iostream> imports the input/output stream library, allowing use of cout and cin.'
-      }
-    ]
+        explanation: "The << operator sends output to cout.",
+      },
+      {
+        id: "cpp-q3",
+        question: "Which statement is used to end a program successfully?",
+        options: ["stop;", "exit;", "return 0;", "end;"],
+        correctAnswer: 2,
+        explanation: "return 0 inside main indicates successful execution.",
+      },
+      {
+        id: "cpp-q4",
+        question: "C++ is primarily known for:",
+        options: [
+          "Web development",
+          "Memory control and performance",
+          "Designing UI",
+          "Only scripting",
+        ],
+        correctAnswer: 1,
+        explanation: "C++ is loved for speed and memory control.",
+      },
+      {
+        id: "cpp-q5",
+        question: "Which line must every C++ program contain?",
+        options: ["int start()", "main()", "program()", "execute()"],
+        correctAnswer: 1,
+        explanation:
+          "The main() function is the entry point of every C++ program.",
+      },
+    ],
   },
   {
-    id: 'c-beginner',
-    title: 'C Programming Foundation',
-    description: 'Learn C programming language fundamentals including pointers, arrays, functions, and memory management.',
-    language: 'C',
-    difficulty: 'beginner',
+    id: "c-beginner",
+    title: "C Programming Foundation",
+    description:
+      "Learn the core foundations of the C programming language including syntax, memory concepts, logic building, and system-level programming basics.",
+    language: "C",
+    difficulty: "beginner",
     duration: 13,
-    thumbnail: '/placeholder.svg?key=rypdo',
-    instructor: 'Prof. Robert Johnson',
-    totalLessons: 14,
-    lessons: [
-      {
-        id: 'c-1',
-        title: 'Introduction to C',
-        duration: 25,
-        videoUrl: 'https://www.youtube.com/embed/KJgsSFOSQv0',
-        notes: `# Introduction to C
-
-C is a foundational programming language known for its efficiency and low-level control.
-
-## Why Learn C?
-
-- **Foundation**: Many languages are based on C
-- **System Programming**: Operating systems, embedded systems
-- **Performance**: Fast and efficient
-- **Understanding**: Learn how computers work at a low level
-
-## Your First C Program
-
-Every C program must have a main() function.`,
-        codeExample: `#include <stdio.h>
-
-int main() {
-    printf("Hello, C!\\n");
-    printf("Welcome to CodeZen\\n");
-    
-    // Simple calculation
-    int x = 10;
-    int y = 5;
-    printf("Sum: %d\\n", x + y);
-    
-    return 0;
-}`,
-        language: 'c'
-      }
-    ],
+    thumbnail: "/placeholder.svg?key=rypdo",
+    instructor: "Prof. Robert Johnson",
+    notes:
+      "# C Programming Foundation\n\nC is one of the most powerful and foundational programming languages ever created. It is used in system programming, operating systems, embedded devices, game engines, and performance-critical applications.\n\n## Why Learn C?\n- Extremely fast and efficient\n- Provides low-level memory access\n- Foundation for C++, Java, and many modern languages\n- Used in operating systems, device drivers, and embedded systems\n\n## What You Will Learn\n- C program structure\n- Variables, data types, and operators\n- Input/Output using stdio\n- If-else, loops, and conditions\n- Functions and modular programming\n- Basic memory understanding\n\n## Real-World Uses\n- Operating systems like Windows and Linux components\n- Embedded systems and microcontrollers\n- Game engines and performance systems\n- Compiler and interpreter development\n\n## Outcome\nBy the end of this course, you will understand low-level programming concepts, write efficient C programs, and build a strong base for C++, system programming, and embedded development.",
     test: [
       {
-        id: 'c-q1',
-        question: 'Which function is used to print output in C?',
-        options: ['print()', 'printf()', 'cout', 'echo'],
-        correctAnswer: 1,
-        explanation: 'printf() is the standard function for formatted output in C.'
-      }
-    ]
-  },
-  {
-    id: 'ruby-beginner',
-    title: 'Ruby Programming Basics',
-    description: 'Discover Ruby\'s elegant syntax and learn web development with Rails, testing, and object-oriented design.',
-    language: 'Ruby',
-    difficulty: 'beginner',
-    duration: 11,
-    thumbnail: '/placeholder.svg?key=kvhij',
-    instructor: 'Jessica Martinez',
-    totalLessons: 12,
-    lessons: [
+        id: "c-q1",
+        question: "Which function is used to print output in C?",
+        options: ["print()", "echo()", "printf()", "cout"],
+        correctAnswer: 2,
+        explanation: "printf() is the standard C function for output.",
+      },
       {
-        id: 'ruby-1',
-        title: 'Welcome to Ruby',
-        duration: 22,
-        videoUrl: 'https://www.youtube.com/embed/t_ispmWmdjY',
-        notes: `# Welcome to Ruby
-
-Ruby is a dynamic, object-oriented language known for its elegant and readable syntax.
-
-## Why Learn Ruby?
-
-- **Readable**: Code that reads like English
-- **Rails Framework**: Build web applications quickly
-- **Productive**: Get more done with less code
-- **Community**: Friendly and helpful community
-
-## Your First Ruby Program
-
-Ruby programs are simple and expressive.`,
-        codeExample: `# Your first Ruby program
-puts "Hello, Ruby!"
-puts "Welcome to CodeZen"
-
-# Variables
-name = "Alice"
-age = 25
-
-puts "Name: #{name}"
-puts "Age: #{age}"
-
-# Simple calculation
-x = 10
-y = 5
-puts "Sum: #{x + y}"`,
-        language: 'ruby'
-      }
+        id: "c-q2",
+        question: "Every C program must have a:",
+        options: ["start()", "main()", "program()", "run()"],
+        correctAnswer: 1,
+        explanation: "The main() function is the entry point of a C program.",
+      },
+      {
+        id: "c-q3",
+        question: "Which header file is required for input/output?",
+        options: ["<conio.h>", "<stdio.h>", "<stdlib.h>", "<iostream>"],
+        correctAnswer: 1,
+        explanation: "stdio.h provides printf() and scanf().",
+      },
+      {
+        id: "c-q4",
+        question: "C is known for:",
+        options: [
+          "Web development",
+          "Mobile development",
+          "Low-level programming",
+          "Game design only",
+        ],
+        correctAnswer: 2,
+        explanation: "C provides direct access to memory and hardware.",
+      },
+      {
+        id: "c-q5",
+        question: "Which symbol is used to end statements in C?",
+        options: [".", ":", ";", ","],
+        correctAnswer: 2,
+        explanation: "Each C statement ends with a semicolon.",
+      },
     ],
-    test: [
-      {
-        id: 'ruby-q1',
-        question: 'Which method is used to print output in Ruby?',
-        options: ['print', 'puts', 'console.log', 'printf'],
-        correctAnswer: 1,
-        explanation: 'puts is the standard method to print output with a newline in Ruby.'
-      }
-    ]
   },
   {
-    id: 'go-beginner',
-    title: 'Go Programming Essentials',
-    description: 'Learn Go (Golang) for building scalable applications, microservices, and concurrent systems.',
-    language: 'Go',
-    difficulty: 'beginner',
+    id: "go-beginner",
+    title: "Go Programming Essentials",
+    description:
+      "Learn Go (Golang) fundamentals including syntax, concurrency basics, fast execution concepts, and real-world backend development foundations.",
+    language: "Go",
+    difficulty: "beginner",
     duration: 12,
-    thumbnail: '/placeholder.svg?key=415ai',
-    instructor: 'Alex Thompson',
-    totalLessons: 13,
-    lessons: [
-      {
-        id: 'go-1',
-        title: 'Introduction to Go',
-        duration: 24,
-        videoUrl: 'https://www.youtube.com/embed/YS4e4q9oBaU',
-        notes: `# Introduction to Go
-
-Go (Golang) is a modern programming language designed for simplicity, efficiency, and concurrent programming.
-
-## Why Learn Go?
-
-- **Fast**: Compiled language with excellent performance
-- **Simple**: Clean syntax, easy to learn
-- **Concurrent**: Built-in support for concurrent programming
-- **Modern**: Designed for cloud and microservices
-
-## Your First Go Program
-
-Go programs start with package declarations and a main function.`,
-        codeExample: `package main
-
-import "fmt"
-
-func main() {
-    fmt.Println("Hello, Go!")
-    fmt.Println("Welcome to CodeZen")
-    
-    // Variables
-    name := "Alice"
-    age := 25
-    
-    fmt.Printf("Name: %s\\n", name)
-    fmt.Printf("Age: %d\\n", age)
-    
-    // Simple calculation
-    x := 10
-    y := 5
-    fmt.Printf("Sum: %d\\n", x + y)
-}`,
-        language: 'go'
-      }
-    ],
+    thumbnail: "/placeholder.svg?key=415ai",
+    instructor: "Alex Thompson",
+    notes:
+      "# Go Programming Essentials\n\nGo (Golang) is a modern programming language created by Google, designed for simplicity, performance, and massive scalability. It is commonly used for backend services, cloud computing, DevOps tools, and distributed systems.\n\n## Why Learn Go?\n- Extremely fast compiled language\n- Simple and clean syntax\n- Built-in support for concurrency (goroutines)\n- Designed for cloud, microservices, and scalable systems\n\n## What You Will Learn\n- Go program structure\n- Variables, data types, and operators\n- Input and output basics\n- Conditional statements and loops\n- Functions and reusable logic\n- Introduction to Goroutines\n\n## Real-World Uses\n- Cloud applications\n- Backend APIs and microservices\n- Networking tools and servers\n- DevOps and automation tools (Docker, Kubernetes)\n\n## Outcome\nBy the end of this course, you will understand Go fundamentals, write efficient programs, and be ready to explore backend development, microservices, and cloud programming.",
     test: [
       {
-        id: 'go-q1',
-        question: 'What package must every Go program include?',
-        options: ['package main', 'import main', 'class main', 'module main'],
+        id: "go-q1",
+        question: "Which keyword starts a Go program?",
+        options: ["package main", "class main", "module main", "begin main"],
         correctAnswer: 0,
-        explanation: 'Every executable Go program must be in package main and have a main() function.'
-      }
-    ]
+        explanation: "Every executable Go program must be inside package main.",
+      },
+      {
+        id: "go-q2",
+        question: "Which function is the entry point of Go programs?",
+        options: ["start()", "main()", "execute()", "run()"],
+        correctAnswer: 1,
+        explanation: "Execution begins from the main() function.",
+      },
+      {
+        id: "go-q3",
+        question: "Go is primarily used for:",
+        options: [
+          "Game development",
+          "Mobile UI",
+          "Scalable backend and cloud systems",
+          "Graphic design",
+        ],
+        correctAnswer: 2,
+        explanation:
+          "Go is designed for scalable backend, cloud computing, and concurrency.",
+      },
+      {
+        id: "go-q4",
+        question: "Which keyword is used to declare variables?",
+        options: ["var", "let", "define", "int"],
+        correctAnswer: 0,
+        explanation: "var is commonly used to declare variables in Go.",
+      },
+      {
+        id: "go-q5",
+        question: "Which unique feature makes Go powerful for concurrency?",
+        options: ["Threads", "Processes", "Goroutines", "Pipelines"],
+        correctAnswer: 2,
+        explanation: "Goroutines allow lightweight concurrent execution.",
+      },
+    ],
   },
   {
-    id: 'php-beginner',
-    title: 'PHP Web Development',
-    description: 'Learn PHP for server-side web development including forms, databases, sessions, and modern frameworks.',
-    language: 'PHP',
-    difficulty: 'beginner',
+    id: "php-beginner",
+    title: "PHP Web Development",
+    description:
+      "Learn PHP fundamentals for backend web development including server-side scripting, data handling, and dynamic website creation.",
+    language: "PHP",
+    difficulty: "beginner",
     duration: 13,
-    thumbnail: '/placeholder.svg?key=hbmnz',
-    instructor: 'Marco Rossi',
-    totalLessons: 14,
-    lessons: [
-      {
-        id: 'php-1',
-        title: 'Getting Started with PHP',
-        duration: 23,
-        videoUrl: 'https://www.youtube.com/embed/OK_JCtrrv-c',
-        notes: `# Getting Started with PHP
-
-PHP is a popular server-side scripting language used for web development.
-
-## Why Learn PHP?
-
-- **Web Development**: Powers 78% of websites
-- **Easy to Learn**: Simple syntax for beginners
-- **Powerful**: Build dynamic websites and APIs
-- **Community**: Large ecosystem of frameworks and tools
-
-## Your First PHP Program
-
-PHP code is embedded in HTML files and executed on the server.`,
-        codeExample: `<?php
-// Your first PHP program
-echo "Hello, PHP!\\n";
-echo "Welcome to CodeZen\\n";
-
-// Variables
-$name = "Alice";
-$age = 25;
-
-echo "Name: $name\\n";
-echo "Age: $age\\n";
-
-// Simple calculation
-$x = 10;
-$y = 5;
-echo "Sum: " . ($x + $y) . "\\n";
-?>`,
-        language: 'php'
-      }
-    ],
+    thumbnail: "/placeholder.svg?key=hbmnz",
+    instructor: "Marco Rossi",
+    notes:
+      "# PHP Web Development\n\nPHP is a powerful server-side scripting language used to build dynamic and interactive websites. It powers a large portion of the internet including websites like Facebook (early versions), WordPress, and many modern CMS platforms.\n\n## Why Learn PHP?\n- Widely used in backend web development\n- Easy to learn and beginner friendly\n- Excellent database support (MySQL, MariaDB, etc.)\n- Huge ecosystem including WordPress and Laravel\n\n## What You Will Learn\n- PHP syntax and execution\n- Variables and data handling\n- Echo and output handling\n- Conditional statements and loops\n- Basic server-side logic\n- Introduction to forms and data processing\n\n## Real-World Uses\n- Dynamic websites\n- Content Management Systems\n- Backend web applications\n- API development\n\n## Outcome\nBy the end of this course, you will understand how server-side programming works, build dynamic PHP programs, and prepare for frameworks like Laravel.",
     test: [
       {
-        id: 'php-q1',
-        question: 'How do you start a PHP code block?',
-        options: ['<php>', '<?php', '{php}', '<%php%>'],
+        id: "php-q1",
+        question: "How do you start a PHP script?",
+        options: ["<php>", "<?php", "{php}", "<%php%>"],
         correctAnswer: 1,
-        explanation: 'PHP code blocks start with <?php and end with ?>'
-      }
-    ]
+        explanation: "A PHP script begins with <?php.",
+      },
+      {
+        id: "php-q2",
+        question: "PHP is mainly used for:",
+        options: [
+          "Mobile apps",
+          "Frontend UI",
+          "Backend web development",
+          "Game design",
+        ],
+        correctAnswer: 2,
+        explanation: "PHP runs on the server to build backend systems.",
+      },
+      {
+        id: "php-q3",
+        question: "Which function outputs text in PHP?",
+        options: ["print()", "echo", "console.log()", "write()"],
+        correctAnswer: 1,
+        explanation: "echo is commonly used to output text in PHP.",
+      },
+      {
+        id: "php-q4",
+        question: "PHP works closely with which database?",
+        options: ["MongoDB", "Firebase", "MySQL", "SQLite only"],
+        correctAnswer: 2,
+        explanation: "PHP is popularly paired with MySQL.",
+      },
+      {
+        id: "php-q5",
+        question: "PHP runs on:",
+        options: ["Browser", "Client only", "Server", "Mobile device only"],
+        correctAnswer: 2,
+        explanation: "PHP is a server-side language.",
+      },
+    ],
   },
   {
-    id: 'swift-beginner',
-    title: 'Swift Programming for iOS',
-    description: 'Learn Swift for iOS and macOS development including SwiftUI, protocols, and app architecture.',
-    language: 'Swift',
-    difficulty: 'beginner',
+    id: "swift-beginner",
+    title: "Swift Programming for iOS",
+    description:
+      "Learn Swift programming from the basics and build a strong foundation for iOS, macOS, and Apple ecosystem development.",
+    language: "Swift",
+    difficulty: "beginner",
     duration: 14,
-    thumbnail: '/placeholder.svg?key=lfl1r',
-    instructor: 'Emma Williams',
-    totalLessons: 15,
-    lessons: [
-      {
-        id: 'swift-1',
-        title: 'Introduction to Swift',
-        duration: 26,
-        videoUrl: 'https://www.youtube.com/embed/comQ1-x2a1Q',
-        notes: `# Introduction to Swift
-
-Swift is Apple's modern programming language for iOS, macOS, watchOS, and tvOS development.
-
-## Why Learn Swift?
-
-- **Modern**: Clean, safe, and expressive syntax
-- **Fast**: High-performance compiled language
-- **iOS Development**: Build apps for Apple devices
-- **Growing**: Expanding beyond Apple ecosystem
-
-## Your First Swift Program
-
-Swift programs can run in playgrounds or as part of apps.`,
-        codeExample: `import Foundation
-
-// Your first Swift program
-print("Hello, Swift!")
-print("Welcome to CodeZen")
-
-// Variables
-let name = "Alice"  // constant
-var age = 25        // variable
-
-print("Name: \\(name)")
-print("Age: \\(age)")
-
-// Simple calculation
-let x = 10
-let y = 5
-print("Sum: \\(x + y)")`,
-        language: 'swift'
-      }
-    ],
+    thumbnail: "/placeholder.svg?key=lfl1r",
+    instructor: "Emma Williams",
+    notes:
+      "# Swift Programming for iOS\n\nSwift is Apple's modern programming language used for building applications for **iOS**, **macOS**, **watchOS**, and **tvOS**. It is fast, safe, and designed with developer productivity in mind.\n\n## Why Learn Swift?\n- Official language for iPhone and Apple development\n- Clean, simple, and expressive syntax\n- Extremely fast and powerful\n- Backed by Apple with continuous improvements\n\n## What You Will Learn\n- Swift syntax and structure\n- Variables, constants, and data types\n- Functions and reusable logic\n- Conditions and loops\n- Optionals and safe programming basics\n- Basics of Swift development concepts\n\n## Real-World Uses\n- iOS mobile apps\n- macOS desktop software\n- Watch and TV apps\n- Swift-based backend development in some cases\n\n## Outcome\nBy the end of this course, you will understand the Swift language basics and be ready to explore iOS development using SwiftUI or UIKit.",
     test: [
       {
-        id: 'swift-q1',
-        question: 'What is the difference between let and var in Swift?',
-        options: ['No difference', 'let is constant, var is variable', 'var is constant, let is variable', 'let is for strings only'],
+        id: "swift-q1",
+        question: "Swift is mainly used for developing apps for:",
+        options: ["Android", "Windows", "Apple platforms", "Linux"],
+        correctAnswer: 2,
+        explanation:
+          "Swift is designed for Apple's ecosystem including iOS, macOS, watchOS, and tvOS.",
+      },
+      {
+        id: "swift-q2",
+        question: "Which keyword declares a constant in Swift?",
+        options: ["const", "let", "var", "static"],
         correctAnswer: 1,
-        explanation: 'let declares a constant (immutable), while var declares a variable (mutable).'
-      }
-    ]
+        explanation: "let is used to declare constants in Swift.",
+      },
+      {
+        id: "swift-q3",
+        question: "Swift is known for being:",
+        options: ["Slow", "Unsafe", "Fast and safe", "Difficult to learn"],
+        correctAnswer: 2,
+        explanation: "Swift is designed to be fast and memory safe.",
+      },
+      {
+        id: "swift-q4",
+        question: "Which company created Swift?",
+        options: ["Google", "Microsoft", "Apple", "Meta"],
+        correctAnswer: 2,
+        explanation: "Swift was developed and is maintained by Apple.",
+      },
+      {
+        id: "swift-q5",
+        question: "Swift supports:",
+        options: [
+          "Only procedural programming",
+          "Only scripting",
+          "Modern programming with OOP concepts",
+          "No structured programming",
+        ],
+        correctAnswer: 2,
+        explanation:
+          "Swift supports object-oriented and modern structured programming.",
+      },
+    ],
   },
   {
-    id: 'rust-beginner',
-    title: 'Rust Programming Fundamentals',
-    description: 'Master Rust for systems programming with focus on memory safety, ownership, and concurrent programming.',
-    language: 'Rust',
-    difficulty: 'beginner',
+    id: "rust-beginner",
+    title: "Rust Programming Fundamentals",
+    description:
+      "Learn Rust programming fundamentals focusing on memory safety, performance, ownership principles, and modern systems programming concepts.",
+    language: "Rust",
+    difficulty: "beginner",
     duration: 15,
-    thumbnail: '/placeholder.svg?key=0kef0',
-    instructor: 'Dr. Thomas Anderson',
-    totalLessons: 16,
-    lessons: [
-      {
-        id: 'rust-1',
-        title: 'Getting Started with Rust',
-        duration: 27,
-        videoUrl: 'https://www.youtube.com/embed/BpPEoZW5IiY',
-        notes: `# Getting Started with Rust
-
-Rust is a systems programming language focused on safety, speed, and concurrency.
-
-## Why Learn Rust?
-
-- **Memory Safety**: No null pointers or data races
-- **Performance**: As fast as C/C++
-- **Modern**: Great tooling and package management
-- **Growing**: Increasingly popular for systems programming
-
-## Your First Rust Program
-
-Rust programs start with a main function and use macros for common operations.`,
-        codeExample: `fn main() {
-    // Your first Rust program
-    println!("Hello, Rust!");
-    println!("Welcome to CodeZen");
-    
-    // Variables
-    let name = "Alice";
-    let age = 25;
-    
-    println!("Name: {}", name);
-    println!("Age: {}", age);
-    
-    // Simple calculation
-    let x = 10;
-    let y = 5;
-    println!("Sum: {}", x + y);
-}`,
-        language: 'rust'
-      }
-    ],
+    thumbnail: "/placeholder.svg?key=0kef0",
+    instructor: "Dr. Thomas Anderson",
+    notes:
+      "# Rust Programming Fundamentals\n\nRust is a modern systems programming language designed for **safety**, **speed**, and **concurrency** without relying on garbage collection. It is used in system programming, game engines, web assembly, embedded systems, and performance-critical applications.\n\n## Why Learn Rust?\n- Memory safety without garbage collector\n- Extremely fast like C/C++\n- Prevents null pointer and data race issues\n- Increasingly adopted in industry\n\n## What You Will Learn\n- Rust syntax and basics\n- Variables, data types, and mutability\n- Ownership and borrowing introduction\n- Control flow and loops\n- Functions and scopes\n- Basic error handling\n\n## Real-World Uses\n- System-level programming\n- Game engines\n- WebAssembly applications\n- Embedded systems\n- High-performance backend services\n\n## Outcome\nBy the end of this course, you will clearly understand Rust fundamentals, memory safety concepts, and be ready to explore advanced Rust programming like lifetimes, traits, and concurrency.",
     test: [
       {
-        id: 'rust-q1',
-        question: 'What makes Rust unique compared to C/C++?',
-        options: ['Faster execution', 'Memory safety without garbage collection', 'Easier syntax', 'Better for web development'],
+        id: "rust-q1",
+        question: "Rust is primarily designed for:",
+        options: [
+          "Web design",
+          "Low-level safe programming",
+          "Mobile UI design",
+          "Graphics only",
+        ],
         correctAnswer: 1,
-        explanation: 'Rust provides memory safety guarantees at compile time without needing a garbage collector.'
-      }
-    ]
-  }
-]
+        explanation:
+          "Rust focuses on low-level system programming with memory safety.",
+      },
+      {
+        id: "rust-q2",
+        question: "Rust is known for its unique:",
+        options: [
+          "Garbage collector",
+          "Ownership system",
+          "Slow performance",
+          "Lack of features",
+        ],
+        correctAnswer: 1,
+        explanation: "Rust's ownership system ensures memory safety.",
+      },
+      {
+        id: "rust-q3",
+        question: "Rust performance is comparable to:",
+        options: ["JavaScript", "Python", "C/C++", "PHP"],
+        correctAnswer: 2,
+        explanation: "Rust is designed to match C/C++ performance levels.",
+      },
+      {
+        id: "rust-q4",
+        question: "Rust is used in:",
+        options: [
+          "Only web design",
+          "Only mobile apps",
+          "System programming and performance apps",
+          "Only database systems",
+        ],
+        correctAnswer: 2,
+        explanation:
+          "Rust excels in system, embedded, and performance-heavy applications.",
+      },
+      {
+        id: "rust-q5",
+        question: "Rust prevents:",
+        options: [
+          "HTML errors",
+          "Design mistakes",
+          "Memory safety issues like null pointer dereferencing",
+          "Syntax highlighting issues",
+        ],
+        correctAnswer: 2,
+        explanation: "Rust's ownership and borrowing prevent memory crashes.",
+      },
+    ],
+  },
+  {
+    id: "ruby-beginner",
+    title: "Ruby Programming Basics",
+    description:
+      "Learn Ruby programming fundamentals including syntax, object-oriented concepts, and the foundation for modern web development using Ruby on Rails.",
+    language: "Ruby",
+    difficulty: "beginner",
+    duration: 11,
+    thumbnail: "/placeholder.svg?key=kvhij",
+    instructor: "Jessica Martinez",
+    notes:
+      "# Ruby Programming Basics\n\nRuby is a dynamic, object-oriented programming language known for its elegant and human-friendly syntax. It emphasizes developer happiness and productivity, making coding feel natural and expressive.\n\n## Why Learn Ruby?\n- Clean and readable syntax\n- Highly productive development experience\n- Strong focus on simplicity\n- Backbone of the Ruby on Rails framework\n\n## What You Will Learn\n- Ruby syntax and structure\n- Variables and data handling\n- Conditions and loops\n- Functions (methods) and reuse\n- Basic Object-Oriented Programming\n\n## Real-World Uses\n- Web development using Ruby on Rails\n- Backend systems and APIs\n- Automation scripts\n- Prototyping applications quickly\n\n## Outcome\nBy the end of this course, you will comfortably understand Ruby fundamentals, write expressive programs, and be ready to explore web development with Ruby on Rails.",
+    test: [
+      {
+        id: "ruby-q1",
+        question: "Ruby is best known for:",
+        options: [
+          "Complex syntax",
+          "Performance only",
+          "Readable and elegant syntax",
+          "Low-level programming",
+        ],
+        correctAnswer: 2,
+        explanation: "Ruby focuses on simplicity and readable code.",
+      },
+      {
+        id: "ruby-q2",
+        question: "Ruby is primarily used for:",
+        options: [
+          "Game engines",
+          "Mobile UI",
+          "Web development",
+          "Hardware programming",
+        ],
+        correctAnswer: 2,
+        explanation: "Ruby is most popular for building web applications.",
+      },
+      {
+        id: "ruby-q3",
+        question: "Which framework is Ruby famous for?",
+        options: ["Laravel", "Spring", "Ruby on Rails", "Django"],
+        correctAnswer: 2,
+        explanation: "Ruby on Rails is a powerful web framework built on Ruby.",
+      },
+      {
+        id: "ruby-q4",
+        question: "Ruby is:",
+        options: [
+          "Statically typed",
+          "Low-level",
+          "Dynamically typed",
+          "Assembly based",
+        ],
+        correctAnswer: 2,
+        explanation: "Ruby is a dynamically typed language.",
+      },
+      {
+        id: "ruby-q5",
+        question: "Ruby code is:",
+        options: [
+          "Hard to read",
+          "Similar to machine code",
+          "Human-friendly and expressive",
+          "Strictly complex",
+        ],
+        correctAnswer: 2,
+        explanation: "Ruby prioritizes developer happiness and readability.",
+      },
+    ],
+  },
+];
 
 // Language configurations for the compiler
 export const LANGUAGE_CONFIGS = {
-  python: { id: 'python', name: 'Python', extension: '.py', boilerplate: '# Write your Python code here\nprint("Hello, World!")' },
-  javascript: { id: 'javascript', name: 'JavaScript', extension: '.js', boilerplate: '// Write your JavaScript code here\nconsole.log("Hello, World!");' },
-  java: { id: 'java', name: 'Java', extension: '.java', boilerplate: 'public class Main {\n    public static void main(String[] args) {\n        System.out.println("Hello, World!");\n    }\n}' },
-  cpp: { id: 'cpp', name: 'C++', extension: '.cpp', boilerplate: '#include <iostream>\n\nint main() {\n    std::cout << "Hello, World!" << std::endl;\n    return 0;\n}' },
-  c: { id: 'c', name: 'C', extension: '.c', boilerplate: '#include <stdio.h>\n\nint main() {\n    printf("Hello, World!\\n");\n    return 0;\n}' },
-  ruby: { id: 'ruby', name: 'Ruby', extension: '.rb', boilerplate: '# Write your Ruby code here\nputs "Hello, World!"' },
-  go: { id: 'go', name: 'Go', extension: '.go', boilerplate: 'package main\n\nimport "fmt"\n\nfunc main() {\n    fmt.Println("Hello, World!")\n}' },
-  php: { id: 'php', name: 'PHP', extension: '.php', boilerplate: '<?php\n// Write your PHP code here\necho "Hello, World!\\n";\n?>' },
-  swift: { id: 'swift', name: 'Swift', extension: '.swift', boilerplate: 'import Foundation\n\n// Write your Swift code here\nprint("Hello, World!")' },
-  rust: { id: 'rust', name: 'Rust', extension: '.rs', boilerplate: 'fn main() {\n    // Write your Rust code here\n    println!("Hello, World!");\n}' },
-}
+  python: {
+    id: "python",
+    name: "Python",
+    extension: ".py",
+    boilerplate: '# Write your Python code here\nprint("Hello, World!")',
+  },
+  javascript: {
+    id: "javascript",
+    name: "JavaScript",
+    extension: ".js",
+    boilerplate:
+      '// Write your JavaScript code here\nconsole.log("Hello, World!");',
+  },
+  java: {
+    id: "java",
+    name: "Java",
+    extension: ".java",
+    boilerplate:
+      'public class Main {\n    public static void main(String[] args) {\n        System.out.println("Hello, World!");\n    }\n}',
+  },
+  cpp: {
+    id: "cpp",
+    name: "C++",
+    extension: ".cpp",
+    boilerplate:
+      '#include <iostream>\n\nint main() {\n    std::cout << "Hello, World!" << std::endl;\n    return 0;\n}',
+  },
+  c: {
+    id: "c",
+    name: "C",
+    extension: ".c",
+    boilerplate:
+      '#include <stdio.h>\n\nint main() {\n    printf("Hello, World!\\n");\n    return 0;\n}',
+  },
+  ruby: {
+    id: "ruby",
+    name: "Ruby",
+    extension: ".rb",
+    boilerplate: '# Write your Ruby code here\nputs "Hello, World!"',
+  },
+  go: {
+    id: "go",
+    name: "Go",
+    extension: ".go",
+    boilerplate:
+      'package main\n\nimport "fmt"\n\nfunc main() {\n    fmt.Println("Hello, World!")\n}',
+  },
+  php: {
+    id: "php",
+    name: "PHP",
+    extension: ".php",
+    boilerplate:
+      '<?php\n// Write your PHP code here\necho "Hello, World!\\n";\n?>',
+  },
+  swift: {
+    id: "swift",
+    name: "Swift",
+    extension: ".swift",
+    boilerplate:
+      'import Foundation\n\n// Write your Swift code here\nprint("Hello, World!")',
+  },
+  rust: {
+    id: "rust",
+    name: "Rust",
+    extension: ".rs",
+    boilerplate:
+      'fn main() {\n    // Write your Rust code here\n    println!("Hello, World!");\n}',
+  },
+};
 
 // Mock user progress data
 export interface UserProgress {
-  courseId: string
-  completedLessons: string[]
-  testScore?: number
-  certificateIssued: boolean
-  lastAccessed: string
+  courseId: string;
+  completedLessons: string[];
+  testScore?: number;
+  certificateIssued: boolean;
+  lastAccessed: string;
 }
 
 export interface User {
-  id: string
-  name: string
-  email: string
-  enrolledCourses: string[]
-  progress: UserProgress[]
-  totalCertificates: number
-  streak: number
+  id: string;
+  name: string;
+  email: string;
+  enrolledCourses: string[];
+  progress: UserProgress[];
+  totalCertificates: number;
+  streak: number;
 }
