@@ -6,8 +6,6 @@ import { type Course, LANGUAGE_CONFIGS } from "@/lib/data";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Progress } from "@/components/ui/progress";
-import { Badge } from "@/components/ui/badge";
 import {
   CheckCircle2,
   ChevronRight,
@@ -70,7 +68,7 @@ export function CoursePlayer({ course }: CoursePlayerProps) {
             <TabsContent value="notes" className="mt-4">
               <Card>
                 <CardContent className="pt-6 prose prose-invert max-w-none">
-                  <ReactMarkdown>{course.notes}</ReactMarkdown>
+                 <CourseNotes notes={course.notes}/>
                 </CardContent>
               </Card>
             </TabsContent>
@@ -245,6 +243,90 @@ export function MiniCompiler({ language }: MiniCompilerProps) {
           {output || "Run code to see results..."}
         </pre>
       </div>
+    </div>
+  );
+}
+
+import remarkGfm from "remark-gfm";
+import rehypeHighlight from "rehype-highlight";
+import "highlight.js/styles/github-dark.css";
+
+interface CourseNotesProps {
+  notes: string;
+}
+
+export function CourseNotes({ notes }: CourseNotesProps) {
+  return (
+    <div className="prose prose-slate dark:prose-invert max-w-none">
+      <ReactMarkdown
+        remarkPlugins={[remarkGfm]}
+        rehypePlugins={[rehypeHighlight]}
+        components={{
+          //
+          // TEXT AND SPACING
+          //
+          p: (props) => (
+            <p className="my-4 leading-relaxed" {...props} />
+          ),
+
+          //
+          // HEADINGS
+          //
+          h1: (props) => (
+            <h1 className="mt-6 mb-4 text-4xl font-bold" {...props} />
+          ),
+          h2: (props) => (
+            <h2 className="mt-6 mb-3 text-3xl font-bold border-b pb-2" {...props} />
+          ),
+          h3: (props) => (
+            <h3 className="mt-5 mb-2 text-2xl font-semibold" {...props} />
+          ),
+
+          //
+          // TABLES — works perfectly now
+          //
+          table: (props) => (
+            <div className="overflow-x-auto my-6">
+              <table
+                className="min-w-full border border-gray-300 rounded-lg"
+                {...props}
+              />
+            </div>
+          ),
+          thead: (props) => (
+            <thead className="bg-gray-100 dark:bg-gray-800" {...props} />
+          ),
+          th: (props) => (
+            <th
+              className="px-4 py-2 text-left font-semibold border"
+              {...props}
+            />
+          ),
+          td: (props) => (
+            <td
+              className="px-4 py-2 border"
+              {...props}
+            />
+          ),
+
+          //
+          // CODE BLOCKS
+          //
+          pre: (props) => (
+            <pre
+              className="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto my-4"
+              {...props}
+            />
+          ),
+          code: ({ className, children, ...props }) => (
+            <code className={`${className} text-sm`} {...props}>
+              {children}
+            </code>
+          ),
+        }}
+      >
+        {notes}
+      </ReactMarkdown>
     </div>
   );
 }

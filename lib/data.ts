@@ -44,8 +44,222 @@ export const COURSES: Course[] = [
     duration: 12,
     thumbnail: "/placeholder.svg?key=ld672",
     instructor: "Dr. Sarah Chen",
-    notes:
-      "# Python Programming for Beginners\n\nPython is a beginner-friendly, powerful, and highly versatile programming language trusted by developers worldwide.\nIt is widely used in **Web Development**, **Data Science**, **Machine Learning**, **AI**, **Automation**, **Cybersecurity**, **Scripting**, and **Backend Development**.\n\n## Why Python is Loved\n- Simple and readable syntax\n- Huge community support\n- Rich standard library\n- Cross-platform and portable\n- Great for beginners and professionals\n\n## What You Will Learn\n- Installing Python & environment setup\n- Variables, data types, and operators\n- Input and output handling\n- Conditional statements and loops\n- Functions and reusable logic\n- Lists, Tuples, Dictionaries\n- Basics of Object-Oriented Programming\n- File handling basics\n\n## Real-World Uses\n- Instagram, YouTube, Netflix backend\n- Machine Learning & AI (TensorFlow, PyTorch)\n- Data Analysis (Pandas, NumPy)\n- Automation & Scripting\n- Web Development (Django, Flask)\n\n## Outcome\nBy the end of this course, you'll confidently write Python programs, solve logical problems, understand real-world applications, and be ready to explore **Web Development**, **Machine Learning**, or **Automation**.",
+    notes: `# Python Programming for Beginners
+
+## 🐍 Introduction to Python
+
+Python is a **beginner-friendly**, **powerful**, and **highly versatile** programming language trusted by developers worldwide. Created by Guido van Rossum in 1991, Python has grown to become one of the most popular programming languages in the world.
+
+### What Makes Python Special?
+
+Python emphasizes code readability and allows developers to express concepts in fewer lines of code compared to other languages. Its philosophy is summarized in "The Zen of Python" - *Beautiful is better than ugly, Simple is better than complex*.
+
+---
+
+## 🌟 Why Python is Loved Worldwide
+
+| Feature | Description |
+|---------|-------------|
+| **Simple Syntax** | Easy to read and write, resembles plain English |
+| **Versatile** | Used in web, AI, data science, automation, and more |
+| **Huge Community** | Millions of developers, extensive documentation |
+| **Rich Libraries** | 200,000+ packages available via PyPI |
+| **Cross-Platform** | Runs on Windows, Mac, Linux, and more |
+| **Free & Open Source** | Completely free to use and modify |
+
+### Programming Paradigms Supported
+- ✅ **Procedural Programming**
+- ✅ **Object-Oriented Programming (OOP)**
+- ✅ **Functional Programming**
+
+---
+
+## 📚 What You Will Learn
+
+### Module 1: Getting Started
+- Installing Python and setting up your environment
+- Understanding the Python interpreter
+- Writing your first "Hello, World!" program
+- Using IDLE and VS Code for development
+
+### Module 2: Python Basics
+- **Variables and Data Types**
+  - Integers, Floats, Strings, Booleans
+  - Type conversion and type checking
+- **Operators**
+  - Arithmetic: +, -, *, /, //, %, **
+  - Comparison: ==, !=, >, <, >=, <=
+  - Logical: and, or, not
+  - Assignment operators
+
+### Module 3: Input and Output
+\`\`\`python
+# Input from user
+name = input("Enter your name: ")
+
+# Output to console
+print(f"Hello, {name}!")
+\`\`\`
+
+### Module 4: Control Flow
+- **Conditional Statements**
+  - if, elif, else structures
+  - Nested conditions
+  - Ternary operators
+- **Loops**
+  - for loops with range()
+  - while loops
+  - break and continue statements
+  - Loop else clause
+
+### Module 5: Data Structures
+| Structure | Mutable | Ordered | Syntax |
+|-----------|---------|---------|--------|
+| **List** | ✅ Yes | ✅ Yes | \`[1, 2, 3]\` |
+| **Tuple** | ❌ No | ✅ Yes | \`(1, 2, 3)\` |
+| **Dictionary** | ✅ Yes | ✅ Yes (3.7+) | \`{'key': 'value'}\` |
+| **Set** | ✅ Yes | ❌ No | \`{1, 2, 3}\` |
+
+### Module 6: Functions
+- Defining and calling functions
+- Parameters and arguments
+- Return values
+- Default parameters
+- *args and **kwargs
+- Lambda functions
+- Scope and namespaces
+
+### Module 7: Introduction to OOP
+- Classes and Objects
+- Attributes and Methods
+- Constructor (\`__init__\`)
+- Basic inheritance
+
+### Module 8: File Handling
+- Reading files: \`open(), read(), readline(), readlines()\`
+- Writing files: \`write(), writelines()\`
+- Context managers: \`with\` statement
+- Working with CSV and JSON files
+
+---
+
+## 🚀 Real-World Applications
+
+### Web Development
+- **Django** - Full-stack web framework (Instagram, Pinterest)
+- **Flask** - Lightweight micro-framework
+- **FastAPI** - Modern, fast API development
+
+### Data Science & Analytics
+- **Pandas** - Data manipulation and analysis
+- **NumPy** - Numerical computing
+- **Matplotlib/Seaborn** - Data visualization
+
+### Machine Learning & AI
+- **TensorFlow** - Deep learning framework (Google)
+- **PyTorch** - Research and production ML (Facebook)
+- **Scikit-learn** - Traditional machine learning
+
+### Automation & Scripting
+- Web scraping with BeautifulSoup and Selenium
+- Task automation with scripts
+- DevOps and system administration
+- Testing automation with Pytest
+
+### Other Domains
+- **Game Development** - Pygame
+- **Desktop Applications** - Tkinter, PyQt
+- **Networking** - Socket programming
+- **Cybersecurity** - Penetration testing tools
+
+---
+
+## 💼 Companies Using Python
+
+| Company | Use Case |
+|---------|----------|
+| **Google** | Core infrastructure, YouTube backend |
+| **Netflix** | Data analysis, recommendation engine |
+| **Instagram** | Entire backend built with Django |
+| **Spotify** | Data analysis and backend services |
+| **Dropbox** | Desktop client and backend |
+| **NASA** | Scientific computing and analysis |
+
+---
+
+## 📊 Python vs Other Languages
+
+### Comparison Table
+
+| Feature | Python | Java | JavaScript | C++ |
+|---------|--------|------|------------|-----|
+| Learning Curve | Easy | Medium | Medium | Hard |
+| Speed | Medium | Fast | Fast | Very Fast |
+| Use Case | General Purpose | Enterprise | Web | Systems |
+| Syntax | Simple | Verbose | Moderate | Complex |
+| Community | Huge | Large | Huge | Large |
+
+---
+
+## 🎯 Learning Outcomes
+
+By the end of this course, you will be able to:
+
+✅ **Write Clean Python Code** - Understand syntax, best practices, and PEP 8 style guide
+
+✅ **Solve Real Problems** - Build logic to solve algorithmic challenges
+
+✅ **Handle Data Efficiently** - Work with lists, dictionaries, files, and JSON
+
+✅ **Create Functions** - Write reusable, modular code
+
+✅ **Understand OOP Basics** - Classes, objects, and basic inheritance
+
+✅ **Build Small Projects** - Calculator, to-do list, file manager, web scraper
+
+✅ **Prepare for Advanced Topics** - Ready for web development, data science, or automation
+
+---
+
+## 📖 Recommended Practice Resources
+
+- **LeetCode** - Algorithmic problems
+- **HackerRank** - Python challenges
+- **Project Euler** - Mathematical problems
+- **Real Python** - Tutorials and articles
+- **Python Official Docs** - python.org/docs
+
+---
+
+## 🏆 Career Opportunities
+
+### Job Roles
+- Python Developer
+- Data Scientist
+- Machine Learning Engineer
+- Backend Developer
+- DevOps Engineer
+- Automation Engineer
+- Full Stack Developer (with JavaScript)
+
+### Average Salaries (Global)
+- Entry Level: $60,000 - $80,000
+- Mid Level: $80,000 - $120,000
+- Senior Level: $120,000 - $180,000+
+
+---
+
+## 🎓 Next Steps After This Course
+
+1. **Web Development** → Learn Django or Flask
+2. **Data Science** → Master Pandas, NumPy, Matplotlib
+3. **Machine Learning** → Explore TensorFlow or PyTorch
+4. **Automation** → Build scripts for daily tasks
+5. **API Development** → Learn FastAPI or Flask-RESTful
+
+---
+
+*Happy Coding! 🐍✨*`,
     test: [
       {
         id: "py-q1",
@@ -102,8 +316,273 @@ export const COURSES: Course[] = [
     duration: 14,
     thumbnail: "/placeholder.svg?key=h1qs8",
     instructor: "Michael Rodriguez",
-    notes:
-      "# JavaScript Fundamentals\n\nJavaScript is the **programming language of the web**, responsible for making websites interactive, dynamic, and functional. It powers modern web applications, browsers, servers, mobile apps, and even games.\n\n## Why JavaScript is Important\n- Runs in every web browser\n- Used in Frontend, Backend, Mobile, and Desktop apps\n- Core of modern frameworks like React, Angular, Vue\n- Massive community and ecosystem\n\n## What You Will Learn\n- JavaScript syntax and execution\n- Variables: var, let, const\n- Data types and operators\n- Conditional statements and loops\n- Functions and Arrow Functions (ES6)\n- Arrays and Objects basics\n- Basic DOM manipulation\n- Introduction to asynchronous programming\n\n## Real-World Uses\n- Interactive web interfaces\n- Dynamic UI behavior\n- Backend development using Node.js\n- Single Page Applications (React, Next.js)\n- APIs and real-time applications\n\n## Outcome\nBy the end of this course, you will be confident in writing JavaScript code, understanding logic building, and building interactive web features.",
+    notes: `# JavaScript Fundamentals
+
+## ⚡ Introduction to JavaScript
+
+JavaScript is the **language of the web**, powering interactive websites, web apps, mobile apps, servers, and even desktop software. Created in 1995 by Brendan Eich, JavaScript has evolved into one of the most powerful and widely used programming languages in the world.
+
+It runs everywhere:
+- In your **browser**
+- On **servers** (Node.js)
+- In **mobile apps** (React Native)
+- In **desktop apps** (Electron)
+- In **IoT devices**
+
+JavaScript + HTML + CSS = Modern Web
+
+---
+
+## 🌟 Why JavaScript is So Popular?
+
+| Feature | Description |
+|--------|-------------|
+| **Runs Everywhere** | Browser, Server, Mobile, Desktop |
+| **Beginner Friendly** | Easy to start, fast to build |
+| **Huge Ecosystem** | Thousands of libraries & frameworks |
+| **High Demand** | One of the most in-demand skills globally |
+| **Full-Stack Power** | Same language frontend + backend |
+| **Community Support** | Massive developer community |
+
+---
+
+## 🧠 Programming Paradigms Supported
+
+JavaScript supports multiple programming styles:
+
+- ✅ **Procedural**
+- ✅ **Object-Oriented**
+- ✅ **Functional Programming**
+- ✅ **Event-Driven Programming**
+
+---
+
+## 📚 What You Will Learn
+
+### 🔰 Module 1: Getting Started
+- What is JavaScript?
+- Running JS in browser + Node.js
+- console.log()
+- Comments in JavaScript
+
+---
+
+## ✨ Module 2: Variables & Data Types
+
+### Variables
+- \`var\` → old, avoid
+- \`let\` → changeable variable
+- \`const\` → constant value
+
+### Primitive Data Types
+- Number
+- String
+- Boolean
+- Null
+- Undefined
+- BigInt
+- Symbol
+
+\`\`\`js
+let name = "CodeZen";
+const year = 2026;
+console.log("Hello", name);
+\`\`\`
+
+---
+
+## ➗ Module 3: Operators
+- Arithmetic → + - * / %
+- Comparison → == === != > <
+- Logical →
+  - && (AND)
+  - || (OR)
+  - ! (NOT)
+- Assignment operators
+
+---
+
+## 🧩 Module 4: Control Flow
+
+### Conditions
+- if
+- else
+- else if
+- switch
+
+### Example
+\`\`\`js
+let age = 18;
+
+if(age >= 18){
+    console.log("Adult");
+} else {
+    console.log("Minor");
+}
+\`\`\`
+
+---
+
+## 🔁 Module 5: Loops
+
+- for
+- while
+- do..while
+- for..of
+- for..in
+
+\`\`\`js
+for(let i=1; i<=5; i++){
+  console.log(i);
+}
+\`\`\`
+
+---
+
+## 📦 Module 6: Arrays & Objects
+
+### Arrays
+- push()
+- pop()
+- map()
+- filter()
+
+\`\`\`js
+let numbers = [1,2,3];
+numbers.push(4);
+console.log(numbers);
+\`\`\`
+
+### Objects
+\`\`\`js
+const student = {
+  name: "Alex",
+  age: 20
+};
+console.log(student.name);
+\`\`\`
+
+---
+
+## 🧠 Module 7: Functions
+
+- Normal functions
+- Arrow functions
+- Parameters
+- Return values
+
+\`\`\`js
+function greet(name){
+  return "Hello " + name;
+}
+console.log(greet("JavaScript"));
+\`\`\`
+
+Arrow:
+\`\`\`js
+const add = (a,b) => a + b;
+console.log(add(5,3));
+\`\`\`
+
+---
+
+## 🌐 Module 8: DOM Basics (Preview)
+
+- Selecting elements
+- Changing text
+- Handling events
+
+\`\`\`js
+document.getElementById("title").innerText = "Welcome!";
+\`\`\`
+
+---
+
+## 🚀 Real-World Applications
+
+### 💻 Web Development
+- React
+- Vue
+- Angular
+
+### 🧠 Backend
+- Node.js
+- Express
+
+### 📱 Mobile Apps
+- React Native
+
+### 🕹 Games
+- Phaser.js
+
+---
+
+## 💼 Companies Using JavaScript
+
+| Company | Use Case |
+|--------|---------|
+| Google | Web & Apps |
+| Meta | React & Web Apps |
+| Netflix | UI + Backend |
+| PayPal | Node.js |
+| Uber | Real-time apps |
+
+---
+
+## 📊 JavaScript vs Other Languages
+
+| Feature | JS | Python | Java |
+|--------|----|--------|------|
+| Web Power | ⭐⭐⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐ |
+| Speed | ⭐⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐⭐⭐ |
+| Learning Curve | Easy | Easy | Medium |
+| Ecosystem | Huge | Huge | Large |
+
+---
+
+## 🎯 Learning Outcomes
+
+By the end of this course:
+
+✅ Build interactive programs  
+✅ Understand real JavaScript logic  
+✅ Work confidently with variables, functions, loops  
+✅ Prepare for frameworks (React, Node.js)
+
+---
+
+## 📖 Practice Resources
+
+- HackerRank — JavaScript challenges
+- LeetCode — Problem solving
+- FreeCodeCamp — Projects & lessons
+- MDN Docs — Official documentation
+
+---
+
+## 🏆 Career Paths
+
+- Frontend Developer
+- Full Stack Developer
+- Backend Developer
+- App Developer
+- Game Developer
+
+---
+
+## 🎓 Next Steps After This Course
+
+1️⃣ Learn HTML + CSS Deeply  
+2️⃣ Master DOM Manipulation  
+3️⃣ Learn React or Vue  
+4️⃣ Build Projects  
+5️⃣ Learn Node.js for backend
+
+---
+
+*Happy Coding ⚡🚀*
+`,
+
     test: [
       {
         id: "js-q1",
@@ -160,8 +639,280 @@ export const COURSES: Course[] = [
     duration: 16,
     thumbnail: "/placeholder.svg?key=r6sqa",
     instructor: "Prof. David Kim",
-    notes:
-      "# Java Programming Essentials\n\nJava is a powerful, object-oriented programming language widely used in enterprise systems, Android development, finance, and large-scale applications. It is known for its reliability, performance, and security.\n\n## Why Learn Java?\n- Platform Independent (Write Once, Run Anywhere)\n- Strongly Typed and Structured\n- Backbone of many enterprise systems\n- Used in Android apps, banking systems, backend APIs\n\n## What You Will Learn\n- Java syntax and program structure\n- Variables, data types, and operators\n- Control flow: if, loops, switches\n- Functions (methods) and parameters\n- Classes, Objects, and OOP basics\n- Introduction to error handling\n\n## Real-World Uses\n- Android application development\n- Enterprise applications\n- Banking and finance systems\n- Backend REST APIs\n\n## Outcome\nBy the end of this course, you’ll understand how Java programs execute, write structured code, and be prepared for Object-Oriented and advanced Java development.",
+    notes: `# Java Programming Essentials
+
+## ☕ Introduction to Java
+
+Java is one of the most powerful, secure, and widely used programming languages in the world. Developed by Sun Microsystems (now Oracle), Java follows the philosophy **Write Once, Run Anywhere (WORA)** thanks to the Java Virtual Machine (JVM).
+
+Java powers:
+
+- Android Apps
+- Banking & Financial Systems
+- Enterprise Applications
+- Backend Services
+- Gaming Engines
+- Big Data Platforms
+
+---
+
+## 🌟 Why Java is Trusted Worldwide
+
+| Feature | Description |
+|--------|-------------|
+| **Platform Independent** | Runs anywhere with JVM |
+| **Highly Secure** | Built-in security & sandboxing |
+| **Object Oriented** | Clean structured programming |
+| **High Performance** | Faster than Python & JS |
+| **Enterprise Standard** | Used in banks, corporates |
+| **Huge Community** | Millions of developers |
+
+---
+
+## 🧠 Programming Paradigms Supported
+- ✅ Object-Oriented Programming
+- ✅ Procedural
+- ✅ Modular
+- ⚙ Functional features (Lambdas)
+
+---
+
+## 📚 What You Will Learn
+
+---
+
+## 🔰 Module 1: Getting Started
+- Install JDK
+- Set PATH
+- Compile & Run Java Programs
+- Understanding JVM, JDK, JRE
+
+### Your First Java Program
+\`\`\`java
+public class Main {
+  public static void main(String[] args) {
+    System.out.println("Hello Java!");
+  }
+}
+\`\`\`
+
+---
+
+## 🏗 Module 2: Syntax & Structure
+- class & main method
+- Statements & Semicolons
+- Packages & Imports
+
+---
+
+## ✨ Module 3: Variables & Data Types
+
+### Primitive Data Types
+- byte
+- short
+- int
+- long
+- float
+- double
+- boolean
+- char
+
+### Non-Primitive
+- String
+- Arrays
+- Objects
+
+\`\`\`java
+int age = 21;
+String name = "CodeZen";
+System.out.println(name + " is " + age);
+\`\`\`
+
+---
+
+## ➗ Module 4: Operators
+- Arithmetic (+ - * / %)
+- Comparison (== != > < >= <=)
+- Logical (&& || !)
+- Assignment (= += -=)
+
+---
+
+## 🧩 Module 5: Control Flow
+- if / else
+- switch
+- ternary operator
+
+### Example
+\`\`\`java
+int marks = 85;
+
+if(marks >= 90){
+  System.out.println("A Grade");
+} else {
+  System.out.println("Good Score");
+}
+\`\`\`
+
+---
+
+## 🔁 Module 6: Loops
+- for loop
+- while loop
+- do while loop
+- enhanced for loop
+
+\`\`\`java
+for(int i=1;i<=5;i++){
+  System.out.println(i);
+}
+\`\`\`
+
+---
+
+## 📦 Module 7: Arrays
+\`\`\`java
+int nums[] = {1,2,3,4};
+System.out.println(nums[0]);
+\`\`\`
+
+---
+
+## 🧠 Module 8: Functions (Methods)
+
+- Method declaration
+- Parameters
+- Return values
+- Method Overloading
+
+\`\`\`java
+static int add(int a,int b){
+ return a+b;
+}
+\`\`\`
+
+---
+
+## 🏛 Module 9: Object-Oriented Programming
+
+### Concepts
+- Classes
+- Objects
+- Constructor
+- this keyword
+
+\`\`\`java
+class Student {
+ String name;
+ 
+ Student(String n){
+  name = n;
+ }
+}
+\`\`\`
+
+---
+
+## 👑 Advanced OOP (Preview)
+- Inheritance
+- Polymorphism
+- Abstraction
+- Encapsulation
+- Interfaces
+
+---
+
+## 📂 File Handling (Preview)
+- Reading files
+- Writing files
+
+---
+
+## 🚀 Real-World Applications
+
+### Android Development
+- Entire Android ecosystem built on Java
+
+### Enterprise Solutions
+- Banking systems
+- Billing systems
+- Transaction processing
+
+### Backend
+- Spring Boot
+- Microservices
+
+### Big Data
+- Hadoop
+- Kafka
+
+---
+
+## 💼 Companies Using Java
+
+| Company | Usage |
+|--------|--------|
+| Google | Android & backend |
+| Netflix | Backend |
+| Amazon | Services & APIs |
+| HSBC | Banking |
+| LinkedIn | Backend |
+| NASA | Software systems |
+
+---
+
+## 📊 Java vs Other Languages
+
+| Feature | Java | Python | JS |
+|--------|------|--------|----|
+| Speed | ⭐⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐⭐⭐ |
+| Security | ⭐⭐⭐⭐⭐ | ⭐⭐ | ⭐⭐ |
+| Enterprise Use | ⭐⭐⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐ |
+| Learning Curve | Medium | Easy | Easy |
+
+---
+
+## 🎯 Learning Outcomes
+
+By the end:
+
+✅ Strong programming foundation  
+✅ Write Java programs confidently  
+✅ Understand OOP deeply  
+✅ Ready for Android, Spring Boot & Backend  
+
+---
+
+## 📖 Practice Resources
+- HackerRank Java
+- LeetCode
+- CodeChef
+- Oracle Java Docs
+- GeeksForGeeks
+
+---
+
+## 🏆 Career Opportunities
+- Java Developer
+- Backend Developer
+- Android Developer
+- Software Engineer
+- Enterprise Architect
+
+---
+
+## 🎓 Next Steps
+1️⃣ Learn OOP deeply  
+2️⃣ Learn Collections  
+3️⃣ Learn Exception Handling  
+4️⃣ Learn JDBC & Databases  
+5️⃣ Move to Spring Boot / Android  
+
+---
+
+*Code Smart ☕🔥*
+`,
+
     test: [
       {
         id: "java-q1",
@@ -227,8 +978,289 @@ export const COURSES: Course[] = [
     duration: 15,
     thumbnail: "/placeholder.svg?key=ox15q",
     instructor: "Dr. Emily Watson",
-    notes:
-      "# C++ Programming Basics\n\nC++ is a high-performance programming language widely used in game development, system programming, embedded systems, finance, and applications that require speed and efficiency.\n\n## Why Learn C++?\n- Extremely fast and powerful\n- Close to hardware yet high-level capability\n- Strong control over memory management\n- Used in game engines, operating systems, and performance systems\n\n## What You Will Learn\n- C++ syntax and structure\n- Input and output using iostream\n- Variables, data types, and operators\n- Conditional statements and loops\n- Functions and modular programming\n- Basic introduction to Object-Oriented Programming\n\n## Real-World Uses\n- Game engines (Unreal Engine)\n- Operating systems and drivers\n- High-speed trading systems\n- Embedded and real-time applications\n\n## Outcome\nBy the end of this course, you will understand how C++ works, write efficient programs, and build a strong foundation for advanced C++ development like OOP, STL, and memory handling.",
+    notes: `# C++ Programming Basics
+
+## 💻 Introduction to C++
+
+C++ is a **high-performance, powerful, and feature-rich programming language** widely used in systems where **speed, control, and efficiency** are critical. Created by Bjarne Stroustrup, C++ extends the C programming language by adding **Object-Oriented Programming**, better abstraction, and modern features.
+
+C++ is commonly used in:
+
+- Game Development
+- Operating Systems
+- Desktop Applications
+- Embedded Systems
+- High-Frequency Trading
+- Compilers & Browsers
+
+---
+
+## 🌟 Why Learn C++?
+
+| Feature | Description |
+|--------|-------------|
+| ⚡ **Blazing Fast** | Close to hardware, near C speed |
+| 🧠 **Powerful OOP** | Supports classes, inheritance & polymorphism |
+| 🔧 **Fine Memory Control** | Pointers, manual memory management |
+| 🏗 **Foundation Language** | Basis of Unreal Engine, Chrome, MySQL |
+| 🌍 **Industry Standard** | Used by top tech companies |
+
+---
+
+## 🧠 Programming Paradigms Supported
+- Procedural Programming
+- Object-Oriented Programming
+- Generic Programming
+- Functional Programming (with modern C++)
+
+---
+
+## 📚 What You Will Learn
+
+---
+
+## 🔰 Module 1: Getting Started
+
+- C++ Program Structure
+- Compiler (g++, clang)
+- Input / Output
+
+### Hello World Program
+\`\`\`cpp
+#include <iostream>
+using namespace std;
+
+int main() {
+    cout << "Hello C++!";
+    return 0;
+}
+\`\`\`
+
+---
+
+## ✨ Module 2: Variables & Data Types
+
+### Basic Data Types
+- int
+- float
+- double
+- char
+- bool
+- string (from \<string\>)
+
+### Example
+\`\`\`cpp
+int age = 20;
+double price = 99.5;
+string name = "CodeZen";
+
+cout << name << " is " << age;
+\`\`\`
+
+---
+
+## ➗ Module 3: Operators
+
+- Arithmetic: + - * / %
+- Comparison: == != > < >= <=
+- Logical: && || !
+- Assignment: = += -= *=
+
+---
+
+## 🧩 Module 4: Control Flow
+
+### If / Else
+\`\`\`cpp
+int marks = 75;
+
+if(marks >= 90)
+    cout << "Excellent";
+else if(marks >= 60)
+    cout << "Good";
+else
+    cout << "Work Hard";
+\`\`\`
+
+### Switch
+\`\`\`cpp
+int day = 3;
+
+switch(day){
+ case 1: cout << "Mon"; break;
+ case 2: cout << "Tue"; break;
+ default: cout << "Other";
+}
+\`\`\`
+
+---
+
+## 🔁 Module 5: Loops
+
+### For Loop
+\`\`\`cpp
+for(int i = 1; i <= 5; i++) {
+  cout << i << endl;
+}
+\`\`\`
+
+### While Loop
+\`\`\`cpp
+int x = 1;
+while(x <= 5){
+  cout << x << endl;
+  x++;
+}
+\`\`\`
+
+---
+
+## 📦 Module 6: Arrays
+
+\`\`\`cpp
+int arr[3] = {10, 20, 30};
+cout << arr[0];
+\`\`\`
+
+---
+
+## 🧠 Module 7: Functions
+
+\`\`\`cpp
+int add(int a, int b){
+  return a + b;
+}
+\`\`\`
+
+---
+
+## 🏛 Module 8: Object-Oriented Programming
+
+C++ is famous for OOP.
+
+### Concepts
+- Classes
+- Objects
+- Constructors
+- Inheritance
+- Polymorphism
+- Encapsulation
+
+### Example
+\`\`\`cpp
+class Student {
+public:
+ string name;
+ int age;
+
+ void intro(){
+  cout << name << " is " << age;
+ }
+};
+\`\`\`
+
+---
+
+## 🧠 Module 9: Pointers & Memory (Preview)
+
+- Address of (&)
+- Dereferencing (*)
+- Dynamic Memory
+
+\`\`\`cpp
+int a = 10;
+int *p = &a;
+cout << *p;
+\`\`\`
+
+---
+
+## 🚀 Real-World Applications
+
+### 🎮 Game Development
+- Unreal Engine
+- AAA Games
+
+### 🧠 System Programming
+- OS Kernel Components
+- Drivers
+
+### 🌐 Browsers
+- Chrome Engine
+- Firefox Components
+
+### 💰 Finance
+- High-frequency trading systems
+
+---
+
+## 💼 Companies Using C++
+
+| Company | Usage |
+|--------|--------|
+| Microsoft | Windows, Office |
+| Google | Chrome, Search Systems |
+| Unreal Engine | Game Dev |
+| Adobe | Photoshop, Premiere |
+| Apple | OS Components |
+| Meta | Performance Systems |
+
+---
+
+## 📊 C++ vs Other Languages
+
+| Feature | C++ | Java | Python |
+|--------|-----|------|--------|
+| Speed | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐ |
+| Memory Control | ⭐⭐⭐⭐⭐ | ⭐⭐ | ⭐ |
+| Learning Curve | Hard | Medium | Easy |
+| System Level | Strong | Medium | Weak |
+
+---
+
+## 🎯 Learning Outcomes
+
+By the end of this course:
+
+✅ Write C++ programs confidently  
+✅ Understand memory and performance  
+✅ Work with OOP effectively  
+✅ Build strong problem-solving ability  
+✅ Prepare for development & competitive programming  
+
+---
+
+## 📖 Practice Resources
+
+- HackerRank C++
+- Codeforces
+- LeetCode
+- GeeksForGeeks
+- CPP Reference Docs
+
+---
+
+## 🏆 Career Paths
+
+- Game Developer
+- System Programmer
+- Software Engineer
+- Embedded Developer
+- Performance Engineer
+
+---
+
+## 🎓 Next Steps
+
+1️⃣ Learn STL  
+2️⃣ Learn Advanced OOP  
+3️⃣ Learn File Handling  
+4️⃣ Move to Competitive Programming or Game Dev  
+
+---
+
+*Code Fast, Code Powerful 💻⚡*
+`,
     test: [
       {
         id: "cpp-q1",
@@ -290,8 +1322,279 @@ export const COURSES: Course[] = [
     duration: 13,
     thumbnail: "/placeholder.svg?key=rypdo",
     instructor: "Prof. Robert Johnson",
-    notes:
-      "# C Programming Foundation\n\nC is one of the most powerful and foundational programming languages ever created. It is used in system programming, operating systems, embedded devices, game engines, and performance-critical applications.\n\n## Why Learn C?\n- Extremely fast and efficient\n- Provides low-level memory access\n- Foundation for C++, Java, and many modern languages\n- Used in operating systems, device drivers, and embedded systems\n\n## What You Will Learn\n- C program structure\n- Variables, data types, and operators\n- Input/Output using stdio\n- If-else, loops, and conditions\n- Functions and modular programming\n- Basic memory understanding\n\n## Real-World Uses\n- Operating systems like Windows and Linux components\n- Embedded systems and microcontrollers\n- Game engines and performance systems\n- Compiler and interpreter development\n\n## Outcome\nBy the end of this course, you will understand low-level programming concepts, write efficient C programs, and build a strong base for C++, system programming, and embedded development.",
+    notes: `# C Programming Foundation
+
+## 🔧 Introduction to C Programming
+
+C is a **powerful, low-level programming language** that forms the foundation of almost every modern programming language. Created by Dennis Ritchie in 1972, C is used to build:
+
+- Operating Systems
+- Embedded Systems
+- Compilers
+- Database Engines
+- Drivers & Firmware
+- High-Performance Applications
+
+C gives you **complete control over memory and hardware**, making it essential for serious programmers.
+
+---
+
+## 🌟 Why Learn C?
+
+| Feature | Description |
+|--------|-------------|
+| ⚙ **Low-Level Control** | Direct interaction with memory & hardware |
+| ⚡ **Super Fast** | Used where performance matters |
+| 🧠 **Foundation Language** | Base of C++, Java, Python, Go, Rust |
+| 🏗 **System-Level Power** | Build OS, Kernels, Drivers |
+| 🎯 **Deep Understanding** | Learn how computers actually work |
+
+Learning C makes you a **stronger, smarter, more logical programmer**.
+
+---
+
+## 🧠 Programming Paradigms Supported
+- Procedural Programming
+- Structured Programming
+- Modular Programming
+
+---
+
+## 📚 What You Will Learn
+
+---
+
+## 🔰 Module 1: Getting Started
+
+- Installing GCC / MinGW
+- Understanding Compiler
+- Writing & running programs
+
+### Hello World
+\`\`\`c
+#include <stdio.h>
+
+int main() {
+    printf("Hello C!\\n");
+    return 0;
+}
+\`\`\`
+
+---
+
+## ✨ Module 2: Syntax & Structure
+- Header Files
+- Main Function
+- Statements & Semicolons
+- Comments
+
+---
+
+## 📦 Module 3: Variables & Data Types
+
+### Basic Types
+- int
+- float
+- double
+- char
+
+\`\`\`c
+int age = 20;
+float price = 99.5;
+char grade = 'A';
+
+printf("%d %f %c", age, price, grade);
+\`\`\`
+
+---
+
+## ➗ Module 4: Operators
+
+- Arithmetic: + - * / %
+- Comparison: == != > < >= <=
+- Logical: && || !
+- Assignment: = += -=
+
+---
+
+## 🧩 Module 5: Control Flow
+
+### If / Else
+\`\`\`c
+int marks = 80;
+
+if(marks >= 90)
+  printf("Excellent");
+else
+  printf("Good");
+\`\`\`
+
+### Switch
+\`\`\`c
+int day = 2;
+
+switch(day){
+ case 1: printf("Mon"); break;
+ case 2: printf("Tue"); break;
+ default: printf("Other");
+}
+\`\`\`
+
+---
+
+## 🔁 Module 6: Loops
+
+### For Loop
+\`\`\`c
+for(int i=1; i<=5; i++){
+  printf("%d\\n", i);
+}
+\`\`\`
+
+### While Loop
+\`\`\`c
+int x = 1;
+while(x <= 5){
+  printf("%d\\n", x);
+  x++;
+}
+\`\`\`
+
+---
+
+## 📂 Module 7: Arrays
+
+\`\`\`c
+int arr[3] = {10, 20, 30};
+printf("%d", arr[0]);
+\`\`\`
+
+---
+
+## 🧠 Module 8: Functions
+
+- Function Declaration
+- Parameters
+- Return Value
+
+\`\`\`c
+int add(int a, int b){
+  return a + b;
+}
+\`\`\`
+
+---
+
+## 🧬 Module 9: Pointers (Core Power of C)
+
+- Memory Address (&)
+- Pointer Variable (*)
+- Dereferencing
+
+\`\`\`c
+int a = 10;
+int *p = &a;
+printf("%d", *p);
+\`\`\`
+
+---
+
+## 📁 Module 10: File Handling (Preview)
+
+- Reading files
+- Writing files
+- fopen, fclose, fprintf, fscanf
+
+---
+
+## 🚀 Real-World Applications
+
+### 🖥 Operating Systems
+- Windows
+- Linux
+- MacOS
+
+### 📦 Compilers
+- GCC
+- Clang
+
+### 🔌 Embedded Systems
+- Microcontrollers
+- Firmware
+- IoT
+
+### 💾 Databases
+- MySQL core built in C
+
+---
+
+## 💼 Companies Using C
+
+| Company | Usage |
+|--------|--------|
+| Microsoft | Windows Kernel |
+| Apple | macOS components |
+| Google | Performance systems |
+| NASA | Hardware programming |
+| Intel | Firmware & drivers |
+
+---
+
+## 📊 C vs Other Languages
+
+| Feature | C | C++ | Python |
+|--------|---|-----|--------|
+| Speed | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐ |
+| Memory Control | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐ |
+| Learning Curve | Hard | Hard | Easy |
+| System Level | Strongest | Strong | Weak |
+
+---
+
+## 🎯 Learning Outcomes
+
+By the end of this course:
+
+✅ Write efficient C programs  
+✅ Understand how memory works  
+✅ Master logic & structured programming  
+✅ Build strong problem-solving foundation  
+✅ Be ready for C++ / Embedded / Systems Programming  
+
+---
+
+## 📖 Practice Resources
+
+- HackerRank C
+- CodeChef
+- LeetCode
+- GeeksForGeeks
+- C Programming Docs
+
+---
+
+## 🏆 Career Opportunities
+
+- Embedded Developer
+- Firmware Engineer
+- System Programmer
+- Kernel & OS Developer
+- Performance Engineer
+
+---
+
+## 🎓 Next Steps
+
+1️⃣ Learn Pointers Deeply  
+2️⃣ Learn Dynamic Memory (malloc, free)  
+3️⃣ Learn Structures  
+4️⃣ Learn File Handling  
+5️⃣ Move to Embedded or C++  
+
+---
+
+*Think Low Level. Code Like a Pro 🔧⚙*
+`,
     test: [
       {
         id: "c-q1",
@@ -346,8 +1649,294 @@ export const COURSES: Course[] = [
     duration: 12,
     thumbnail: "/placeholder.svg?key=415ai",
     instructor: "Alex Thompson",
-    notes:
-      "# Go Programming Essentials\n\nGo (Golang) is a modern programming language created by Google, designed for simplicity, performance, and massive scalability. It is commonly used for backend services, cloud computing, DevOps tools, and distributed systems.\n\n## Why Learn Go?\n- Extremely fast compiled language\n- Simple and clean syntax\n- Built-in support for concurrency (goroutines)\n- Designed for cloud, microservices, and scalable systems\n\n## What You Will Learn\n- Go program structure\n- Variables, data types, and operators\n- Input and output basics\n- Conditional statements and loops\n- Functions and reusable logic\n- Introduction to Goroutines\n\n## Real-World Uses\n- Cloud applications\n- Backend APIs and microservices\n- Networking tools and servers\n- DevOps and automation tools (Docker, Kubernetes)\n\n## Outcome\nBy the end of this course, you will understand Go fundamentals, write efficient programs, and be ready to explore backend development, microservices, and cloud programming.",
+    notes: `# Go Programming Essentials
+
+## 🚀 Introduction to Go (Golang)
+
+Go (also called Golang) is a **modern, powerful, and highly efficient programming language** created by Google. It was designed to solve real-world problems related to **performance, scalability, and simplicity**, especially in **cloud computing and backend systems**.
+
+With Go, you get:
+- Speed like C++
+- Simplicity like Python
+- Power like Java
+- Built-in concurrency
+- Minimal complexity
+
+Go is widely used in backend services, cloud computing, networking tools, DevOps, microservices, and distributed systems.
+
+---
+
+## 🌟 Why Learn Go?
+
+| Feature | Description |
+|--------|-------------|
+| ⚡ **Blazing Fast** | Compiled language with high performance |
+| 🧠 **Simple & Clean Syntax** | Easy to learn and read |
+| 🔄 **Built-in Concurrency** | Goroutines & channels |
+| ☁ **Cloud Native** | Perfect for microservices |
+| 🏗 **Scalable** | Handles millions of users |
+| 🛠 **Great Tooling** | Formatter, testing, profiling included |
+
+---
+
+## 🧠 Go Philosophy
+
+Go follows three powerful principles:
+
+- **Keep it simple**
+- **Fast development**
+- **Highly reliable programs**
+
+Unlike many languages, Go focuses on **clarity over complexity**.
+
+---
+
+## 🧬 Programming Paradigms Supported
+
+- Procedural Programming
+- Concurrent Programming
+- Modular Programming
+
+(Go intentionally avoids full OOP complexity — but supports struct-based design.)
+
+---
+
+## 📚 What You Will Learn
+
+---
+
+## 🔰 Module 1: Getting Started
+
+- Installing Go
+- GOPATH & Workspace
+- Running Programs
+
+### Hello World
+\`\`\`go
+package main
+import "fmt"
+
+func main() {
+  fmt.Println("Hello Go!")
+}
+\`\`\`
+
+---
+
+## ✨ Module 2: Variables & Data Types
+
+### Declaring Variables
+\`\`\`go
+var name string = "CodeZen"
+age := 21
+\`\`\`
+
+### Data Types
+- int
+- float32 / float64
+- string
+- bool
+
+---
+
+## ➗ Module 3: Operators
+- Arithmetic
+- Comparison
+- Logical
+- Assignment
+
+---
+
+## 🧩 Module 4: Control Flow
+
+### If / Else
+\`\`\`go
+age := 18
+
+if age >= 18 {
+  fmt.Println("Adult")
+} else {
+  fmt.Println("Minor")
+}
+\`\`\`
+
+### Switch
+\`\`\`go
+switch day := 2; day {
+ case 1: fmt.Println("Mon")
+ case 2: fmt.Println("Tue")
+ default: fmt.Println("Other")
+}
+\`\`\`
+
+---
+
+## 🔁 Module 5: Loops
+Go only has one loop → **for**
+
+### Example
+\`\`\`go
+for i := 1; i <= 5; i++ {
+  fmt.Println(i)
+}
+\`\`\`
+
+---
+
+## 📦 Module 6: Arrays, Slices & Maps
+
+### Arrays
+\`\`\`go
+var arr = [3]int{1,2,3}
+\`\`\`
+
+### Slices (Dynamic Arrays)
+\`\`\`go
+nums := []int{10,20,30}
+\`\`\`
+
+### Maps (Key-Value)
+\`\`\`go
+student := map[string]int{
+ "age": 20,
+}
+fmt.Println(student["age"])
+\`\`\`
+
+---
+
+## 🧠 Module 7: Functions
+
+\`\`\`go
+func add(a int, b int) int {
+  return a + b
+}
+\`\`\`
+
+Support:
+- return values
+- multiple return values
+- named returns
+
+---
+
+## 🏛 Module 8: Structs (Go’s OOP Style)
+
+Go doesn’t use classes — it uses **structs + methods**
+
+\`\`\`go
+type Student struct {
+ name string
+ age int
+}
+\`\`\`
+
+---
+
+## ⚙ Module 9: Concurrency (Go’s Superpower)
+
+Go provides **goroutines** → lightweight threads managed by Go runtime.
+
+\`\`\`go
+go myFunction()
+\`\`\`
+
+Used widely in:
+- real-time systems
+- chat apps
+- streaming
+- scalable servers
+
+---
+
+## 🚀 Real-World Applications
+
+### ☁ Cloud & Backend
+- Microservices
+- APIs
+- Distributed systems
+
+### 🔧 DevOps & Tools
+- Docker → built in Go
+- Kubernetes → built in Go
+- Terraform → built in Go
+- Prometheus
+
+### 🧠 Networking & Performance Apps
+- Real-time services
+- Scalable backends
+
+---
+
+## 💼 Companies Using Go
+
+| Company | Usage |
+|--------|--------|
+| Google | Backend & Cloud |
+| Netflix | High-performance systems |
+| Uber | Real-time services |
+| Twitch | Streaming backend |
+| Dropbox | Infrastructure |
+| Kubernetes | Written in Go |
+
+---
+
+## 📊 Go vs Other Languages
+
+| Feature | Go | Java | Python |
+|--------|----|------|--------|
+| Speed | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐ |
+| Simplicity | ⭐⭐⭐⭐⭐ | ⭐⭐ | ⭐⭐⭐⭐ |
+| Concurrency | ⭐⭐⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐⭐ |
+| Learning Curve | Easy | Medium | Easy |
+| Cloud Support | Excellent | Excellent | Good |
+
+---
+
+## 🎯 Learning Outcomes
+
+By the end:
+
+✅ Write Go programs confidently  
+✅ Understand concurrency basics  
+✅ Work with functions, slices & maps  
+✅ Build backend-ready logic  
+✅ Be prepared for real-world Go development  
+
+---
+
+## 📖 Practice Resources
+
+- Go by Example
+- Go.dev Documentation
+- Exercism Go
+- LeetCode
+- HackerRank Go
+
+---
+
+## 🏆 Career Opportunities
+
+- Backend Developer
+- Cloud Engineer
+- DevOps Engineer
+- Golang Developer
+- System Engineer
+
+---
+
+## 🎓 Next Steps
+
+1️⃣ Learn Goroutines deeply  
+2️⃣ Learn Channels  
+3️⃣ Build REST APIs  
+4️⃣ Learn Go Modules  
+5️⃣ Move to Microservices & Cloud  
+
+---
+
+*Simple. Fast. Powerful. That’s Go 🚀*
+`,
     test: [
       {
         id: "go-q1",
@@ -403,8 +1992,272 @@ export const COURSES: Course[] = [
     duration: 13,
     thumbnail: "/placeholder.svg?key=hbmnz",
     instructor: "Marco Rossi",
-    notes:
-      "# PHP Web Development\n\nPHP is a powerful server-side scripting language used to build dynamic and interactive websites. It powers a large portion of the internet including websites like Facebook (early versions), WordPress, and many modern CMS platforms.\n\n## Why Learn PHP?\n- Widely used in backend web development\n- Easy to learn and beginner friendly\n- Excellent database support (MySQL, MariaDB, etc.)\n- Huge ecosystem including WordPress and Laravel\n\n## What You Will Learn\n- PHP syntax and execution\n- Variables and data handling\n- Echo and output handling\n- Conditional statements and loops\n- Basic server-side logic\n- Introduction to forms and data processing\n\n## Real-World Uses\n- Dynamic websites\n- Content Management Systems\n- Backend web applications\n- API development\n\n## Outcome\nBy the end of this course, you will understand how server-side programming works, build dynamic PHP programs, and prepare for frameworks like Laravel.",
+    notes: `# PHP Web Development
+
+## 🛠 Introduction to PHP
+
+PHP (Hypertext Preprocessor) is a **powerful server-side scripting language** used to build dynamic web applications. It powers **over 75% of the web**, including platforms like **Facebook (early years), WordPress, Wikipedia, Slack, and Laravel-based systems**.
+
+PHP integrates seamlessly with HTML, databases, and modern frameworks, making it an excellent language for backend and full-stack developers.
+
+---
+
+## 🌟 Why Learn PHP?
+
+| Feature | Description |
+|--------|-------------|
+| 🌍 **Most Used Backend Language** | Powers majority of websites |
+| ⚙ **Server-Side Execution** | Runs on the server before sending data |
+| 🧠 **Beginner Friendly** | Easy syntax, fast learning |
+| 🏗 **Framework Support** | Laravel, CodeIgniter, Symfony |
+| 📦 **Database Friendly** | MySQL, PostgreSQL, MongoDB |
+| 💰 **High Demand** | Huge global job market |
+
+---
+
+## 🧠 PHP is Commonly Used For
+
+- Dynamic Websites
+- Web Applications
+- APIs & Backend Services
+- E-commerce Platforms
+- Content Management Systems
+- Authentication Systems
+- Payment Gateways
+
+---
+
+## 📚 What You Will Learn
+
+---
+
+## 🔰 Module 1: Getting Started
+- Installing XAMPP / WAMP / MAMP
+- PHP Setup & Server
+- Running PHP in Browser
+
+### First PHP Program
+\`\`\`php
+<?php
+echo "Hello PHP!";
+?>
+\`\`\`
+
+---
+
+## ✨ Module 2: Variables & Data Types
+
+### Variables
+\`\`\`php
+$name = "CodeZen";
+$age = 20;
+\`\`\`
+
+### Data Types
+- String
+- Integer
+- Float
+- Boolean
+- Array
+- Object
+- NULL
+
+---
+
+## ➗ Module 3: Operators
+- Arithmetic
+- Comparison
+- Logical
+- Assignment
+
+---
+
+## 🧩 Module 4: Control Flow
+
+### If / Else
+\`\`\`php
+$marks = 80;
+
+if($marks >= 90){
+ echo "Excellent";
+} else {
+ echo "Good";
+}
+\`\`\`
+
+### Switch
+\`\`\`php
+$day = 2;
+
+switch($day){
+ case 1: echo "Mon"; break;
+ case 2: echo "Tue"; break;
+ default: echo "Other";
+}
+\`\`\`
+
+---
+
+## 🔁 Module 5: Loops
+- for
+- while
+- do while
+- foreach
+
+\`\`\`php
+for($i = 1; $i <= 5; $i++){
+ echo $i;
+}
+\`\`\`
+
+---
+
+## 📦 Module 6: Arrays
+
+### Indexed Array
+\`\`\`php
+$numbers = [1,2,3];
+\`\`\`
+
+### Associative Array
+\`\`\`php
+$student = [
+ "name" => "Alex",
+ "age" => 21
+];
+\`\`\`
+
+---
+
+## 🧠 Module 7: Functions
+
+\`\`\`php
+function greet($name){
+ return "Hello " . $name;
+}
+\`\`\`
+
+---
+
+## 🗂 Module 8: Forms & Input Handling
+
+- GET
+- POST
+- Form validation
+- Sanitization
+
+---
+
+## 🔐 Module 9: Sessions & Cookies
+
+- Authentication concepts
+- Remember user
+- Session security
+
+---
+
+## 🗄 Module 10: Database Connectivity
+
+- MySQL connection
+- CRUD operations
+- PDO / MySQLi
+
+---
+
+## 🚀 Modern PHP (Preview)
+
+- Laravel Framework
+- MVC Concept
+- REST API Development
+- Authentication Systems
+
+---
+
+## 💼 Real-World Applications
+
+### 🌍 Web Platforms
+- WordPress
+- Shopify
+- Wikipedia
+
+### 🛒 E-Commerce
+- Payment systems
+- Dynamic shopping carts
+
+### 🧠 Backend Systems
+- APIs
+- Dashboards
+- Admin panels
+
+---
+
+## 💼 Companies Using PHP
+
+| Company | Usage |
+|--------|--------|
+| Facebook (Early) | Web Platform |
+| Wikipedia | CMS |
+| Slack | Backend Services |
+| MailChimp | Web Platform |
+| WordPress | Entire platform |
+
+---
+
+## 📊 PHP vs Other Backend Languages
+
+| Feature | PHP | Node.js | Python |
+|--------|-----|---------|--------|
+| Ease of Learning | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐⭐ |
+| Speed | ⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐ |
+| Frameworks | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐⭐ |
+| Hosting Support | ⭐⭐⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐⭐ |
+
+---
+
+## 🎯 Learning Outcomes
+
+By the end:
+
+✅ Build dynamic websites  
+✅ Work with forms & authentication  
+✅ Connect with MySQL databases  
+✅ Create backend logic  
+✅ Prepare for Laravel / Full-Stack development  
+
+---
+
+## 📖 Practice Resources
+
+- PHP Manual
+- W3Schools
+- HackerRank PHP
+- Laravel Docs
+- PHP The Right Way
+
+---
+
+## 🏆 Career Opportunities
+
+- PHP Developer
+- Backend Developer
+- Full-Stack Developer
+- CMS Developer
+- API Developer
+
+---
+
+## 🎓 Next Steps
+
+1️⃣ Learn OOP in PHP  
+2️⃣ Learn Laravel  
+3️⃣ Build REST APIs  
+4️⃣ Work with Authentication  
+5️⃣ Deploy Projects  
+
+---
+
+*Build Powerful Web Apps with PHP 🛠✨*
+`,
     test: [
       {
         id: "php-q1",
@@ -459,8 +2312,302 @@ export const COURSES: Course[] = [
     duration: 14,
     thumbnail: "/placeholder.svg?key=lfl1r",
     instructor: "Emma Williams",
-    notes:
-      "# Swift Programming for iOS\n\nSwift is Apple's modern programming language used for building applications for **iOS**, **macOS**, **watchOS**, and **tvOS**. It is fast, safe, and designed with developer productivity in mind.\n\n## Why Learn Swift?\n- Official language for iPhone and Apple development\n- Clean, simple, and expressive syntax\n- Extremely fast and powerful\n- Backed by Apple with continuous improvements\n\n## What You Will Learn\n- Swift syntax and structure\n- Variables, constants, and data types\n- Functions and reusable logic\n- Conditions and loops\n- Optionals and safe programming basics\n- Basics of Swift development concepts\n\n## Real-World Uses\n- iOS mobile apps\n- macOS desktop software\n- Watch and TV apps\n- Swift-based backend development in some cases\n\n## Outcome\nBy the end of this course, you will understand the Swift language basics and be ready to explore iOS development using SwiftUI or UIKit.",
+    notes: `# Swift Programming for iOS Development
+
+## 🍎 Introduction to Swift
+
+Swift is a **modern, fast, and safe programming language** developed by Apple for building applications across the Apple ecosystem, including:
+
+- iOS (iPhone / iPad Apps)
+- macOS Applications
+- watchOS
+- tvOS
+- Backend with Swift Server
+
+Swift was introduced in 2014 to replace Objective-C with a language that is **simpler**, **safer**, and **more powerful**, making it one of the most developer-friendly languages today.
+
+---
+
+## 🌟 Why Learn Swift?
+
+| Feature | Description |
+|--------|-------------|
+| ⚡ **High Performance** | As fast as C++ |
+| 🛡 **Memory Safe** | Prevents crashes & memory leaks |
+| 🎯 **Easy to Learn** | Clean & modern syntax |
+| 📱 **Native iOS Language** | Official Apple development language |
+| 🎨 **Great for UI** | Seamless with SwiftUI & UIKit |
+| 🔐 **Secure & Stable** | Strict compile-time checks |
+
+---
+
+## 🧠 Where Swift Is Used
+
+- iPhone & iPad applications
+- Mac desktop applications
+- Apple Watch apps
+- Apple TV apps
+- Backend APIs (Vapor framework)
+- Gaming (SpriteKit, SceneKit)
+- AR Apps (ARKit)
+
+---
+
+## 📚 What You Will Learn
+
+---
+
+## 🔰 Module 1: Getting Started
+
+- Install Xcode
+- Swift playgrounds
+- Running your first program
+
+### Hello Swift
+\`\`\`swift
+import Foundation
+
+print("Hello Swift!")
+\`\`\`
+
+---
+
+## ✨ Module 2: Variables & Data Types
+
+### Variables
+\`\`\`swift
+var name = "CodeZen"
+let age = 21
+\`\`\`
+
+\`var\` → Changeable  
+\`let\` → Constant (recommended)
+
+### Data Types
+
+- Int
+- Double
+- Float
+- String
+- Bool
+
+---
+
+## ➗ Module 3: Operators
+
+Supports:
+- Arithmetic Operators
+- Logical Operators
+- Comparison Operators
+- Assignment Operators
+
+---
+
+## 🧩 Module 4: Control Flow
+
+### If / Else
+\`\`\`swift
+let marks = 85
+
+if marks >= 90 {
+ print("Excellent")
+} else {
+ print("Good")
+}
+\`\`\`
+
+### Switch
+\`\`\`swift
+let day = 2
+
+switch day {
+ case 1: print("Mon")
+ case 2: print("Tue")
+ default: print("Other")
+}
+\`\`\`
+
+---
+
+## 🔁 Module 5: Loops
+
+### For Loop
+\`\`\`swift
+for i in 1...5 {
+ print(i)
+}
+\`\`\`
+
+### While Loop
+\`\`\`swift
+var x = 1
+while x <= 5 {
+ print(x)
+ x += 1
+}
+\`\`\`
+
+---
+
+## 📦 Module 6: Collections
+
+### Arrays
+\`\`\`swift
+var numbers = [1,2,3]
+\`\`\`
+
+### Dictionaries
+\`\`\`swift
+var student = ["name": "Alex", "age": "21"]
+\`\`\`
+
+### Sets
+\`\`\`swift
+var setValues: Set = [1,2,3]
+\`\`\`
+
+---
+
+## 🧠 Module 7: Functions
+
+\`\`\`swift
+func greet(_ name: String) -> String {
+ return "Hello \(name)"
+}
+\`\`\`
+
+Supports:
+- Parameters
+- Return values
+- Default parameters
+
+---
+
+## 🏛 Module 8: Object-Oriented Programming
+
+Swift supports full OOP.
+
+\`\`\`swift
+class Student {
+ var name = "Alex"
+ var age = 21
+
+ func intro() {
+  print("\\(name) is \\(age)")
+ }
+}
+\`\`\`
+
+Concepts:
+- Classes
+- Objects
+- Inheritance
+- Polymorphism
+- Encapsulation
+
+---
+
+## 🎨 Module 9: SwiftUI (Preview)
+
+SwiftUI is Apple’s UI framework.
+
+\`\`\`swift
+import SwiftUI
+
+struct ContentView: View {
+ var body: some View {
+  Text("Hello SwiftUI!")
+ }
+}
+\`\`\`
+
+---
+
+## 🚀 Real-World Applications
+
+### 📱 Mobile Apps
+- iPhone Applications
+- iPad Productivity Tools
+
+### 🎮 Gaming
+- SpriteKit
+- SceneKit
+- Metal
+
+### 🧠 Modern Tech
+- AI powered apps
+- AR / VR apps using ARKit
+- Health & Fitness Apps
+
+---
+
+## 💼 Companies Using Swift
+
+| Company | Usage |
+|--------|--------|
+| Apple | Entire ecosystem |
+| Uber | iOS app |
+| Airbnb | Mobile app |
+| Instagram | iOS app |
+| LinkedIn | iOS app |
+| WhatsApp | iOS App |
+
+---
+
+## 📊 Swift vs Other Languages
+
+| Feature | Swift | Kotlin | Java | Flutter (Dart) |
+|--------|-------|--------|------|----------------|
+| Speed | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐ |
+| Safety | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐ | ⭐⭐⭐ |
+| Native Support | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐⭐ |
+| Ease of Learning | ⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐ | ⭐⭐⭐⭐ |
+
+---
+
+## 🎯 Learning Outcomes
+
+By the end of this course:
+
+✅ Write Swift programs confidently  
+✅ Understand iOS fundamentals  
+✅ Work with functions & classes  
+✅ Handle logic and structure  
+✅ Prepare for iOS App Development  
+
+---
+
+## 📖 Practice Resources
+
+- Apple Swift Docs
+- Hacking with Swift
+- Swift Playground
+- Ray Wenderlich Tutorials
+- LeetCode Swift
+
+---
+
+## 🏆 Career Opportunities
+
+- iOS Developer
+- Mobile Engineer
+- App Developer
+- AR/VR Developer
+
+---
+
+## 🎓 Next Steps
+
+1️⃣ Learn SwiftUI  
+2️⃣ Learn UIKit Basics  
+3️⃣ Build iOS Apps  
+4️⃣ Learn API Integration  
+5️⃣ Publish Apps to App Store  
+
+---
+
+*Build Beautiful Apps with Swift 🍎✨*
+`,
     test: [
       {
         id: "swift-q1",
@@ -517,8 +2664,335 @@ export const COURSES: Course[] = [
     duration: 15,
     thumbnail: "/placeholder.svg?key=0kef0",
     instructor: "Dr. Thomas Anderson",
-    notes:
-      "# Rust Programming Fundamentals\n\nRust is a modern systems programming language designed for **safety**, **speed**, and **concurrency** without relying on garbage collection. It is used in system programming, game engines, web assembly, embedded systems, and performance-critical applications.\n\n## Why Learn Rust?\n- Memory safety without garbage collector\n- Extremely fast like C/C++\n- Prevents null pointer and data race issues\n- Increasingly adopted in industry\n\n## What You Will Learn\n- Rust syntax and basics\n- Variables, data types, and mutability\n- Ownership and borrowing introduction\n- Control flow and loops\n- Functions and scopes\n- Basic error handling\n\n## Real-World Uses\n- System-level programming\n- Game engines\n- WebAssembly applications\n- Embedded systems\n- High-performance backend services\n\n## Outcome\nBy the end of this course, you will clearly understand Rust fundamentals, memory safety concepts, and be ready to explore advanced Rust programming like lifetimes, traits, and concurrency.",
+    notes: `# Rust Programming Fundamentals
+
+## 🦀 Introduction to Rust
+
+Rust is a **high-performance, memory-safe, and modern programming language** created by Mozilla. It is designed to provide **C/C++ level speed** while preventing memory errors, crashes, and security vulnerabilities.
+
+Rust is massively popular in:
+
+- System Programming
+- WebAssembly
+- Game Engines
+- Blockchain
+- Cloud Infrastructure
+- Performance-Critical Applications
+
+Rust gives you **speed, safety, and concurrency — without garbage collection**.
+
+---
+
+## 🌟 Why Learn Rust?
+
+| Feature | Description |
+|--------|-------------|
+| 🛡 **Memory Safe** | Prevents crashes, null pointers & data races |
+| ⚡ **Super Fast** | Comparable to C/C++ |
+| 🔀 **Fearless Concurrency** | Safe multithreading |
+| 🧠 **Modern Design** | Powerful features and clean syntax |
+| 🚀 **High Demand** | Loved & highly paid language |
+| 🏆 **Most Loved Language** | Frequently #1 on StackOverflow |
+
+---
+
+## 🧠 Rust Philosophy
+
+Rust focuses on:
+
+- **Safety**
+- **Speed**
+- **Concurrency**
+- **Zero-cost abstractions**
+- **No garbage collector**
+- **No runtime overhead**
+
+Rust makes you write **correct and efficient code** from the beginning.
+
+---
+
+## 📚 What You Will Learn
+
+---
+
+## 🔰 Module 1: Getting Started
+
+- Install Rust using rustup
+- cargo (Rust’s build system)
+- Running programs
+
+### Hello Rust
+\`\`\`rust
+fn main() {
+    println!("Hello Rust!");
+}
+\`\`\`
+
+---
+
+## ✨ Module 2: Variables & Data Types
+
+### Variables
+\`\`\`rust
+let name = "CodeZen";
+let mut age = 21;
+\`\`\`
+
+\`let\` → immutable by default  
+\`mut\` → makes variable changeable
+
+### Data Types
+- i32, i64
+- f32, f64
+- bool
+- char
+- String
+
+---
+
+## ➗ Module 3: Operators
+- Arithmetic
+- Comparison
+- Logical
+- Assignment
+
+---
+
+## 🧩 Module 4: Control Flow
+
+### If / Else
+\`\`\`rust
+let marks = 85;
+
+if marks >= 90 {
+    println!("Excellent");
+} else {
+    println!("Good");
+}
+\`\`\`
+
+### Match (Rust Switch)
+\`\`\`rust
+let day = 2;
+
+match day {
+    1 => println!("Mon"),
+    2 => println!("Tue"),
+    _ => println!("Other"),
+}
+\`\`\`
+
+---
+
+## 🔁 Module 5: Loops
+
+### Loop
+\`\`\`rust
+loop {
+    println!("Running");
+    break;
+}
+\`\`\`
+
+### While
+\`\`\`rust
+let mut x = 1;
+while x <= 5 {
+    println!("{}", x);
+    x += 1;
+}
+\`\`\`
+
+### For
+\`\`\`rust
+for i in 1..6 {
+    println!("{}", i);
+}
+\`\`\`
+
+---
+
+## 📦 Module 6: Ownership — Rust’s Superpower
+
+Rust prevents memory bugs using **Ownership Rules**:
+
+1️⃣ Each value has one owner  
+2️⃣ When owner goes out of scope, value is freed  
+3️⃣ You cannot use data after move
+
+Example:
+\`\`\`rust
+let s1 = String::from("Hello");
+let s2 = s1; // ownership moved
+\`\`\`
+
+---
+
+## 🧠 Borrowing & References
+
+Rust allows safe sharing:
+
+\`\`\`rust
+let s = String::from("Rust");
+let len = calculate_length(&s);
+
+fn calculate_length(s: &String) -> usize {
+    s.len()
+}
+\`\`\`
+
+No null.
+No dangling pointers.
+No memory leaks.
+
+---
+
+## 🧑‍🔧 Module 7: Functions
+
+\`\`\`rust
+fn add(a: i32, b: i32) -> i32 {
+    a + b
+}
+\`\`\`
+
+Supports:
+- Parameters
+- Return values
+- Expression-based returns
+
+---
+
+## 🏛 Module 8: Structs & Enums
+
+### Struct
+\`\`\`rust
+struct Student {
+    name: String,
+    age: i32,
+}
+\`\`\`
+
+### Enum
+\`\`\`rust
+enum Role {
+    Admin,
+    User,
+}
+\`\`\`
+
+---
+
+## ⚙ Module 9: Error Handling
+
+Rust has **no exceptions**.
+Instead uses:
+
+- Result
+- Option
+
+\`\`\`rust
+fn divide(a: i32, b: i32) -> Option<i32> {
+    if b == 0 {
+        None
+    } else {
+        Some(a / b)
+    }
+}
+\`\`\`
+
+---
+
+## 🚀 Real-World Applications
+
+### 🧠 System Programming
+- OS Components
+- Drivers
+- Performance tools
+
+### ☁ Cloud & Backend
+- Distributed systems
+- High performance APIs
+
+### 🔐 Security
+- Memory-safe secure apps
+
+### 🎮 Gaming
+- Game engines
+- Real-time rendering
+
+### 🌐 WebAssembly
+- High performance web apps
+
+---
+
+## 💼 Companies Using Rust
+
+| Company | Usage |
+|--------|--------|
+| Microsoft | Windows components |
+| Google | System & security |
+| Meta | Backend & infra |
+| Amazon | Cloud services |
+| Dropbox | Core systems |
+| Discord | High performance backend |
+
+---
+
+## 📊 Rust vs Other Languages
+
+| Feature | Rust | C++ | Go | Python |
+|--------|------|-----|----|--------|
+| Speed | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐ |
+| Memory Safety | ⭐⭐⭐⭐⭐ | ⭐⭐ | ⭐⭐⭐ | ⭐ |
+| Concurrency | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐ |
+| Learning Curve | Hard | Hard | Easy | Easy |
+
+---
+
+## 🎯 Learning Outcomes
+
+By the end:
+
+✅ Write safe & fast Rust programs  
+✅ Understand ownership & borrowing  
+✅ Build functions & structs  
+✅ Handle errors safely  
+✅ Be ready for real-world Rust projects  
+
+---
+
+## 📖 Practice Resources
+
+- Rust Book (official)
+- Rustlings
+- Exercism Rust
+- LeetCode
+- Rust By Example
+
+---
+
+## 🏆 Career Opportunities
+
+- System Engineer
+- Rust Developer
+- Blockchain Engineer
+- Backend Engineer
+- Performance Engineer
+
+---
+
+## 🎓 Next Steps
+
+1️⃣ Learn Lifetimes  
+2️⃣ Learn Traits & Generics  
+3️⃣ Learn Async Rust  
+4️⃣ Build Projects  
+5️⃣ Explore WebAssembly  
+
+---
+
+*Fast. Safe. Powerful. That’s Rust 🦀🔥*
+`,
     test: [
       {
         id: "rust-q1",
@@ -590,8 +3064,312 @@ export const COURSES: Course[] = [
     duration: 11,
     thumbnail: "/placeholder.svg?key=kvhij",
     instructor: "Jessica Martinez",
-    notes:
-      "# Ruby Programming Basics\n\nRuby is a dynamic, object-oriented programming language known for its elegant and human-friendly syntax. It emphasizes developer happiness and productivity, making coding feel natural and expressive.\n\n## Why Learn Ruby?\n- Clean and readable syntax\n- Highly productive development experience\n- Strong focus on simplicity\n- Backbone of the Ruby on Rails framework\n\n## What You Will Learn\n- Ruby syntax and structure\n- Variables and data handling\n- Conditions and loops\n- Functions (methods) and reuse\n- Basic Object-Oriented Programming\n\n## Real-World Uses\n- Web development using Ruby on Rails\n- Backend systems and APIs\n- Automation scripts\n- Prototyping applications quickly\n\n## Outcome\nBy the end of this course, you will comfortably understand Ruby fundamentals, write expressive programs, and be ready to explore web development with Ruby on Rails.",
+    notes: `# Ruby Programming Basics
+
+## 💎 Introduction to Ruby
+
+Ruby is a **beautiful, simple, and highly expressive programming language** created by Yukihiro “Matz” Matsumoto. Ruby is designed to make programmers **happy**, focusing on readability and developer productivity.
+
+Ruby powers some of the world’s biggest platforms including:
+- **Ruby on Rails**
+- **GitHub**
+- **Shopify**
+- **Airbnb (early)**
+- **Hulu**
+- **Basecamp**
+
+Ruby lets you **write less code and achieve more**, making it a favorite for startups, web apps, and rapid development.
+
+---
+
+## 🌟 Why Learn Ruby?
+
+| Feature | Description |
+|--------|-------------|
+| ✨ **Clean & Readable Syntax** | Code feels like English |
+| ⚡ **Highly Productive** | Build apps very fast |
+| 🧠 **Beginner Friendly** | Perfect for new developers |
+| 🏗 **Rails Framework** | Powerful web development |
+| 🌍 **Strong Community** | Friendly & supportive |
+| 💼 **Industry Ready** | Used in real-world large systems |
+
+Ruby follows the philosophy:
+
+> “Programming should be fun and enjoyable.”
+
+---
+
+## 🧠 Where Ruby is Used
+
+- Web Applications
+- APIs & Backend
+- Startups and SaaS
+- Automation & Scripting
+- DevOps Tools
+- E-commerce Platforms
+
+---
+
+## 📚 What You Will Learn
+
+---
+
+## 🔰 Module 1: Getting Started
+
+- Install Ruby
+- Use IRB (Interactive Ruby)
+- First Ruby Program
+
+\`\`\`ruby
+puts "Hello Ruby!"
+\`\`\`
+
+---
+
+## ✨ Module 2: Variables & Data Types
+
+\`\`\`ruby
+name = "CodeZen"
+age = 21
+\`\`\`
+
+Ruby Data Types:
+- Integer
+- Float
+- String
+- Boolean
+- Array
+- Hash
+- Symbol
+
+---
+
+## ➗ Module 3: Operators
+
+Ruby supports:
+- Arithmetic
+- Comparison
+- Logical
+- Assignment
+
+---
+
+## 🧩 Module 4: Control Flow
+
+### If / Else
+\`\`\`ruby
+marks = 85
+
+if marks >= 90
+  puts "Excellent"
+else
+  puts "Good"
+end
+\`\`\`
+
+### Case (Switch)
+\`\`\`ruby
+day = 2
+
+case day
+when 1
+  puts "Mon"
+when 2
+  puts "Tue"
+else
+  puts "Other"
+end
+\`\`\`
+
+---
+
+## 🔁 Module 5: Loops
+
+### For Loop
+\`\`\`ruby
+for i in 1..5
+  puts i
+end
+\`\`\`
+
+### While Loop
+\`\`\`ruby
+x = 1
+while x <= 5
+  puts x
+  x += 1
+end
+\`\`\`
+
+### Each Loop
+\`\`\`ruby
+[1,2,3].each do |n|
+  puts n
+end
+\`\`\`
+
+---
+
+## 📦 Module 6: Arrays & Hashes
+
+### Array
+\`\`\`ruby
+numbers = [10,20,30]
+puts numbers[0]
+\`\`\`
+
+### Hash (Like Dictionary)
+\`\`\`ruby
+student = {
+ name: "Alex",
+ age: 21
+}
+
+puts student[:name]
+\`\`\`
+
+---
+
+## 🧠 Module 7: Functions (Methods)
+
+\`\`\`ruby
+def greet(name)
+  "Hello #{name}"
+end
+\`\`\`
+
+Ruby supports:
+- Parameters
+- Default values
+- Return values
+
+---
+
+## 🏛 Module 8: Object-Oriented Programming
+
+Ruby is **fully OOP** — everything is an object.
+
+### Class Example
+\`\`\`ruby
+class Student
+  def initialize(name, age)
+    @name = name
+    @age = age
+  end
+
+  def intro
+    puts "#{@name} is #{@age}"
+  end
+end
+\`\`\`
+
+Concepts:
+- Classes & Objects
+- Attributes
+- Methods
+- Inheritance
+- Polymorphism
+
+---
+
+## 🚀 Ruby on Rails (Preview)
+
+Ruby becomes most powerful with **Rails Framework**, used for:
+
+- Startups
+- SaaS Platforms
+- E-Commerce
+- APIs
+- Full Stack Web Apps
+
+---
+
+## 💼 Real-World Applications
+
+### Popular Platforms
+- GitHub
+- Shopify
+- Airbnb (early)
+- Twitch
+- Hulu
+- Basecamp
+
+### Use Cases
+- Full Stack Apps
+- APIs
+- E-Commerce
+- Dashboards
+- Admin Panels
+
+---
+
+## 💼 Companies Using Ruby
+
+| Company | Usage |
+|--------|--------|
+| GitHub | Web Platform |
+| Shopify | E-Commerce |
+| Airbnb | Web Platform |
+| Hulu | Backend |
+| Basecamp | Full Framework |
+
+---
+
+## 📊 Ruby vs Other Languages
+
+| Feature | Ruby | Python | PHP |
+|--------|------|--------|-----|
+| Ease of Learning | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐⭐ |
+| Syntax Beauty | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐ |
+| Speed | ⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐⭐ |
+| Web Framework | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐⭐ |
+
+---
+
+## 🎯 Learning Outcomes
+
+By the end:
+
+✅ Write Ruby programs easily  
+✅ Understand OOP in Ruby  
+✅ Work with arrays & hashes  
+✅ Build logical backend foundation  
+✅ Be ready for Ruby on Rails  
+
+---
+
+## 📖 Practice Resources
+
+- Ruby Docs
+- RubyMonk
+- Exercism Ruby
+- Codecademy Ruby
+- Rails Guides
+
+---
+
+## 🏆 Career Opportunities
+
+- Ruby Developer
+- Rails Developer
+- Backend Engineer
+- Full-Stack Developer
+- API Developer
+
+---
+
+## 🎓 Next Steps
+
+1️⃣ Learn Ruby OOP deeply  
+2️⃣ Learn Ruby on Rails  
+3️⃣ Build CRUD Apps  
+4️⃣ Learn APIs & Databases  
+5️⃣ Build & Deploy Projects  
+
+---
+
+*Code Smart. Code Elegant. With Ruby 💎✨*
+`,
     test: [
       {
         id: "ruby-q1",

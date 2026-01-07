@@ -16,23 +16,6 @@ export default function DashboardPage() {
 
   if (!user) return null
 
-  const activeCourseProgress = user.progress.filter((p) => p.courseId)
-  const activeCoursesData = activeCourseProgress.map((p) => {
-    const course = courses.find((c) => c.id === p.courseId)
-    const progressPercent = Math.round((p.completedLessons.length / (course?.totalLessons || 1)) * 100)
-    return {
-      ...course,
-      progress: progressPercent,
-      completedCount: p.completedLessons.length,
-      nextLesson: course?.lessons[p.completedLessons.length]?.title || "Final Test",
-    }
-  })
-
-  // Fallback for demo if no courses are started
-  const displayCourses =
-    activeCoursesData.length > 0
-      ? activeCoursesData
-      : courses.slice(0, 3).map((c) => ({ ...c, progress: 0, nextLesson: c.lessons[0].title }))
 
   const recentCompilers = [
     { id: 1, language: "Python", fileName: "fibonacci.py", lastUsed: "2 hours ago" },
@@ -121,7 +104,7 @@ export default function DashboardPage() {
               </Button>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {displayCourses.map((course, i) => (
+              {courses.map((course, i) => (
                 <motion.div
                   key={i}
                   initial={{ opacity: 0, y: 20 }}
@@ -133,16 +116,16 @@ export default function DashboardPage() {
                       <Badge variant="secondary" className="bg-primary/10 text-primary border-primary/20">
                         {course.language}
                       </Badge>
-                      <span className="text-sm text-primary font-bold tracking-tighter">{course.progress}%</span>
+                      <span className="text-sm text-primary font-bold tracking-tighter">{course.difficulty}</span>
                     </div>
                     <h3 className="font-bold text-xl mb-3 group-hover:text-primary transition-colors">
                       {course.title}
                     </h3>
-                    <Progress value={course.progress} className="h-1.5 mb-6" />
+                    {/* <Progress value={course.progress} className="h-1.5 mb-6" /> */}
                     <div className="flex items-center justify-between">
-                      <span className="text-xs text-muted-foreground font-medium truncate max-w-[140px]">
+                      {/* <span className="text-xs text-muted-foreground font-medium truncate max-w-[140px]">
                         Next: {course.nextLesson}
-                      </span>
+                      </span> */}
                       <Button
                         size="sm"
                         className="rounded-full px-5 h-9 bg-primary text-black font-bold hover:bg-primary/90 glow-cyan"

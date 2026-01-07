@@ -63,7 +63,7 @@ int main() {
     shortForm: "java",
     languageId: 62,
     icon: ICONS.java,
-    boilerplate: `public class HelloWorld {
+    boilerplate: `public class Main {
   public static void main(String[] args) {
     System.out.println("Hello, World!");
     System.out.println("Java is awesome!");
