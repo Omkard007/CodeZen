@@ -17,14 +17,6 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
   const pathname = usePathname()
   const { user, logout } = useUser()
 
-  const navItems = [
-    { name: "Home", href: "/dashboard", icon: Home },
-    { name: "Courses", href: "/dashboard/courses", icon: BookOpen },
-    { name: "Compilers", href: "/dashboard/compiler", icon: Terminal },
-    { name: "Certificates", href: "/dashboard/profile", icon: Award },
-    { name: "AI Assistant", href: "/dashboard/ai-assistant", icon: Bot },
-    { name: "Profile", href: "/dashboard/profile", icon: User },
-  ]
 
   if (!user) return null
 
@@ -38,11 +30,11 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
               <Logo size="md" />
             </Link>
           </div>
-          <AppSidebar navItems={navItems} />
+          <AppSidebar />
         </aside>
 
         <div className="flex-1 flex flex-col min-w-0">
-          <header className="h-16 border-b border-border bg-card/50 backdrop-blur sticky top-0 z-40 flex items-center justify-between px-4 lg:px-8">
+          {/* <header className="h-16 border-b border-border bg-card/50 backdrop-blur sticky top-0 z-40 flex items-center justify-between px-4 lg:px-8">
             <div className="flex items-center gap-4">
               <SidebarTrigger className="md:hidden" />
               <div className="flex-1 max-w-md relative hidden lg:block">
@@ -83,7 +75,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
                 </Button>
               </div>
             </div>
-          </header>
+          </header> */}
 
           {/* Main Viewport */}
           <main className="flex-1 overflow-y-auto relative p-6 lg:p-8">

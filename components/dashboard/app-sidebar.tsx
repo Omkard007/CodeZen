@@ -17,7 +17,7 @@ const items = [
   { title: "Overview", url: "/dashboard", icon: LayoutDashboard },
   { title: "Courses", url: "/dashboard/courses", icon: BookOpen },
   { title: "Compiler", url: "/dashboard/compiler", icon: Terminal },
-  { title: "AI Mentor", url: "/dashboard/ai-assistant", icon: Bot },
+  // { title: "AI Mentor", url: "/dashboard/ai-assistant", icon: Bot },
   { title: "Certificates", url: "/dashboard/profile#certificates", icon: Award },
 ]
 
