@@ -1,14 +1,16 @@
-import type React from "react"
-import type { Metadata } from "next"
-import { Inter, JetBrains_Mono } from "next/font/google"
-import { Analytics } from "@vercel/analytics/next"
-import { UserProvider } from "@/context/user-context"
-import "./globals.css"
-import Provider from "@/components/provider"
+import type React from "react";
+import type { Metadata } from "next";
+import { Inter, JetBrains_Mono } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
+import { UserProvider } from "@/context/user-context";
+import "./globals.css";
+import Provider from "@/components/provider";
 
-
-const inter = Inter({ subsets: ["latin"], variable: "--font-sans" })
-const jetbrainsMono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-mono" })
+const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  variable: "--font-mono",
+});
 
 export const metadata: Metadata = {
   title: "CodeZen - Learn. Code. Compile. Certify.",
@@ -31,42 +33,43 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://codezen.com",
     title: "CodeZen - Learn. Code. Compile. Certify.",
-    description: "Master programming with interactive courses, AI mentoring, and verified certificates.",
+    description:
+      "Master programming with interactive courses, AI mentoring, and verified certificates.",
     siteName: "CodeZen",
+    images: [
+      {
+        url: "/og.png",
+        width: 1200,
+        height: 630,
+        alt: "CodeZen - Learn. Code. Compile. Certify.",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "CodeZen - Learn. Code. Compile. Certify.",
-    description: "Master programming with interactive courses, AI mentoring, and verified certificates.",
-    creator: "@codezen",
+    description:
+      "Master programming with interactive courses, AI mentoring, and verified certificates.",
+    images: ["/og.png"],
   },
-  icons: {
-    icon: [
-      { url: "/logo.svg", type: "image/svg+xml" },
-      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
-      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
-    ],
-    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
-  },
-}
+};
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode
+  children: React.ReactNode;
 }>) {
   return (
     <html lang="en" className="dark">
-      <body className={`${inter.variable} ${jetbrainsMono.variable} font-sans antialiased`}>
+      <body
+        className={`${inter.variable} ${jetbrainsMono.variable} font-sans antialiased`}
+      >
         <UserProvider>
-          <Provider>
-          {children}
-          </Provider>
+          <Provider>{children}</Provider>
         </UserProvider>
         <Analytics />
       </body>
     </html>
-  )
+  );
 }
