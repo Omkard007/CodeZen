@@ -10,8 +10,18 @@ import {
 } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Play, RotateCcw, Save, Plus, X, Terminal, Code2 } from "lucide-react";
+import {
+  Play,
+  RotateCcw,
+  Save,
+  Plus,
+  X,
+  Terminal,
+  Code2,
+  MoveLeft,
+} from "lucide-react";
 import { LANGUAGE_DATA } from "@/lib/languages";
+import Link from "next/link";
 
 export default function CompilerPage() {
   const [selectedLanguage, setSelectedLanguage] = useState("javascript");
@@ -117,6 +127,12 @@ export default function CompilerPage() {
     <div className="min-h-screen flex flex-col bg-background">
       {/* Top Bar */}
       <div className="border-b border-border bg-card px-6 py-4 flex items-center justify-between">
+          <Button variant="ghost" asChild>
+            <Link href="/" className="flex items-center gap-2">
+              <MoveLeft className="h-4 w-4" />
+              Home
+            </Link>
+          </Button>
         <div className="flex items-center gap-3">
           <div
             dangerouslySetInnerHTML={{

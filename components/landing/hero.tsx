@@ -56,7 +56,7 @@ export function Hero() {
               className="bg-primary text-black hover:bg-primary/90 px-10 rounded-full h-14 text-lg font-semibold glow-cyan group"
               asChild
             >
-              <Link href="/dashboard">
+              <Link href="/courses">
                 Start Learning
                 <ChevronRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Link>
@@ -67,7 +67,7 @@ export function Hero() {
               className="border-white/10 bg-white/5 hover:bg-white/10 px-10 rounded-full h-14 text-lg font-medium gap-3 backdrop-blur-sm"
               asChild
             >
-              <Link href="/dashboard/compiler">
+              <Link href="/compiler">
                 <Play className="h-5 w-5 fill-current" />Start Code
               </Link>
             </Button>

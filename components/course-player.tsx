@@ -78,7 +78,7 @@ export function CoursePlayer({ course }: CoursePlayerProps) {
           <div className="flex items-center justify-between py-4 border-t border-border">
             <div className="flex gap-2">
               <Button className="gap-2" asChild>
-                <a href={`/dashboard/courses/${course.id}/test`}>
+                <a href={`/courses/${course.id}/test`}>
                   Take Final Test <Award className="h-4 w-4" />
                 </a>
               </Button>

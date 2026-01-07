@@ -20,16 +20,16 @@ export function Navbar() {
       animate={{ y: 0, opacity: 1 }}
       className="border-b border-white/5 bg-black/60 backdrop-blur-md sticky top-0 z-50"
     >
-      <div className="container mx-auto px-4 py-4">
+      <div className="container mx-auto  py-4 px-10">
         <div className="flex items-center justify-between">
           <Link href="/" className="group">
             <Logo size="md" />
           </Link>
           <nav className="hidden md:flex items-center gap-10">
-            {["Dashboard", "Courses", "Compiler"].map((item) => (
+            {[ "Courses", "Compiler"].map((item) => (
               <Link
                 key={item}
-                href={item === "Dashboard" ? "/dashboard" : item === "Courses" ? "/dashboard/courses" : item === "Compiler" ? "/dashboard/compiler" : `/${item.toLowerCase()}`}
+                href={item === "Courses" ? "/courses" : item === "Compiler" ? "/compiler" : `/${item.toLowerCase()}`}
                 className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors relative group"
               >
                 {item}

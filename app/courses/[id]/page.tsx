@@ -32,23 +32,23 @@ export default function CourseLearnPage() {
       <div className="flex flex-col items-center justify-center h-[60vh] gap-4">
         <h2 className="text-2xl font-bold">Course Not Found</h2>
         <Button asChild>
-          <Link href="/dashboard/courses">Return to Courses</Link>
+          <Link href="/courses">Return to Courses</Link>
         </Button>
       </div>
     )
   }
 
   return (
-    <div className="max-w-[1600px] mx-auto">
+    <div className="max-w-7xl my-15 mx-auto">
       <div className="mb-6">
         <Button
           variant="ghost"
           asChild
-          className="pl-0 hover:bg-transparent -ml-2 text-muted-foreground hover:text-foreground"
+          className="pl-0 hover:bg-transparent -ml-2 text-muted-foreground hover:text-foreground absolute top-3 left-3"
         >
-          <Link href="/dashboard/courses" className="flex items-center gap-2">
+          <Link href="/courses" className="flex items-center gap-2">
             <ChevronLeft className="h-4 w-4" />
-            Back to Courses
+            Home
           </Link>
         </Button>
       </div>

@@ -1,10 +1,9 @@
 "use client";
 
 import Link from "next/link";
-
+import { useUser as useUserContext } from "@/context/user-context";
 import { useRef, useState } from "react";
 import { useCourses } from "@/hooks/use-courses";
-import { useUser } from "@/context/user-context";
 import { useParams, useRouter } from "next/navigation";
 import {
   Card,
@@ -29,16 +28,16 @@ import {
 } from "lucide-react";
 import { CertificatePreview } from "@/components/certificate";
 import { downloadPDF } from "@/lib/downloadPDF";
+import { useAuth, useUser } from "@clerk/nextjs";
 
 export default function CourseTestPage() {
-  
   const { id } = useParams();
   const ref = useRef<HTMLDivElement>(null);
   const router = useRouter();
   const { getCourseById } = useCourses();
-  const { user, completeTest, issueCertificate } = useUser();
   const course = getCourseById(id as string);
-
+  const { user } = useUser();
+  const { completeTest, issueCertificate } = useUserContext();
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedAnswers, setSelectedAnswers] = useState<
     Record<string, number>
@@ -61,7 +60,7 @@ export default function CourseTestPage() {
   const handleSubmit = () => {
     let correctCount = 0;
     course.test.forEach((q) => {
-      console.log(q.correctAnswer,selectedAnswers[q.id]);
+      console.log(q.correctAnswer, selectedAnswers[q.id]);
       if (selectedAnswers[q.id] === q.correctAnswer) {
         correctCount++;
       }
@@ -84,12 +83,11 @@ export default function CourseTestPage() {
       setCurrentQuestionIndex(currentQuestionIndex + 1);
     }
   };
-  const handleDownload =() => {
+  const handleDownload = () => {
     if (ref.current) {
       downloadPDF(ref.current);
     }
-  }
-  
+  };
 
   if (isSubmitted) {
     const passed = score >= 70;
@@ -143,14 +141,14 @@ export default function CourseTestPage() {
                 </p>
                 {/* Certificate Preview Mockup */}
                 <div className="relative aspect-video h-full w-full" ref={ref}>
-                <CertificatePreview
-                  studentName={user?.name || "Student Name"}
-                  courseName={course.title}
-                  instructorName={course.instructor}
-                  completionDate={new Date().toLocaleDateString()}
-                  certificateId={Math.random().toString(36).substring(2)}
+                  <CertificatePreview
+                    studentName={user?.fullName || "Student Name"}
+                    courseName={course.title}
+                    instructorName={course.instructor}
+                    completionDate={new Date().toLocaleDateString()}
+                    certificateId={Math.random().toString(36).substring(2)}
                   />
-                  </div>
+                </div>
                 <div className="flex flex-wrap justify-center gap-4">
                   <Button className="gap-2" onClick={handleDownload}>
                     <Download className="h-4 w-4" /> Download PDF
@@ -177,8 +175,8 @@ export default function CourseTestPage() {
 
           <CardFooter className="justify-center border-t pt-6">
             <Button variant="ghost" className="gap-2" asChild>
-              <Link href="/dashboard">
-                <Home className="h-4 w-4" /> Return to Dashboard
+              <Link href="/">
+                <Home className="h-4 w-4" /> Return to Home
               </Link>
             </Button>
           </CardFooter>

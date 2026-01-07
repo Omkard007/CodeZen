@@ -4,6 +4,7 @@ import { Inter, JetBrains_Mono } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import { UserProvider } from "@/context/user-context"
 import "./globals.css"
+import Provider from "@/components/provider"
 
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" })
@@ -59,7 +60,11 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body className={`${inter.variable} ${jetbrainsMono.variable} font-sans antialiased`}>
-        <UserProvider>{children}</UserProvider>
+        <UserProvider>
+          <Provider>
+          {children}
+          </Provider>
+        </UserProvider>
         <Analytics />
       </body>
     </html>
