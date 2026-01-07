@@ -18,13 +18,9 @@ const items = [
   { title: "Courses", url: "/dashboard/courses", icon: BookOpen },
   { title: "Compiler", url: "/dashboard/compiler", icon: Terminal },
   // { title: "AI Mentor", url: "/dashboard/ai-assistant", icon: Bot },
-  { title: "Certificates", url: "/dashboard/profile#certificates", icon: Award },
+  // { title: "Certificates", url: "/dashboard/profile#certificates", icon: Award },
 ]
 
-const accountItems = [
-  { title: "Profile", url: "/dashboard/profile", icon: User },
-  { title: "Settings", url: "/dashboard/settings", icon: Settings },
-]
 
 export function AppSidebar() {
   return (
@@ -43,23 +39,6 @@ export function AppSidebar() {
           <SidebarGroupContent>
             <SidebarMenu>
               {items.map((item) => (
-                <SidebarMenuItem key={item.title}>
-                  <SidebarMenuButton asChild tooltip={item.title}>
-                    <Link href={item.url}>
-                      <item.icon />
-                      <span>{item.title}</span>
-                    </Link>
-                  </SidebarMenuButton>
-                </SidebarMenuItem>
-              ))}
-            </SidebarMenu>
-          </SidebarGroupContent>
-        </SidebarGroup>
-        <SidebarGroup>
-          <SidebarGroupLabel>Account</SidebarGroupLabel>
-          <SidebarGroupContent>
-            <SidebarMenu>
-              {accountItems.map((item) => (
                 <SidebarMenuItem key={item.title}>
                   <SidebarMenuButton asChild tooltip={item.title}>
                     <Link href={item.url}>
