@@ -68,15 +68,74 @@ npm run lint
 ```
 
 ## Project Structure
-- app/ — Next.js app router pages and layouts
-  - dashboard/ — Main application surfaces (overview, courses, compiler, AI assistant, profile)
-  - layout.tsx — Global layout, fonts, analytics, providers
-- components/ — UI components, dashboard sidebar, course player, brand assets
-- lib/ — Data and utilities (course content and language configs)
-- context/ — React context providers (e.g., user context)
-- hooks/ — Reusable hooks (e.g., course retrieval)
-- public/ — Static assets
-- proxy.ts — Clerk middleware and route protection
+
+### Core Application (`app/`)
+- **`layout.tsx`** - Global layout wrapper with Clerk authentication, theme provider, and analytics
+- **`page.tsx`** - Landing page with hero section and navigation
+- **`globals.css`** - Global styles and Tailwind CSS configuration
+- **`courses/`** - Course-related pages
+  - **`page.tsx`** - Courses listing page with filtering and search
+  - **`[id]/`** - Dynamic course detail pages
+- **`compiler/`** - In-browser code compiler interface
+- **`api/`** - API routes for backend functionality
+
+### UI Components (`components/`)
+- **`ui/`** - Reusable UI components (shadcn/ui components)
+  - `button.tsx`, `card.tsx`, `input.tsx`, `tabs.tsx` - Basic UI primitives
+  - `sidebar.tsx` - Main navigation sidebar component
+  - `sheet.tsx`, `dialog.tsx` - Modal and overlay components
+  - `select.tsx`, `radio-group.tsx` - Form controls
+- **`landing/`** - Landing page specific components
+  - `hero.tsx` - Main hero section with call-to-action
+  - `features-grid.tsx` - Feature highlights grid
+  - `navbar.tsx` - Navigation header
+  - `pricing-section.tsx` - Pricing plans display
+  - `footer.tsx` - Footer component
+- **`course-player.tsx`** - Interactive course content viewer with video, notes, and progress tracking
+- **`ai-assistant.tsx`** - AI coding assistant interface with Google Gemini integration
+- **`certificate.tsx`** - Certificate generation and display component
+- **`provider.tsx`** - React context provider wrapper
+- **`theme-provider.tsx`** - Theme switching functionality
+- **`brand/`** - Brand-specific components and assets
+
+### Data & Configuration (`lib/`)
+- **`data.ts`** - Course content database with 10 programming languages
+  - Course metadata, lessons, test questions
+  - MDX content for course notes
+  - Interfaces for `Course`, `Lesson`, `TestQuestion`
+- **`languages.ts`** - Multi-language compiler configuration
+  - Support for 10+ languages (Python, JavaScript, C, C++, Java, C#, Go, Ruby, PHP, Rust)
+  - Language icons, boilerplate code, and compiler settings
+- **`utils.ts`** - Utility functions and helpers
+- **`downloadPDF.ts`** - PDF generation functionality for certificates
+
+### Custom Hooks (`hooks/`)
+- **`use-courses.ts`** - Course data fetching and management
+- **`use-store.ts`** - Global state management with Zustand
+- **`use-mobile.ts`** - Mobile device detection and responsive utilities
+
+### Configuration Files
+- **`package.json`** - Dependencies and scripts (Next.js 16, React 19, TypeScript)
+- **`tsconfig.json`** - TypeScript configuration
+- **`next.config.mjs`** - Next.js build configuration
+- **`tailwind.config.js`** - Tailwind CSS configuration
+- **`components.json`** - shadcn/ui component configuration
+- **`proxy.ts`** - Clerk authentication middleware and route protection
+- **`.env`** - Environment variables (Clerk keys, API keys)
+
+### Key Dependencies
+- **Frontend**: Next.js 16, React 19, TypeScript, Tailwind CSS v4
+- **UI Components**: Radix UI primitives, shadcn/ui, Lucide icons
+- **Authentication**: Clerk for user management and route protection
+- **AI Integration**: Google Gemini for AI coding assistant
+- **Content Rendering**: React Markdown with syntax highlighting
+- **State Management**: Zustand for global state
+- **Analytics**: Vercel Analytics
+- **PDF Generation**: jsPDF, html-to-image, html2canvas
+
+### Static Assets (`public/`)
+- Images, icons, and static files
+- Course thumbnails and brand assets
 
 ## Deployment
 - Vercel recommended for Next.js applications
