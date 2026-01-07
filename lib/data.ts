@@ -27,6 +27,7 @@ export interface Course {
   duration: number;
   thumbnail: string;
   instructor: string;
+  url: string;
   notes: string; // MDX content
   test: TestQuestion[];
 }
@@ -34,6 +35,7 @@ export interface Course {
 export const COURSES: Course[] = [
   {
     id: "python-beginner",
+    url: "https://www.youtube.com/embed/rfscVS0vtbw",
     title: "Python Programming for Beginners",
     description:
       "Master Python from absolute basics to functional programming concepts with real-world logic building, problem solving, and practical coding experience.",
@@ -91,6 +93,7 @@ export const COURSES: Course[] = [
   },
   {
     id: "javascript-beginner",
+    url: "https://www.youtube.com/embed/W6NZfCO5SIk",
     title: "JavaScript Fundamentals",
     description:
       "Learn modern JavaScript from the ground up — build logic, understand core programming concepts, and create interactive web functionality.",
@@ -148,6 +151,7 @@ export const COURSES: Course[] = [
   },
   {
     id: "java-beginner",
+    url: "https://www.youtube.com/embed/eIrMbAQSU34",
     title: "Java Programming Essentials",
     description:
       "Learn Java fundamentals including syntax, OOP concepts, logic building, and structured programming to build real-world applications.",
@@ -214,6 +218,7 @@ export const COURSES: Course[] = [
   },
   {
     id: "cpp-beginner",
+    url: "https://www.youtube.com/embed/vLnPwxZdW4Y",
     title: "C++ Programming Basics",
     description:
       "Learn C++ fundamentals, memory concepts, logic building, and the foundation required for performance-critical applications and system programming.",
@@ -276,6 +281,7 @@ export const COURSES: Course[] = [
   },
   {
     id: "c-beginner",
+    url: "https://www.youtube.com/embed/KJgsSFOSQv0",
     title: "C Programming Foundation",
     description:
       "Learn the core foundations of the C programming language including syntax, memory concepts, logic building, and system-level programming basics.",
@@ -331,6 +337,7 @@ export const COURSES: Course[] = [
   },
   {
     id: "go-beginner",
+    url: "https://www.youtube.com/embed/YS4e4q9oBaU",
     title: "Go Programming Essentials",
     description:
       "Learn Go (Golang) fundamentals including syntax, concurrency basics, fast execution concepts, and real-world backend development foundations.",
@@ -387,6 +394,7 @@ export const COURSES: Course[] = [
   },
   {
     id: "php-beginner",
+    url: "https://www.youtube.com/embed/OK_JCtrrv-c",
     title: "PHP Web Development",
     description:
       "Learn PHP fundamentals for backend web development including server-side scripting, data handling, and dynamic website creation.",
@@ -442,6 +450,7 @@ export const COURSES: Course[] = [
   },
   {
     id: "swift-beginner",
+    url: "https://www.youtube.com/embed/comQ1-x2a1Q",
     title: "Swift Programming for iOS",
     description:
       "Learn Swift programming from the basics and build a strong foundation for iOS, macOS, and Apple ecosystem development.",
@@ -499,6 +508,7 @@ export const COURSES: Course[] = [
   },
   {
     id: "rust-beginner",
+    url: "https://www.youtube.com/embed/BpPEoZW5IiY",
     title: "Rust Programming Fundamentals",
     description:
       "Learn Rust programming fundamentals focusing on memory safety, performance, ownership principles, and modern systems programming concepts.",
@@ -571,6 +581,7 @@ export const COURSES: Course[] = [
   },
   {
     id: "ruby-beginner",
+    url: "https://www.youtube.com/embed/t_ispmWmdjY",
     title: "Ruby Programming Basics",
     description:
       "Learn Ruby programming fundamentals including syntax, object-oriented concepts, and the foundation for modern web development using Ruby on Rails.",

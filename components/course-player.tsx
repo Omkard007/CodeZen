@@ -25,73 +25,13 @@ interface CoursePlayerProps {
 }
 
 export function CoursePlayer({ course }: CoursePlayerProps) {
-  const { user, updateProgress, getCourseProgress } = useUser();
-  const progress = getCourseProgress(course.id);
+  const { user } = useUser();
 
   // Initialize to first uncompleted lesson or first lesson
-  const initialLessonIndex = progress?.completedLessons.length
-    ? Math.min(progress.completedLessons.length, course.lessons.length - 1)
-    : 0;
-
-  const [currentLessonIndex, setCurrentLessonIndex] =
-    useState(initialLessonIndex);
-  const currentLesson = course.lessons[currentLessonIndex];
-  const isLessonCompleted = progress?.completedLessons.includes(
-    currentLesson.id
-  );
 
   // Compiler state
-  const [code, setCode] = useState(currentLesson.codeExample);
   const [output, setOutput] = useState("");
   const [isRunning, setIsRunning] = useState(false);
-
-  useEffect(() => {
-    setCode(currentLesson.codeExample);
-    setOutput("");
-  }, [currentLesson]);
-
-  const handleRunCode = () => {
-    setIsRunning(true);
-    setOutput(
-      `[CodeZen Compiler v1.0]\nRunning ${course.language} code...\n\n`
-    );
-
-    // Simulate compilation
-    setTimeout(() => {
-      // Very basic mock execution - in real app this would call an API
-      let result = "Hello, World!\nExecution successful.\n";
-      if (code.includes("print")) {
-        const matches = code.match(/print$$(['"])(.*?)\1$$/);
-        if (matches) result = `${matches[2]}\n`;
-      } else if (code.includes("console.log")) {
-        const matches = code.match(/console\.log$$(['"])(.*?)\1$$/);
-        if (matches) result = `${matches[2]}\n`;
-      }
-
-      setOutput((prev) => prev + result + "\nProgram exited with code 0");
-      setIsRunning(false);
-    }, 1500);
-  };
-
-  const handleCompleteLesson = () => {
-    updateProgress(course.id, currentLesson.id);
-  };
-
-  const nextLesson = () => {
-    if (currentLessonIndex < course.lessons.length - 1) {
-      setCurrentLessonIndex(currentLessonIndex + 1);
-    }
-  };
-
-  const prevLesson = () => {
-    if (currentLessonIndex > 0) {
-      setCurrentLessonIndex(currentLessonIndex - 1);
-    }
-  };
-
-  const progressPercent = Math.round(
-    ((progress?.completedLessons.length || 0) / course.totalLessons) * 100
-  );
 
   return (
     <div className="grid lg:grid-cols-[1fr_400px] gap-6 h-[calc(100vh-120px)]">
@@ -100,21 +40,8 @@ export function CoursePlayer({ course }: CoursePlayerProps) {
         <div className="flex items-center justify-between">
           <div>
             <h2 className="text-2xl font-bold">{course.title}</h2>
-            <p className="text-muted-foreground">
-              Lesson {currentLessonIndex + 1}: {currentLesson.title}
-            </p>
           </div>
-          <div className="flex items-center gap-4">
-            {isLessonCompleted ? (
-              <Badge className="bg-green-500/10 text-green-500 border-green-500/20">
-                <CheckCircle2 className="h-3 w-3 mr-1" /> Completed
-              </Badge>
-            ) : (
-              <Button onClick={handleCompleteLesson} size="sm">
-                Mark as Completed
-              </Button>
-            )}
-          </div>
+          <div className="flex items-center gap-4"></div>
         </div>
 
         <div className="flex-1 overflow-auto space-y-6 pr-2">
@@ -132,7 +59,7 @@ export function CoursePlayer({ course }: CoursePlayerProps) {
             <TabsContent value="video" className="mt-4">
               <div className="aspect-video rounded-xl bg-black overflow-hidden border border-border relative group">
                 <iframe
-                  src={currentLesson.videoUrl}
+                  src={course.url}
                   className="w-full h-full"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
@@ -143,7 +70,7 @@ export function CoursePlayer({ course }: CoursePlayerProps) {
             <TabsContent value="notes" className="mt-4">
               <Card>
                 <CardContent className="pt-6 prose prose-invert max-w-none">
-                  <ReactMarkdown>{currentLesson.notes}</ReactMarkdown>
+                  <ReactMarkdown>{course.notes}</ReactMarkdown>
                 </CardContent>
               </Card>
             </TabsContent>
@@ -151,27 +78,12 @@ export function CoursePlayer({ course }: CoursePlayerProps) {
 
           {/* Navigation Controls */}
           <div className="flex items-center justify-between py-4 border-t border-border">
-            <Button
-              variant="outline"
-              onClick={prevLesson}
-              disabled={currentLessonIndex === 0}
-              className="gap-2 bg-transparent"
-            >
-              <ChevronLeft className="h-4 w-4" /> Previous Lesson
-            </Button>
-
             <div className="flex gap-2">
-              {currentLessonIndex === course.lessons.length - 1 ? (
-                <Button className="gap-2" asChild>
-                  <a href={`/dashboard/courses/${course.id}/test`}>
-                    Take Final Test <Award className="h-4 w-4" />
-                  </a>
-                </Button>
-              ) : (
-                <Button onClick={nextLesson} className="gap-2">
-                  Next Lesson <ChevronRight className="h-4 w-4" />
-                </Button>
-              )}
+              <Button className="gap-2" asChild>
+                <a href={`/dashboard/courses/${course.id}/test`}>
+                  Take Final Test <Award className="h-4 w-4" />
+                </a>
+              </Button>
             </div>
           </div>
         </div>
@@ -179,10 +91,7 @@ export function CoursePlayer({ course }: CoursePlayerProps) {
 
       {/* Compiler Side Panel */}
       <div className="flex flex-col gap-4 overflow-hidden border-l border-border pl-6">
-        <MiniCompiler
-          language={course.language}
-          initialCode={currentLesson.codeExample}
-        />
+        <MiniCompiler language={course.language} />
       </div>
     </div>
   );
@@ -200,10 +109,9 @@ import { LANGUAGE_DATA } from "@/lib/languages";
 
 interface MiniCompilerProps {
   language: string;
-  initialCode: string;
 }
 
-export function MiniCompiler({ language, initialCode }: MiniCompilerProps) {
+export function MiniCompiler({ language }: MiniCompilerProps) {
   console.log(language);
   const [code, setCode] = useState(
     LANGUAGE_DATA.find((l) => l.name === language.toLocaleLowerCase())
