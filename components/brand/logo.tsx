@@ -18,7 +18,7 @@ export function Logo({ size = "md", showText = true, className = "" }: LogoProps
   return (
     <div className={`flex items-center gap-2 ${className}`}>
       <div
-        className={`${currentSize.padding} rounded-lg bg-primary/20 border border-primary/30 group-hover:glow-cyan transition-all`}
+        className={`${currentSize?.padding} rounded-lg bg-primary/20 border border-primary/30 group-hover:glow-cyan transition-all`}
       >
         <Code2 className={`${currentSize.icon} text-primary`} />
       </div>
