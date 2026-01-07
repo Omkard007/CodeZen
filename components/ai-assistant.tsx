@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { ScrollArea } from "@/components/ui/scroll-area"
-import { Bot, Send, X, Sparkles } from "lucide-react"
+import { Bot, Send, X, Sparkles, ChevronDown } from "lucide-react"
 
 interface Message {
   role: "user" | "assistant"
@@ -20,17 +20,32 @@ export function AIAssistant() {
   const [messages, setMessages] = useState<Message[]>([
     {
       role: "assistant",
-      content: "Hello! I'm Zen, your AI coding mentor. How can I help you with your coding journey today?",
+      content: "Hello! I'm CodeZen, your AI coding mentor. How can I help you with your coding journey today?",
     },
   ])
   const [isTyping, setIsTyping] = useState(false)
-  const scrollAreaRef = useRef<HTMLDivElement>(null)
+  const [isAutoScrollEnabled, setIsAutoScrollEnabled] = useState(true)
+  const scrollViewportRef = useRef<HTMLDivElement>(null)
+  const messagesEndRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    if (scrollAreaRef.current) {
-      scrollAreaRef.current.scrollTop = scrollAreaRef.current.scrollHeight
+    if (isAutoScrollEnabled && messagesEndRef.current) {
+      messagesEndRef.current.scrollIntoView({ behavior: "smooth" })
     }
-  }, [messages, isTyping])
+  }, [messages, isTyping, isAutoScrollEnabled])
+
+  useEffect(() => {
+    const viewport = scrollViewportRef.current
+    if (!viewport) return
+
+    const handleScroll = () => {
+      const isNearBottom = viewport.scrollHeight - viewport.scrollTop - viewport.clientHeight < 100
+      setIsAutoScrollEnabled(isNearBottom)
+    }
+
+    viewport.addEventListener("scroll", handleScroll)
+    return () => viewport.removeEventListener("scroll", handleScroll)
+  }, [])
 
   const handleSend = async (e?: React.FormEvent) => {
     if (e) e.preventDefault()
@@ -40,27 +55,25 @@ export function AIAssistant() {
     setInput("")
     setMessages((prev) => [...prev, { role: "user", content: userMessage }])
     setIsTyping(true)
-
-    // Simulate AI response
-    setTimeout(() => {
-      let aiResponse =
-        "That's a great question! In programming, this concept is fundamental. Would you like me to show you a code example or explain the theory behind it?"
-
-      // Simple mock keyword responses
-      if (userMessage.toLowerCase().includes("python")) {
-        aiResponse =
-          "Python is known for its readability. For beginners, I recommend focusing on lists and dictionaries as they are the backbone of most Python applications. Do you have a specific Python error you're trying to solve?"
-      } else if (userMessage.toLowerCase().includes("error") || userMessage.toLowerCase().includes("fix")) {
-        aiResponse =
-          "I can help you debug! Please paste your code snippet and the error message here. I'll analyze the logic and suggest a fix."
-      } else if (userMessage.toLowerCase().includes("certificate")) {
-        aiResponse =
-          "To earn a certificate, you need to complete all lessons in a course and score at least 70% on the final assessment. You can download it directly from the test results page or your profile!"
-      }
-
-      setMessages((prev) => [...prev, { role: "assistant", content: aiResponse }])
+    setIsAutoScrollEnabled(true)
+    try {
+      const response = await fetch("/api/chat-bot", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          message: userMessage,
+        }),
+      })
+      const data = await response.json()
+      setMessages((prev) => [...prev, { role: "assistant", content: data.message }])
+    } catch (error) {
+      console.error("Error:", error)
+      setMessages((prev) => [...prev, { role: "assistant", content: "Sorry, something went wrong. Please try again." }])
+    } finally {
       setIsTyping(false)
-    }, 1500)
+    }
   }
 
   return (
@@ -92,8 +105,8 @@ export function AIAssistant() {
             </Button>
           </CardHeader>
 
-          <CardContent className="flex-1 p-0 overflow-hidden">
-            <ScrollArea className="h-full p-4" ref={scrollAreaRef}>
+          <CardContent className="flex-1 p-0 overflow-hidden relative">
+            <ScrollArea className="h-full p-4" ref={scrollViewportRef}>
               <div className="space-y-4">
                 {messages.map((m, i) => (
                   <div key={i} className={`flex ${m.role === "user" ? "justify-end" : "justify-start"}`}>
@@ -115,8 +128,23 @@ export function AIAssistant() {
                     </div>
                   </div>
                 )}
+                <div ref={messagesEndRef} />
               </div>
             </ScrollArea>
+
+            {!isAutoScrollEnabled && (
+              <Button
+                onClick={() => {
+                  setIsAutoScrollEnabled(true)
+                  messagesEndRef.current?.scrollIntoView({ behavior: "smooth" })
+                }}
+                className="absolute bottom-4 left-1/2 -translate-x-1/2 gap-1 bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg animate-in fade-in slide-in-from-bottom-2 duration-300"
+                size="sm"
+              >
+                <ChevronDown className="h-4 w-4" />
+                New Messages
+              </Button>
+            )}
           </CardContent>
 
           <CardFooter className="p-4 border-t border-border bg-muted/30">
