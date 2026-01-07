@@ -14,6 +14,7 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: "CodeZen - Learn. Code. Compile. Certify.",
+  metadataBase: new URL("https://code-zen-silk.vercel.app"),
   description:
     "The all-in-one platform to master 10+ programming languages with interactive courses, integrated compilers, AI mentoring, and verified certificates.",
   generator: "v0.app",
