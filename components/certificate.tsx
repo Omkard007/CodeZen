@@ -32,26 +32,26 @@ export function CertificatePreview({
       <div className="absolute bottom-4 sm:bottom-8 right-4 sm:right-8 w-8 sm:w-16 h-8 sm:h-16 border-b-2 border-r-2 border-amber-400"></div>
 
       {/* Content */}
-      <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4 sm:px-8 lg:px-16 space-y-1 sm:space-y-2">
+      <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4 sm:px-8 lg:px-16 space-y-1 lg:space-y-2">
         {/* Award Icon */}
         <div className="w-full flex justify-center items-center">
           <Logo showText={false} size="lg" />
         </div>
 
         {/* Title */}
-        <h1 className="text-lg sm:text-2xl font-serif text-gray-800">Certificate of Completion</h1>
+        <h1 className="text-lg md:text-xl lg:text-2xl font-serif text-gray-800">Certificate of Completion</h1>
 
         {/* Subtitle */}
         <p className="text-xs text-gray-600 uppercase tracking-wider">This is to certify that</p>
 
         {/* Student Name */}
-        <h2 className="text-lg sm:text-2xl font-serif text-gray-900 border-b-2 border-amber-500 pb-1 sm:pb-2 px-4 sm:px-8">
+        <h2 className="text-lg md:text-xl lg:text-2xl font-serif text-gray-900 border-b-2 border-amber-500 pb-1 sm:pb-2 px-4 sm:px-8">
           {studentName || "Student Name"}
         </h2>
 
         {/* Course Info */}
         <p className="text-gray-700 text-xs sm:text-sm">has successfully completed the course</p>
-        <h3 className="text-base sm:text-2xl font-serif text-amber-700">{courseName || "Course Name"}</h3>
+        <h3 className="text-base md:text-xl lg:text-2xl font-serif text-amber-700">{courseName || "Course Name"}</h3>
 
         {/* Date and Instructor */}
         <div className="flex justify-between w-full my-1 sm:my-2 gap-2">
