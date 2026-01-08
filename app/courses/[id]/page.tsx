@@ -40,18 +40,6 @@ export default function CourseLearnPage() {
 
   return (
     <div className="max-w-7xl my-15 mx-auto">
-      <div className="mb-6">
-        <Button
-          variant="ghost"
-          asChild
-          className="pl-0 hover:bg-transparent -ml-2 text-muted-foreground hover:text-foreground absolute top-3 left-3"
-        >
-          <Link href="/courses" className="flex items-center gap-2">
-            <ChevronLeft className="h-4 w-4" />
-            Home
-          </Link>
-        </Button>
-      </div>
 
       <CoursePlayer course={course} />
     </div>

@@ -127,12 +127,6 @@ export default function CompilerPage() {
     <div className="min-h-screen flex flex-col bg-background">
       {/* Top Bar */}
       <div className="border-b border-border bg-card px-6 py-4 flex items-center justify-between">
-          <Button variant="ghost" asChild>
-            <Link href="/" className="flex items-center gap-2">
-              <MoveLeft className="h-4 w-4" />
-              Home
-            </Link>
-          </Button>
         <div className="flex items-center gap-3">
           <div
             dangerouslySetInnerHTML={{
@@ -141,10 +135,10 @@ export default function CompilerPage() {
                 "",
             }}
           ></div>
-          <h1 className="text-xl font-bold">Code Compiler</h1>
+          <h1 className="text-sm md:text-xl font-bold">Code Compiler</h1>
         </div>
         <div className="flex items-center gap-4">
-          <Select value={selectedLanguage} onValueChange={handleLanguageChange}>
+          <Select value={selectedLanguage} onValueChange={handleLanguageChange} >
             <SelectTrigger className="w-48">
               <div className="flex items-center gap-2">
                 <SelectValue />
@@ -161,7 +155,7 @@ export default function CompilerPage() {
                             ?.icon || "",
                       }}
                     ></div>
-                    <span>{lang.label}</span>
+                    <span className="text-xs md:text-base">{lang.label}</span>
                   </div>
                 </SelectItem>
               ))}
@@ -171,16 +165,16 @@ export default function CompilerPage() {
       </div>
 
       {/* Editor Area */}
-      <div className="flex-1 flex overflow-hidden">
+      <div className="flex-1 flex flex-col md:flex-row overflow-hidden">
         {/* Main Editor */}
         <div className="flex-1 flex flex-col">
           {/* File Tabs */}
           {/* Code Editor */}
-          <div className="flex-1 overflow-hidden p-4 bg-muted/10">
+          <div className="flex-1 h-full overflow-hidden p-4 bg-muted/10">
             <Textarea
               value={activeFile?.code || ""}
               onChange={(e) => handleCodeChange(e.target.value)}
-              className="w-full h-full font-mono text-sm bg-card border-border resize-none focus-visible:ring-primary"
+              className="w-full h-full font-mono text-xs sm:text-sm bg-card border-border resize-none focus-visible:ring-primary"
               placeholder={`Write your ${selectedLanguage} code here...`}
             />
           </div>
@@ -207,7 +201,7 @@ export default function CompilerPage() {
         </div>
 
         {/* Output Panel */}
-        <div className="w-full lg:w-[35%] border-l border-border bg-card flex flex-col">
+        <div className="w-full md:w-[35%] border-l border-border bg-card flex flex-col">
           <Tabs defaultValue="output" className="flex-1 flex flex-col">
             <TabsContent
               value="output"
