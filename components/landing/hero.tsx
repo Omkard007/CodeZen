@@ -18,7 +18,7 @@ export function Hero() {
             initial={{ scale: 0.9, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-primary/20 bg-primary/5 text-[13px] font-medium text-primary glow-cyan"
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-primary/20 bg-primary/5 text-xs sm:text-sm font-medium text-primary glow-cyan "
           >
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
@@ -40,7 +40,7 @@ export function Hero() {
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.4, duration: 0.8 }}
-            className="text-lg md:text-2xl text-muted-foreground max-w-[700px] mx-auto leading-relaxed"
+            className="text-base sm:text-lg md:text-2xl text-muted-foreground max-w-[700px] mx-auto leading-relaxed"
           >
             The all-in-one platform to master 10+ programming languages. Integrated compilers, AI mentoring, and
             verified certificates.
@@ -53,7 +53,7 @@ export function Hero() {
           >
             <Button
               size="lg"
-              className="bg-primary text-black hover:bg-primary/90 px-10 rounded-full h-14 text-lg font-semibold glow-cyan group"
+              className="bg-primary text-black hover:bg-primary/90 px-10 rounded-full h-14 text-lg font-semibold glow-cyan group w-full sm:w-auto"
               asChild
             >
               <Link href="/courses">
@@ -64,7 +64,7 @@ export function Hero() {
             <Button
               size="lg"
               variant="outline"
-              className="border-white/10 bg-white/5 hover:bg-white/10 px-10 rounded-full h-14 text-lg font-medium gap-3 backdrop-blur-sm"
+              className="border-white/10 bg-white/5 hover:bg-white/10 px-10 rounded-full h-14 text-lg font-medium gap-3 backdrop-blur-sm w-full sm:w-auto"
               asChild
             >
               <Link href="/compiler">
@@ -92,7 +92,7 @@ export function Hero() {
               </div>
               <div className="text-[10px] text-muted-foreground font-mono ml-4">codezen-app/main.py</div>
             </div>
-            <div className="p-8 font-mono text-sm space-y-2 text-zinc-400">
+            <div className="p-8 font-mono text-xs md:text-sm space-y-2 text-zinc-400 ">
               <p>
                 <span className="text-primary">import</span> codezen
               </p>

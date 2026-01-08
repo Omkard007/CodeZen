@@ -20,7 +20,7 @@ export function Navbar() {
       animate={{ y: 0, opacity: 1 }}
       className="border-b border-white/5 bg-black/60 backdrop-blur-md sticky top-0 z-50"
     >
-      <div className="container mx-auto  py-4 px-10">
+      <div className="container mx-auto  py-4 px-4 sm:px-10">
         <div className="flex items-center justify-between">
           <Link href="/" className="group">
             <Logo size="md" />

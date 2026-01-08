@@ -5,6 +5,7 @@ import { Analytics } from "@vercel/analytics/next";
 import { UserProvider } from "@/context/user-context";
 import "./globals.css";
 import Provider from "@/components/provider";
+import { AIAssistant } from "@/components/ai-assistant";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 const jetbrainsMono = JetBrains_Mono({
@@ -69,6 +70,7 @@ export default function RootLayout({
         <UserProvider>
           <Provider>{children}</Provider>
         </UserProvider>
+        <AIAssistant/>
         <Analytics />
       </body>
     </html>

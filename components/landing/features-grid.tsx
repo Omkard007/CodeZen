@@ -39,10 +39,10 @@ const features = [
 
 export function FeaturesGrid() {
   return (
-    <section className="container mx-auto px-4 py-32 max-w-6xl  relative">
+    <section className="container mx-auto px-4 py-20 max-w-6xl  relative">
       <div className="text-center mb-20 space-y-4 ">
         <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight">Everything you need to ship.</h2>
-        <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+        <p className="text-muted-foreground md:text-lg max-w-2xl mx-auto text-sm ">
           We've built the ultimate developer experience for learning and building at speed.
         </p>
       </div>
