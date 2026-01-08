@@ -77,7 +77,7 @@ export function AIAssistant() {
   }
 
   return (
-    <div className="fixed bottom-6 right-6 z-50">
+    <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50">
       {!isOpen ? (
         <Button
           onClick={() => setIsOpen(true)}
@@ -89,7 +89,7 @@ export function AIAssistant() {
           </div>
         </Button>
       ) : (
-        <Card className="w-[380px] h-[520px] shadow-2xl flex flex-col border-primary/20 bg-card/95 backdrop-blur animate-in slide-in-from-bottom-5 duration-300">
+        <Card className="w-full sm:w-[380px] max-w-[calc(100vw-2rem)] h-[520px] shadow-2xl flex flex-col border-primary/20 bg-card/95 backdrop-blur animate-in slide-in-from-bottom-5 duration-300">
           <CardHeader className="bg-primary px-4 py-3 rounded-t-lg flex flex-row items-center justify-between space-y-0">
             <CardTitle className="text-primary-foreground flex items-center gap-2 text-base">
               <Sparkles className="h-4 w-4" />
@@ -111,7 +111,7 @@ export function AIAssistant() {
                 {messages.map((m, i) => (
                   <div key={i} className={`flex ${m.role === "user" ? "justify-end" : "justify-start"}`}>
                     <div
-                      className={`max-w-[85%] rounded-2xl px-4 py-2 text-sm ${
+                      className={`max-w-[85%] sm:max-w-[80%] rounded-2xl px-4 py-2 text-sm ${
                         m.role === "user" ? "bg-primary text-primary-foreground" : "bg-muted border border-border"
                       }`}
                     >
