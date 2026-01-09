@@ -122,7 +122,6 @@ interface MiniCompilerProps {
 }
 
 export function MiniCompiler({ language }: MiniCompilerProps) {
-  console.log(language);
   const [code, setCode] = useState(
     LANGUAGE_DATA.find((l) => l.name === language.toLocaleLowerCase())
       ?.boilerplate
@@ -130,7 +129,8 @@ export function MiniCompiler({ language }: MiniCompilerProps) {
   const [output, setOutput] = useState("");
   const [isRunning, setIsRunning] = useState(false);
   const [selectedLanguage, setSelectedLanguage] = useState(
-    language.toLocaleLowerCase()
+    LANGUAGE_DATA.find((l) => l.name === language.toLocaleLowerCase())
+      ?.name || "javascript"
   );
   useEffect(() => {
     const boilerplate =

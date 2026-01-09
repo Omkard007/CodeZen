@@ -8,7 +8,7 @@ import { COURSES } from "@/lib/data";
 export function Footer() {
   return (
     <footer className="border-t border-foreground/5 bg-background flex flex-col-reverse md:flex-row py-10 max-w-6xl mx-auto">
-      <div className="container mx-auto px-4 py-8 w-[30%]">
+      <div className="container mx-auto px-4 py-8 w-[30%] flex">
         <div className="pt-8 border-foreground/5 flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="text-sm text-muted-foreground flex flex-col justify-center items-center w-full">
             <Link href="/" className="inline-block mb-2 group">

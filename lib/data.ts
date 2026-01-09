@@ -3436,6 +3436,2983 @@ By the end:
       },
     ],
   },
+  {
+    id: "kotlin-beginner",
+    url: "https://www.youtube.com/embed/F9UC9DY-vIU",
+    title: "Kotlin Programming for Beginners",
+    description:
+      "Learn Kotlin from scratch and build a strong foundation for Android development, backend services, and modern JVM-based applications.",
+    language: "Kotlin",
+    difficulty: "beginner",
+    duration: 13,
+    thumbnail:
+      "https://campus.w3schools.com/cdn/shop/files/Kotlin_000b7c33-3027-46be-b684-600e68b0de26_1078x1078.png?v=1764575660",
+    instructor: "Rahul Verma",
+    notes: `# Kotlin Programming for Beginners
+
+## 🟣 Introduction to Kotlin
+
+Kotlin is a **modern, concise, and powerful programming language** developed by JetBrains and officially supported by Google for Android development. It runs on the **JVM**, interoperates fully with Java, and is designed to eliminate common programming errors while improving developer productivity.
+
+Kotlin is used for:
+- Android App Development
+- Backend Development (Ktor, Spring)
+- Desktop Applications
+- Multiplatform Development
+- JVM-based Systems
+
+---
+
+## 🌟 Why Learn Kotlin?
+
+| Feature | Description |
+|-------|-------------|
+| ✅ Concise Syntax | Less boilerplate than Java |
+| 🛡 Null Safety | Prevents NullPointerException |
+| ⚡ JVM Performance | Fast and efficient |
+| 🔄 Java Interoperability | Use Java libraries directly |
+| 📱 Official Android Language | Preferred by Google |
+| 🌍 Multiplatform | Android, iOS, Web, Desktop |
+
+---
+
+## 🧠 Programming Paradigms
+
+Kotlin supports:
+- Object-Oriented Programming
+- Functional Programming
+- Procedural Programming
+
+---
+
+## 📚 What You Will Learn
+
+---
+
+## 🔰 Module 1: Getting Started
+
+- Installing Kotlin
+- Kotlin Playground
+- Using IntelliJ IDEA
+- Running Kotlin programs
+
+### Hello World
+\`\`\`kotlin
+fun main() {
+    println("Hello Kotlin!")
+}
+\`\`\`
+
+---
+
+## ✨ Module 2: Variables & Data Types
+
+### Variables
+\`\`\`kotlin
+var name = "CodeZen"
+val age = 21
+\`\`\`
+
+- \`var\` → mutable
+- \`val\` → immutable (recommended)
+
+### Data Types
+- Int
+- Double
+- Float
+- String
+- Boolean
+- Char
+
+---
+
+## ➗ Module 3: Operators
+
+- Arithmetic (+ - * / %)
+- Comparison (== != > < >= <=)
+- Logical (&& || !)
+- Assignment (= += -=)
+
+---
+
+## 🧩 Module 4: Control Flow
+
+### If / Else
+\`\`\`kotlin
+val marks = 85
+
+if (marks >= 90) {
+    println("Excellent")
+} else {
+    println("Good")
+}
+\`\`\`
+
+### When (Switch)
+\`\`\`kotlin
+val day = 2
+
+when (day) {
+    1 -> println("Mon")
+    2 -> println("Tue")
+    else -> println("Other")
+}
+\`\`\`
+
+---
+
+## 🔁 Module 5: Loops
+
+### For Loop
+\`\`\`kotlin
+for (i in 1..5) {
+    println(i)
+}
+\`\`\`
+
+### While Loop
+\`\`\`kotlin
+var x = 1
+while (x <= 5) {
+    println(x)
+    x++
+}
+\`\`\`
+
+---
+
+## 📦 Module 6: Collections
+
+### List
+\`\`\`kotlin
+val numbers = listOf(1, 2, 3)
+\`\`\`
+
+### Mutable List
+\`\`\`kotlin
+val nums = mutableListOf(1, 2)
+nums.add(3)
+\`\`\`
+
+### Map
+\`\`\`kotlin
+val student = mapOf("name" to "Alex", "age" to 21)
+\`\`\`
+
+---
+
+## 🧠 Module 7: Functions
+
+\`\`\`kotlin
+fun add(a: Int, b: Int): Int {
+    return a + b
+}
+\`\`\`
+
+Supports:
+- Default parameters
+- Named arguments
+- Single-expression functions
+
+---
+
+## 🏛 Module 8: Object-Oriented Programming
+
+### Class & Object
+\`\`\`kotlin
+class Student(val name: String, val age: Int) {
+    fun intro() {
+        println("\$name is \$age")
+    }
+}
+\`\`\`
+
+Concepts:
+- Classes & Objects
+- Constructors
+- Inheritance
+- Polymorphism
+- Encapsulation
+
+---
+
+## 🛡 Module 9: Null Safety (Kotlin Superpower)
+
+\`\`\`kotlin
+var name: String? = null
+println(name?.length)
+\`\`\`
+
+- Prevents crashes
+- Safe calls (?.)
+- Elvis operator (?:)
+
+---
+
+## 📱 Kotlin for Android (Preview)
+
+- Activities & Fragments
+- ViewBinding
+- Jetpack Compose
+- MVVM Architecture
+
+---
+
+## 🚀 Real-World Applications
+
+- Android Apps
+- Backend APIs
+- Enterprise JVM Systems
+- Multiplatform Apps
+
+---
+
+## 💼 Companies Using Kotlin
+
+| Company | Usage |
+|-------|------|
+| Google | Android |
+| Netflix | Backend |
+| Pinterest | Mobile apps |
+| Trello | Android |
+| Uber | Mobile systems |
+
+---
+
+## 🎯 Learning Outcomes
+
+By the end:
+
+✅ Write clean Kotlin programs  
+✅ Understand JVM & Android basics  
+✅ Work with collections & functions  
+✅ Avoid runtime crashes using null safety  
+✅ Be ready for Android development  
+
+---
+
+## 📖 Practice Resources
+
+- Kotlin Official Docs
+- Kotlin Playground
+- LeetCode Kotlin
+- Android Developers
+- JetBrains Academy
+
+---
+
+## 🏆 Career Opportunities
+
+- Android Developer
+- Kotlin Backend Developer
+- Mobile Engineer
+- JVM Software Engineer
+
+---
+
+## 🎓 Next Steps
+
+1️⃣ Learn Android fundamentals  
+2️⃣ Jetpack Compose  
+3️⃣ MVVM Architecture  
+4️⃣ Build Android apps  
+5️⃣ Publish on Play Store  
+
+---
+
+*Modern. Safe. Powerful. Kotlin 🚀*
+`,
+    test: [
+      {
+        id: "kt-q1",
+        question: "Kotlin runs on which platform?",
+        options: ["CLR", "JVM", "Browser only", "Linux Kernel"],
+        correctAnswer: 1,
+        explanation: "Kotlin runs on the JVM.",
+      },
+      {
+        id: "kt-q2",
+        question: "Which keyword declares an immutable variable?",
+        options: ["var", "let", "const", "val"],
+        correctAnswer: 3,
+        explanation: "val declares read-only variables.",
+      },
+      {
+        id: "kt-q3",
+        question: "Kotlin is officially supported by:",
+        options: ["Microsoft", "Google", "Meta", "Amazon"],
+        correctAnswer: 1,
+        explanation: "Google officially supports Kotlin for Android.",
+      },
+    ],
+  },
+  {
+    id: "html-beginner",
+    url: "https://www.youtube.com/embed/pQN-pnXPaVg",
+    title: "HTML Fundamentals for Beginners",
+    description:
+      "Learn HTML from scratch and build a strong foundation for web development by understanding structure, semantics, and modern web standards.",
+    language: "HTML",
+    difficulty: "beginner",
+    duration: 8,
+    thumbnail:
+      "https://campus.w3schools.com/cdn/shop/files/HTML_1078x1078.png?v=1764577055",
+    instructor: "Laura Mitchell",
+    notes: `# HTML Fundamentals for Beginners
+
+## 🌐 Introduction to HTML
+
+HTML (HyperText Markup Language) is the **foundation of the web**. It defines the structure and content of websites and is used by every web page you see on the internet. HTML works together with CSS (styling) and JavaScript (interactivity).
+
+HTML is used to:
+- Structure web pages
+- Display text, images, videos
+- Create links, forms, and layouts
+- Build the base of all websites and web apps
+
+---
+
+## 🌟 Why Learn HTML?
+
+| Feature | Description |
+|-------|-------------|
+| 🌍 Universal | Used by every website |
+| 🧠 Easy to Learn | Beginner-friendly syntax |
+| 🧱 Foundation Skill | Required for CSS & JavaScript |
+| ⚡ Fast Results | Build pages quickly |
+| 📱 Responsive Ready | Works on all devices |
+
+---
+
+## 🧠 How HTML Works
+
+HTML uses **tags** to define elements.
+Tags tell the browser **what content is** and **how it is structured**.
+
+Example:
+\`<p>\` means paragraph  
+\`<img>\` means image  
+
+---
+
+## 📚 What You Will Learn
+
+---
+
+## 🔰 Module 1: HTML Basics
+
+- What is HTML?
+- HTML file structure
+- Tags & elements
+- Attributes
+- Comments
+
+### Basic HTML Page
+\`\`\`html
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My First Page</title>
+</head>
+<body>
+  <h1>Hello HTML</h1>
+  <p>This is my first webpage.</p>
+</body>
+</html>
+\`\`\`
+
+---
+
+## 🧱 Module 2: Text & Formatting
+
+- Headings (\`h1\` to \`h6\`)
+- Paragraphs
+- Bold, Italic, Underline
+- Line breaks & horizontal rules
+
+\`\`\`html
+<h1>Main Heading</h1>
+<p><strong>Bold</strong> and <em>Italic</em> text</p>
+\`\`\`
+
+---
+
+## 🔗 Module 3: Links & Images
+
+### Links
+\`\`\`html
+<a href="https://example.com">Visit Site</a>
+\`\`\`
+
+### Images
+\`\`\`html
+<img src="image.png" alt="Sample Image">
+\`\`\`
+
+Attributes:
+- src
+- alt
+- width / height
+
+---
+
+## 📋 Module 4: Lists
+
+### Unordered List
+\`\`\`html
+<ul>
+  <li>HTML</li>
+  <li>CSS</li>
+  <li>JavaScript</li>
+</ul>
+\`\`\`
+
+### Ordered List
+\`\`\`html
+<ol>
+  <li>Install Editor</li>
+  <li>Write Code</li>
+  <li>Run Browser</li>
+</ol>
+\`\`\`
+
+---
+
+## 🧩 Module 5: Tables
+
+\`\`\`html
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Age</th>
+  </tr>
+  <tr>
+    <td>Alex</td>
+    <td>21</td>
+  </tr>
+</table>
+\`\`\`
+
+Used for:
+- Tabular data
+- Reports
+- Dashboards
+
+---
+
+## 📝 Module 6: Forms & Inputs
+
+Forms collect user input.
+
+\`\`\`html
+<form>
+  <input type="text" placeholder="Name">
+  <input type="email" placeholder="Email">
+  <button>Submit</button>
+</form>
+\`\`\`
+
+Input types:
+- text
+- email
+- password
+- checkbox
+- radio
+- submit
+
+---
+
+## 🧠 Module 7: Semantic HTML
+
+Semantic tags improve **SEO**, **accessibility**, and **readability**.
+
+Examples:
+- \`<header>\`
+- \`<nav>\`
+- \`<section>\`
+- \`<article>\`
+- \`<footer>\`
+
+\`\`\`html
+<header>
+  <h1>Website</h1>
+</header>
+\`\`\`
+
+---
+
+## 📱 Module 8: Responsive Basics
+
+- Viewport meta tag
+- Mobile-friendly layouts
+
+\`\`\`html
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+\`\`\`
+
+---
+
+## 🚀 Real-World Applications
+
+- Websites
+- Landing pages
+- Blogs
+- Dashboards
+- Web apps
+- Emails
+
+---
+
+## 💼 Companies Using HTML
+
+Every company using the web:
+- Google
+- Apple
+- Meta
+- Amazon
+- Netflix
+- Startups & Enterprises
+
+---
+
+## 📊 HTML vs Other Technologies
+
+| Technology | Purpose |
+|----------|--------|
+| HTML | Structure |
+| CSS | Styling |
+| JavaScript | Logic & Interactivity |
+
+HTML is the **base** — CSS and JS depend on it.
+
+---
+
+## 🎯 Learning Outcomes
+
+By the end:
+
+✅ Build complete HTML pages  
+✅ Understand web structure  
+✅ Use forms, tables, lists  
+✅ Write clean semantic HTML  
+✅ Prepare for CSS & JavaScript  
+
+---
+
+## 📖 Practice Resources
+
+- MDN HTML Docs
+- W3Schools HTML
+- FreeCodeCamp
+- HTML Validator (W3C)
+
+---
+
+## 🏆 Career Relevance
+
+- Frontend Developer
+- Web Designer
+- UI Developer
+- Full Stack Developer (with CSS & JS)
+
+---
+
+## 🎓 Next Steps
+
+1️⃣ Learn CSS Styling  
+2️⃣ Learn Responsive Design  
+3️⃣ Learn JavaScript  
+4️⃣ Build real websites  
+5️⃣ Move to React / Next.js  
+
+---
+
+*Every Web Developer Starts with HTML 🌐*
+`,
+    test: [
+      {
+        id: "html-q1",
+        question: "HTML stands for:",
+        options: [
+          "Hyper Tool Markup Language",
+          "HyperText Markup Language",
+          "HighText Machine Language",
+          "Hyperlink Markup Language",
+        ],
+        correctAnswer: 1,
+        explanation: "HTML stands for HyperText Markup Language.",
+      },
+      {
+        id: "html-q2",
+        question: "Which tag is used for the largest heading?",
+        options: ["<h6>", "<p>", "<h1>", "<header>"],
+        correctAnswer: 2,
+        explanation: "<h1> defines the largest heading.",
+      },
+      {
+        id: "html-q3",
+        question: "Which tag is used to create a link?",
+        options: ["<link>", "<a>", "<href>", "<url>"],
+        correctAnswer: 1,
+        explanation: "<a> tag is used to create hyperlinks.",
+      },
+    ],
+  },
+  {
+    id: "css-beginner",
+    url: "https://www.youtube.com/embed/yfoY53QXEnI",
+    title: "CSS Fundamentals for Beginners",
+    description:
+      "Learn CSS from scratch to style beautiful, responsive websites using modern layouts, colors, animations, and best practices.",
+    language: "CSS",
+    difficulty: "beginner",
+    duration: 9,
+    thumbnail:
+      "https://campus.w3schools.com/cdn/shop/files/CSS_7c48e5b1-6d42-4936-aa4a-02a79ddbaeaf_1078x1078.png?v=1764577041",
+    instructor: "Laura Mitchell",
+    notes: `# CSS Fundamentals for Beginners
+
+## 🎨 Introduction to CSS
+
+CSS (Cascading Style Sheets) is used to **style and design web pages**. While HTML creates structure, CSS controls layout, colors, fonts, spacing, animations, and responsiveness.
+
+CSS allows you to:
+- Make websites visually appealing
+- Control layouts across devices
+- Create responsive designs
+- Add animations and transitions
+- Build modern UI components
+
+HTML without CSS looks plain — CSS brings the web to life.
+
+---
+
+## 🌟 Why Learn CSS?
+
+| Feature | Description |
+|-------|-------------|
+| 🎨 Visual Design | Control colors, fonts, layouts |
+| 📱 Responsive | Works on all screen sizes |
+| ⚡ Fast Results | See changes instantly |
+| 🧩 Modular | Reusable styles |
+| 🌍 Essential Skill | Required for frontend dev |
+
+---
+
+## 🧠 How CSS Works
+
+CSS applies **rules** to HTML elements.
+
+Rule structure:
+selector → property → value
+
+\`\`\`css
+p {
+  color: blue;
+  font-size: 16px;
+}
+\`\`\`
+
+---
+
+## 📚 What You Will Learn
+
+---
+
+## 🔰 Module 1: CSS Basics
+
+- Inline, Internal, External CSS
+- CSS syntax
+- Comments
+- Linking CSS to HTML
+
+\`\`\`html
+<link rel="stylesheet" href="style.css">
+\`\`\`
+
+---
+
+## 🎯 Module 2: Selectors
+
+- Element selector
+- Class selector
+- ID selector
+- Universal selector
+- Group selector
+
+\`\`\`css
+#title { color: red; }
+.card { padding: 16px; }
+\`\`\`
+
+---
+
+## 🎨 Module 3: Colors & Backgrounds
+
+- Named colors
+- HEX
+- RGB / RGBA
+- Gradients
+- Background images
+
+\`\`\`css
+body {
+  background: #111;
+  color: white;
+}
+\`\`\`
+
+---
+
+## 🔤 Module 4: Text & Fonts
+
+- font-family
+- font-size
+- font-weight
+- line-height
+- text-align
+- Google Fonts
+
+\`\`\`css
+h1 {
+  font-size: 32px;
+  font-weight: bold;
+}
+\`\`\`
+
+---
+
+## 📦 Module 5: Box Model (Core Concept)
+
+Every element is a box.
+
+- Content
+- Padding
+- Border
+- Margin
+
+\`\`\`css
+.card {
+  padding: 20px;
+  margin: 10px;
+  border: 2px solid #333;
+}
+\`\`\`
+
+---
+
+## 📐 Module 6: Layouts
+
+### Display
+- block
+- inline
+- inline-block
+- none
+
+### Position
+- static
+- relative
+- absolute
+- fixed
+- sticky
+
+\`\`\`css
+.box {
+  position: relative;
+  top: 10px;
+}
+\`\`\`
+
+---
+
+## 🧩 Module 7: Flexbox (Modern Layout)
+
+Used for one-dimensional layouts.
+
+- flex-direction
+- justify-content
+- align-items
+- gap
+
+\`\`\`css
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+\`\`\`
+
+---
+
+## 🧱 Module 8: Grid (Advanced Layout)
+
+Used for two-dimensional layouts.
+
+\`\`\`css
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+\`\`\`
+
+---
+
+## 📱 Module 9: Responsive Design
+
+- Media queries
+- Mobile-first design
+- Flexible units
+
+\`\`\`css
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+}
+\`\`\`
+
+---
+
+## ✨ Module 10: Transitions & Animations
+
+### Transitions
+\`\`\`css
+button {
+  transition: background 0.3s ease;
+}
+\`\`\`
+
+### Animations
+\`\`\`css
+@keyframes fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+\`\`\`
+
+---
+
+## 🚀 Real-World Applications
+
+- Website layouts
+- Landing pages
+- Dashboards
+- UI components
+- Animations
+- Responsive apps
+
+---
+
+## 💼 Companies Using CSS
+
+All web-based companies:
+- Google
+- Apple
+- Meta
+- Netflix
+- Amazon
+- Startups
+
+---
+
+## 📊 CSS vs Other Styling Methods
+
+| Method | Usage |
+|------|------|
+| CSS | Standard web styling |
+| Inline styles | Not recommended |
+| Tailwind | Utility-based CSS |
+| CSS-in-JS | Component styling |
+
+---
+
+## 🎯 Learning Outcomes
+
+By the end:
+
+✅ Style modern websites  
+✅ Build responsive layouts  
+✅ Master Flexbox & Grid  
+✅ Understand box model deeply  
+✅ Prepare for frameworks  
+
+---
+
+## 📖 Practice Resources
+
+- MDN CSS Docs
+- CSS Tricks
+- W3Schools CSS
+- Flexbox Froggy
+- Grid Garden
+
+---
+
+## 🏆 Career Relevance
+
+- Frontend Developer
+- UI Developer
+- Web Designer
+- Full Stack Developer
+
+---
+
+## 🎓 Next Steps
+
+1️⃣ Learn Responsive Design Deeply  
+2️⃣ Learn Tailwind CSS  
+3️⃣ Learn JavaScript  
+4️⃣ Build UI Projects  
+5️⃣ Move to React / Next.js  
+
+---
+
+*Design the Web with CSS 🎨*
+`,
+    test: [
+      {
+        id: "css-q1",
+        question: "CSS stands for:",
+        options: [
+          "Colorful Style Sheets",
+          "Cascading Style Sheets",
+          "Creative Style System",
+          "Computer Style Sheets",
+        ],
+        correctAnswer: 1,
+        explanation: "CSS stands for Cascading Style Sheets.",
+      },
+      {
+        id: "css-q2",
+        question: "Which property controls spacing inside an element?",
+        options: ["margin", "padding", "border", "gap"],
+        correctAnswer: 1,
+        explanation: "Padding controls inner spacing.",
+      },
+      {
+        id: "css-q3",
+        question: "Which layout system is best for 2D layouts?",
+        options: ["Flexbox", "Grid", "Float", "Position"],
+        correctAnswer: 1,
+        explanation: "CSS Grid handles rows and columns.",
+      },
+    ],
+  },
+  {
+    id: "sql-beginner",
+    url: "https://www.youtube.com/embed/7S_tz1z_5bA",
+    title: "SQL Fundamentals for Beginners",
+    description:
+      "Learn SQL from scratch to store, retrieve, analyze, and manage data efficiently using relational databases and real-world queries.",
+    language: "SQL",
+    difficulty: "beginner",
+    duration: 10,
+    thumbnail:
+      "https://campus.w3schools.com/cdn/shop/files/SQL_9503d82a-db63-4013-b4bb-4852a770eabc_1078x1078.png?v=1764576999",
+    instructor: "Daniel Cooper",
+    notes: `# SQL Fundamentals for Beginners
+
+## 🗄 Introduction to SQL
+
+SQL (Structured Query Language) is used to **communicate with databases**. It allows you to store, retrieve, update, and delete data from relational databases like MySQL, PostgreSQL, SQLite, and SQL Server.
+
+Almost every application — web, mobile, enterprise — relies on SQL databases.
+
+---
+
+## 🌟 Why Learn SQL?
+
+| Feature | Description |
+|-------|-------------|
+| 🧠 Data Power | Work directly with data |
+| 🌍 Universal | Works across all major databases |
+| 💼 High Demand | Required for backend & data roles |
+| ⚡ Fast Queries | Efficient data access |
+| 🔗 Works Everywhere | Web, mobile, enterprise |
+
+---
+
+## 🧠 How SQL Works
+
+SQL works with **tables** (rows and columns).
+
+- Rows → Records
+- Columns → Fields
+
+Example table:
+Users(id, name, email)
+
+---
+
+## 📚 What You Will Learn
+
+---
+
+## 🔰 Module 1: Database Basics
+
+- What is a database?
+- Relational databases
+- Tables, rows, columns
+- Primary keys
+
+---
+
+## 📋 Module 2: Creating Tables
+
+\`\`\`sql
+CREATE TABLE users (
+  id INT PRIMARY KEY,
+  name VARCHAR(50),
+  email VARCHAR(100)
+);
+\`\`\`
+
+---
+
+## 🔍 Module 3: SELECT Queries
+
+\`\`\`sql
+SELECT * FROM users;
+SELECT name, email FROM users;
+\`\`\`
+
+- WHERE
+- ORDER BY
+- LIMIT
+
+\`\`\`sql
+SELECT * FROM users WHERE id = 1;
+\`\`\`
+
+---
+
+## ✍ Module 4: INSERT Data
+
+\`\`\`sql
+INSERT INTO users (id, name, email)
+VALUES (1, 'Alex', 'alex@mail.com');
+\`\`\`
+
+---
+
+## 🔄 Module 5: UPDATE Data
+
+\`\`\`sql
+UPDATE users
+SET email = 'new@mail.com'
+WHERE id = 1;
+\`\`\`
+
+---
+
+## ❌ Module 6: DELETE Data
+
+\`\`\`sql
+DELETE FROM users WHERE id = 1;
+\`\`\`
+
+---
+
+## 🔗 Module 7: Constraints
+
+- PRIMARY KEY
+- FOREIGN KEY
+- UNIQUE
+- NOT NULL
+- DEFAULT
+
+\`\`\`sql
+email VARCHAR(100) UNIQUE NOT NULL
+\`\`\`
+
+---
+
+## 🔀 Module 8: Relationships & JOINS
+
+### INNER JOIN
+\`\`\`sql
+SELECT orders.id, users.name
+FROM orders
+INNER JOIN users ON orders.user_id = users.id;
+\`\`\`
+
+Types:
+- INNER JOIN
+- LEFT JOIN
+- RIGHT JOIN
+- FULL JOIN
+
+---
+
+## 📊 Module 9: Aggregations
+
+\`\`\`sql
+SELECT COUNT(*) FROM users;
+SELECT AVG(age) FROM users;
+\`\`\`
+
+Functions:
+- COUNT
+- SUM
+- AVG
+- MIN
+- MAX
+
+---
+
+## 🧠 Module 10: Indexes & Performance
+
+- Indexes speed up queries
+- Use WHERE wisely
+- Avoid SELECT *
+
+\`\`\`sql
+CREATE INDEX idx_email ON users(email);
+\`\`\`
+
+---
+
+## 🚀 Real-World Applications
+
+- User management systems
+- E-commerce databases
+- Analytics & reports
+- Authentication systems
+- Enterprise apps
+
+---
+
+## 💼 Companies Using SQL
+
+- Google
+- Amazon
+- Meta
+- Netflix
+- Banks & Enterprises
+
+---
+
+## 📊 SQL vs NoSQL
+
+| Feature | SQL | NoSQL |
+|------|-----|------|
+| Structure | Fixed schema | Flexible |
+| Relations | Strong | Weak |
+| Use Case | Transactions | Big data |
+| Scaling | Vertical | Horizontal |
+
+---
+
+## 🎯 Learning Outcomes
+
+By the end:
+
+✅ Write SQL queries confidently  
+✅ Manage relational databases  
+✅ Use joins & aggregations  
+✅ Optimize basic queries  
+✅ Work with real data  
+
+---
+
+## 📖 Practice Resources
+
+- SQLZoo
+- LeetCode SQL
+- HackerRank SQL
+- W3Schools SQL
+- Mode Analytics SQL
+
+---
+
+## 🏆 Career Opportunities
+
+- Backend Developer
+- Data Analyst
+- Database Engineer
+- Full Stack Developer
+- Business Analyst
+
+---
+
+## 🎓 Next Steps
+
+1️⃣ Learn Advanced Joins  
+2️⃣ Learn Stored Procedures  
+3️⃣ Learn Index Optimization  
+4️⃣ Learn ORM tools  
+5️⃣ Move to PostgreSQL / MySQL  
+
+---
+
+*Data is Power. SQL Unlocks It 🗄*
+`,
+    test: [
+      {
+        id: "sql-q1",
+        question: "SQL is used for:",
+        options: [
+          "Styling websites",
+          "Managing databases",
+          "Building UI",
+          "Writing servers",
+        ],
+        correctAnswer: 1,
+        explanation: "SQL is used to interact with databases.",
+      },
+      {
+        id: "sql-q2",
+        question: "Which keyword retrieves data?",
+        options: ["GET", "FETCH", "SELECT", "READ"],
+        correctAnswer: 2,
+        explanation: "SELECT retrieves data from tables.",
+      },
+      {
+        id: "sql-q3",
+        question: "Which clause filters records?",
+        options: ["ORDER BY", "GROUP BY", "WHERE", "LIMIT"],
+        correctAnswer: 2,
+        explanation: "WHERE filters records.",
+      },
+    ],
+  },
+  {
+    id: "bootstrap3-beginner",
+    url: "https://www.youtube.com/embed/qIULMnbH2-o",
+    title: "Bootstrap 3 Fundamentals",
+    description:
+      "Learn Bootstrap 3 from scratch to build fast, responsive, and mobile-first websites using its grid system, components, and utilities.",
+    language: "Bootstrap 3",
+    difficulty: "beginner",
+    duration: 8,
+    thumbnail:
+      "https://campus.w3schools.com/cdn/shop/files/Bootstrap_3_1078x1078.png?v=1764576969",
+    instructor: "Andrew Miller",
+    notes: `# Bootstrap 3 Fundamentals
+
+## 🎨 Introduction to Bootstrap 3
+
+Bootstrap 3 is a **popular front-end CSS framework** developed by Twitter that helps developers build **responsive and mobile-first websites quickly**. It provides pre-built CSS classes, components, and a powerful grid system.
+
+Bootstrap 3 is widely used in legacy projects and still important to understand for maintaining older applications.
+
+---
+
+## 🌟 Why Learn Bootstrap 3?
+
+| Feature | Description |
+|-------|-------------|
+| 📱 Responsive Design | Mobile-first layout system |
+| ⚡ Fast Development | Ready-made UI components |
+| 🎯 Consistent UI | Uniform design across browsers |
+| 🧩 Grid System | Flexible 12-column layout |
+| 🌍 Cross-Browser | Works on all major browsers |
+
+---
+
+## 🧠 Core Concepts
+
+Bootstrap 3 is based on:
+- CSS
+- HTML
+- Optional JavaScript (jQuery based)
+
+It focuses on **layout, responsiveness, and UI components**.
+
+---
+
+## 📚 What You Will Learn
+
+---
+
+## 🔰 Module 1: Getting Started
+
+- Bootstrap CDN
+- Local setup
+- Required meta viewport
+
+\`\`\`html
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+\`\`\`
+
+---
+
+## 📐 Module 2: Grid System
+
+Bootstrap 3 uses a **12-column grid**.
+
+### Grid Classes
+- col-xs-*
+- col-sm-*
+- col-md-*
+- col-lg-*
+
+\`\`\`html
+<div class="row">
+  <div class="col-md-6">Left</div>
+  <div class="col-md-6">Right</div>
+</div>
+\`\`\`
+
+---
+
+## 🧱 Module 3: Containers
+
+- container
+- container-fluid
+
+\`\`\`html
+<div class="container">
+  Content here
+</div>
+\`\`\`
+
+---
+
+## 🎛 Module 4: Typography & Utilities
+
+- Headings
+- text-center
+- text-muted
+- pull-left / pull-right
+- hidden-xs, visible-md
+
+---
+
+## 🔘 Module 5: Buttons
+
+\`\`\`html
+<button class="btn btn-primary">Primary</button>
+<button class="btn btn-success">Success</button>
+<button class="btn btn-danger">Danger</button>
+\`\`\`
+
+---
+
+## 📋 Module 6: Forms
+
+\`\`\`html
+<form>
+  <div class="form-group">
+    <label>Email</label>
+    <input type="email" class="form-control">
+  </div>
+</form>
+\`\`\`
+
+---
+
+## 📦 Module 7: Components
+
+- Navbar
+- Panels
+- Alerts
+- Wells
+- Badges
+- Labels
+
+### Alert Example
+\`\`\`html
+<div class="alert alert-success">
+  Success message
+</div>
+\`\`\`
+
+---
+
+## 🧭 Module 8: Navigation Bar
+
+\`\`\`html
+<nav class="navbar navbar-default">
+  <div class="container">
+    <a class="navbar-brand">Brand</a>
+  </div>
+</nav>
+\`\`\`
+
+---
+
+## ⚙ Module 9: JavaScript Components
+
+Requires **jQuery**.
+
+- Modal
+- Dropdown
+- Carousel
+- Collapse
+
+\`\`\`html
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+\`\`\`
+
+---
+
+## 🚀 Real-World Applications
+
+- Corporate websites
+- Admin dashboards
+- Landing pages
+- Legacy enterprise apps
+- Rapid prototypes
+
+---
+
+## 📊 Bootstrap 3 vs Bootstrap 4/5
+
+| Feature | Bootstrap 3 | Bootstrap 5 |
+|------|------------|-------------|
+| jQuery | Required | Not required |
+| Grid | Float-based | Flexbox |
+| Utility classes | Limited | Extensive |
+| Icons | Glyphicons | External |
+
+---
+
+## 🎯 Learning Outcomes
+
+By the end:
+
+✅ Build responsive layouts  
+✅ Use Bootstrap grid system  
+✅ Create forms & navbars  
+✅ Understand legacy Bootstrap projects  
+✅ Style websites quickly  
+
+---
+
+## 📖 Practice Resources
+
+- Bootstrap 3 Docs
+- W3Schools Bootstrap
+- FreeCodeCamp
+- CodePen
+
+---
+
+## 🏆 Career Use
+
+- Frontend Developer
+- Web Designer
+- UI Developer
+- Legacy App Maintenance
+
+---
+
+## 🎓 Next Steps
+
+1️⃣ Learn Bootstrap 4/5  
+2️⃣ Learn Flexbox & CSS Grid  
+3️⃣ Build responsive layouts  
+4️⃣ Combine with JS frameworks  
+
+---
+
+*Design Fast. Build Responsive. Bootstrap 3 🎨*
+`,
+    test: [
+      {
+        id: "bs3-q1",
+        question: "Bootstrap 3 grid system is based on:",
+        options: ["Flexbox", "CSS Grid", "12-column layout", "Tables"],
+        correctAnswer: 2,
+        explanation: "Bootstrap 3 uses a 12-column grid layout.",
+      },
+      {
+        id: "bs3-q2",
+        question: "Bootstrap 3 JavaScript components require:",
+        options: ["React", "Vue", "jQuery", "Angular"],
+        correctAnswer: 2,
+        explanation: "Bootstrap 3 depends on jQuery.",
+      },
+      {
+        id: "bs3-q3",
+        question: "Which class creates a responsive fixed-width container?",
+        options: ["box", "wrapper", "container", "container-fluid"],
+        correctAnswer: 2,
+        explanation: "container provides fixed-width responsive layout.",
+      },
+    ],
+  },
+  {
+    id: "xml-beginner",
+    url: "https://www.youtube.com/embed/1JblVElt5K0",
+    title: "XML Fundamentals",
+    description:
+      "Learn XML from scratch to understand structured data representation, data exchange, configuration files, and integration with modern systems.",
+    language: "XML",
+    difficulty: "beginner",
+    duration: 6,
+    thumbnail:
+      "https://campus.w3schools.com/cdn/shop/files/XML_ede0d596-4b41-4269-b733-02f9b32cb4a0_1078x1078.png?v=1764576960",
+    instructor: "Daniel Foster",
+    notes: `# XML Fundamentals
+
+## 📄 Introduction to XML
+
+XML (eXtensible Markup Language) is a **markup language used to store, transport, and structure data**. Unlike HTML, XML is designed to **carry data**, not display it. XML is widely used in **configuration files, APIs, web services, enterprise systems, and data exchange**.
+
+XML is human-readable, platform-independent, and supported by almost every programming language.
+
+---
+
+## 🌟 Why Learn XML?
+
+| Feature | Description |
+|-------|-------------|
+| 📦 Data Exchange | Common format for sharing data |
+| 🧠 Human Readable | Easy to read and understand |
+| 🌍 Platform Independent | Works across systems |
+| ⚙ Config Files | Used in apps, servers, tools |
+| 🔗 Interoperability | Used with APIs & services |
+
+---
+
+## 🧠 Where XML Is Used
+
+- Web services (SOAP)
+- Configuration files
+- Android layouts
+- RSS feeds
+- Office documents
+- Enterprise systems
+- Data storage & migration
+
+---
+
+## 📚 What You Will Learn
+
+---
+
+## 🔰 Module 1: XML Basics
+
+- What is XML?
+- XML vs HTML
+- XML declaration
+
+\`\`\`xml
+<?xml version="1.0" encoding="UTF-8"?>
+\`\`\`
+
+---
+
+## 🧱 Module 2: XML Structure
+
+XML uses **elements, tags, and attributes**.
+
+\`\`\`xml
+<student>
+  <name>Alex</name>
+  <age>21</age>
+</student>
+\`\`\`
+
+Rules:
+- Tags must be closed
+- Case-sensitive
+- Proper nesting required
+
+---
+
+## 🏷 Module 3: Attributes
+
+\`\`\`xml
+<book id="101" category="programming">
+  <title>XML Basics</title>
+</book>
+\`\`\`
+
+---
+
+## 🧩 Module 4: XML Data Types
+
+- Text
+- Numbers
+- Boolean (as text)
+- Nested elements
+
+---
+
+## 🧠 Module 5: XML Namespaces
+
+Used to avoid name conflicts.
+
+\`\`\`xml
+<ns:student xmlns:ns="http://example.com/student">
+  <ns:name>Alex</ns:name>
+</ns:student>
+\`\`\`
+
+---
+
+## 📂 Module 6: XML Comments & CDATA
+
+### Comments
+\`\`\`xml
+<!-- This is a comment -->
+\`\`\`
+
+### CDATA
+\`\`\`xml
+<![CDATA[
+  <data>Raw text</data>
+]]>
+\`\`\`
+
+---
+
+## 🔍 Module 7: XML Validation
+
+### DTD (Document Type Definition)
+### XSD (XML Schema Definition)
+
+Used to **validate structure and data types**.
+
+---
+
+## 🔄 Module 8: XML Parsing (Preview)
+
+XML can be parsed using:
+- DOM Parser
+- SAX Parser
+- StAX Parser
+
+Used in:
+- Java
+- Python
+- JavaScript
+- PHP
+
+---
+
+## 🚀 Real-World Applications
+
+### 🌐 Web Services
+- SOAP APIs
+- Legacy integrations
+
+### 📱 Mobile Apps
+- Android UI layouts
+- App configs
+
+### ⚙ Enterprise Systems
+- ERP systems
+- Banking software
+- Data exchange
+
+---
+
+## 💼 Companies Using XML
+
+| Company | Usage |
+|--------|--------|
+| Google | Feeds & configs |
+| Microsoft | Office files |
+| Oracle | Enterprise systems |
+| SAP | Business data |
+| Android | UI layouts |
+
+---
+
+## 📊 XML vs JSON
+
+| Feature | XML | JSON |
+|------|-----|------|
+| Readability | Medium | High |
+| Size | Larger | Smaller |
+| Validation | Strong (XSD) | Limited |
+| Attributes | Yes | No |
+| Enterprise Use | Very High | High |
+
+---
+
+## 🎯 Learning Outcomes
+
+By the end:
+
+✅ Understand XML syntax  
+✅ Structure and store data  
+✅ Validate XML documents  
+✅ Read and write XML files  
+✅ Work with enterprise systems  
+
+---
+
+## 📖 Practice Resources
+
+- W3Schools XML
+- XML Official Specs
+- TutorialsPoint
+- MDN Docs
+
+---
+
+## 🏆 Career Use
+
+- Backend Developer
+- Enterprise Software Engineer
+- Integration Engineer
+- Android Developer
+- System Engineer
+
+---
+
+## 🎓 Next Steps
+
+1️⃣ Learn JSON  
+2️⃣ Learn XML Parsing in Java/Python  
+3️⃣ Learn SOAP APIs  
+4️⃣ Explore XSD deeply  
+
+---
+
+*Structure Your Data with XML 📄*
+`,
+    test: [
+      {
+        id: "xml-q1",
+        question: "XML is mainly used for:",
+        options: [
+          "Styling web pages",
+          "Displaying UI",
+          "Storing and transporting data",
+          "Game development",
+        ],
+        correctAnswer: 2,
+        explanation: "XML is designed to store and transport structured data.",
+      },
+      {
+        id: "xml-q2",
+        question: "XML tags are:",
+        options: [
+          "Case insensitive",
+          "Optional",
+          "Case sensitive",
+          "Auto-closed",
+        ],
+        correctAnswer: 2,
+        explanation: "XML tags are case-sensitive.",
+      },
+      {
+        id: "xml-q3",
+        question: "Which is used to validate XML?",
+        options: ["CSS", "XSD", "HTML", "JSON"],
+        correctAnswer: 1,
+        explanation: "XSD is used to validate XML structure and data.",
+      },
+    ],
+  },
+  {
+    id: "numpy-beginner",
+    url: "https://www.youtube.com/embed/QUT1VHiLmmI",
+    title: "NumPy for Data Science & Scientific Computing",
+    description:
+      "Learn NumPy from scratch to perform fast numerical computations, array operations, and data processing essential for data science and machine learning.",
+    language: "NumPy",
+    difficulty: "beginner",
+    duration: 8,
+    thumbnail:
+      "https://campus.w3schools.com/cdn/shop/files/NumPy_fe5df422-3ae0-4e82-883a-7a28c96bf25c_1078x1078.png?v=1764575945",
+    instructor: "Dr. Alan Brooks",
+    notes: `# NumPy for Data Science & Scientific Computing
+
+## 🔢 Introduction to NumPy
+
+NumPy (Numerical Python) is the **core library for numerical computing in Python**. It provides powerful tools to work with **arrays, matrices, mathematical functions, and linear algebra**, making it the foundation of data science, machine learning, AI, and scientific computing.
+
+Most Python data libraries like **Pandas, Scikit-learn, TensorFlow, and PyTorch** are built on top of NumPy.
+
+---
+
+## 🌟 Why Learn NumPy?
+
+| Feature | Description |
+|-------|-------------|
+| ⚡ High Performance | Faster than Python lists |
+| 📦 N-Dimensional Arrays | Powerful ndarray structure |
+| 🧮 Math & Linear Algebra | Built-in optimized functions |
+| 🔬 Scientific Computing | Ideal for research & analytics |
+| 🤖 ML & AI Foundation | Backbone of data libraries |
+
+---
+
+## 🧠 Where NumPy Is Used
+
+- Data Science
+- Machine Learning
+- Artificial Intelligence
+- Scientific Research
+- Image Processing
+- Financial Analysis
+- Signal Processing
+
+---
+
+## 📚 What You Will Learn
+
+---
+
+## 🔰 Module 1: Getting Started with NumPy
+
+- Installing NumPy
+- Importing NumPy
+- Understanding ndarray
+
+\`\`\`python
+import numpy as np
+\`\`\`
+
+---
+
+## 📦 Module 2: NumPy Arrays
+
+### Creating Arrays
+\`\`\`python
+import numpy as np
+
+arr = np.array([1, 2, 3, 4])
+print(arr)
+\`\`\`
+
+### Array Properties
+- shape
+- ndim
+- size
+- dtype
+
+---
+
+## 🔢 Module 3: Array Operations
+
+NumPy supports **vectorized operations**.
+
+\`\`\`python
+a = np.array([1, 2, 3])
+b = np.array([4, 5, 6])
+
+print(a + b)
+print(a * b)
+\`\`\`
+
+---
+
+## 🧮 Module 4: Mathematical Functions
+
+- sum()
+- mean()
+- median()
+- min()
+- max()
+- std()
+
+\`\`\`python
+data = np.array([10, 20, 30])
+print(np.mean(data))
+\`\`\`
+
+---
+
+## 🧩 Module 5: Indexing & Slicing
+
+\`\`\`python
+arr = np.array([10, 20, 30, 40])
+print(arr[1:3])
+\`\`\`
+
+Supports:
+- Boolean indexing
+- Fancy indexing
+
+---
+
+## 🔁 Module 6: Reshaping & Dimensions
+
+\`\`\`python
+arr = np.array([1,2,3,4,5,6])
+reshaped = arr.reshape(2,3)
+print(reshaped)
+\`\`\`
+
+Functions:
+- reshape()
+- flatten()
+- ravel()
+- transpose()
+
+---
+
+## 🧠 Module 7: Broadcasting
+
+Allows operations on arrays of different shapes.
+
+\`\`\`python
+arr = np.array([1,2,3])
+print(arr + 10)
+\`\`\`
+
+---
+
+## 📐 Module 8: Linear Algebra Basics
+
+- dot()
+- matrix multiplication
+- inverse
+- determinant
+
+\`\`\`python
+a = np.array([[1,2],[3,4]])
+b = np.array([[5,6],[7,8]])
+print(np.dot(a, b))
+\`\`\`
+
+---
+
+## 🚀 Real-World Applications
+
+### 📊 Data Science
+- Data cleaning
+- Feature engineering
+- Statistical analysis
+
+### 🤖 Machine Learning
+- Training datasets
+- Numerical optimization
+
+### 🔬 Scientific Computing
+- Simulations
+- Mathematical modeling
+
+### 📈 Finance
+- Risk analysis
+- Time-series data
+
+---
+
+## 💼 Companies Using NumPy
+
+| Company | Usage |
+|--------|--------|
+| Google | AI & ML |
+| Netflix | Data analytics |
+| Meta | Machine learning |
+| NASA | Scientific research |
+| Amazon | Forecasting systems |
+
+---
+
+## 📊 NumPy vs Python Lists
+
+| Feature | NumPy | Python List |
+|------|------|-------------|
+| Speed | Very Fast | Slow |
+| Memory | Efficient | High usage |
+| Math Ops | Vectorized | Loop based |
+| Dimensions | Multi-D | Single-D |
+
+---
+
+## 🎯 Learning Outcomes
+
+By the end:
+
+✅ Work with NumPy arrays confidently  
+✅ Perform fast numerical operations  
+✅ Manipulate multi-dimensional data  
+✅ Build foundation for Pandas & ML  
+✅ Write optimized numerical code  
+
+---
+
+## 📖 Practice Resources
+
+- NumPy Official Docs
+- Kaggle
+- LeetCode
+- DataCamp
+- Real Python
+
+---
+
+## 🏆 Career Opportunities
+
+- Data Analyst
+- Data Scientist
+- Machine Learning Engineer
+- Research Engineer
+- Quantitative Analyst
+
+---
+
+## 🎓 Next Steps
+
+1️⃣ Learn Pandas  
+2️⃣ Learn Matplotlib  
+3️⃣ Start Machine Learning  
+4️⃣ Explore Scikit-learn  
+
+---
+
+*Power Your Data with NumPy 🔢🚀*
+`,
+    test: [
+      {
+        id: "np-q1",
+        question: "NumPy is mainly used for:",
+        options: [
+          "Web design",
+          "Numerical and scientific computing",
+          "Mobile UI",
+          "Game engines",
+        ],
+        correctAnswer: 1,
+        explanation:
+          "NumPy is designed for fast numerical and scientific computations.",
+      },
+      {
+        id: "np-q2",
+        question: "Core data structure of NumPy is:",
+        options: ["List", "Tuple", "ndarray", "Dictionary"],
+        correctAnswer: 2,
+        explanation: "ndarray is the core data structure in NumPy.",
+      },
+      {
+        id: "np-q3",
+        question: "NumPy operations are faster because they are:",
+        options: ["Loop based", "Vectorized", "Interpreted", "Recursive"],
+        correctAnswer: 1,
+        explanation: "NumPy uses vectorized operations implemented in C.",
+      },
+      {
+        id: "np-q4",
+        question: "Which function reshapes an array?",
+        options: ["resize()", "reshape()", "shape()", "convert()"],
+        correctAnswer: 1,
+        explanation: "reshape() changes the dimensions of an array.",
+      },
+      {
+        id: "np-q5",
+        question: "NumPy is the foundation of:",
+        options: [
+          "React",
+          "Django",
+          "Data science & ML libraries",
+          "Game engines",
+        ],
+        correctAnswer: 2,
+        explanation: "Most data science and ML libraries are built on NumPy.",
+      },
+    ],
+  },
+  {
+    id: "pandas-beginner",
+    url: "https://www.youtube.com/embed/vmEHCJofslg",
+    title: "Pandas for Data Analysis",
+    description:
+      "Learn Pandas from scratch to clean, analyze, manipulate, and visualize structured data efficiently for data science and analytics.",
+    language: "Pandas",
+    difficulty: "beginner",
+    duration: 9,
+    thumbnail:
+      "https://campus.w3schools.com/cdn/shop/files/Pandas_1078x1078.png?v=1764575937",
+    instructor: "Dr. Lisa Morgan",
+    notes: `# Pandas for Data Analysis
+
+## 🐼 Introduction to Pandas
+
+Pandas is a **powerful Python library for data analysis and manipulation**. It provides easy-to-use data structures like **Series** and **DataFrame**, making it simple to work with **tabular, time-series, and structured data**.
+
+Pandas is widely used in **data science, analytics, finance, machine learning, and research** and is built on top of **NumPy**.
+
+---
+
+## 🌟 Why Learn Pandas?
+
+| Feature | Description |
+|-------|-------------|
+| 📊 Tabular Data Handling | Work with rows & columns |
+| ⚡ Fast Data Processing | Optimized with NumPy |
+| 🧹 Data Cleaning | Handle missing & messy data |
+| ⏱ Time-Series Support | Date & time operations |
+| 📈 Data Analysis | Filtering, grouping, stats |
+
+---
+
+## 🧠 Where Pandas Is Used
+
+- Data Analysis
+- Data Science
+- Machine Learning
+- Business Analytics
+- Finance & Trading
+- Research & Statistics
+
+---
+
+## 📚 What You Will Learn
+
+---
+
+## 🔰 Module 1: Getting Started
+
+- Installing Pandas
+- Importing Pandas
+- Understanding Series & DataFrame
+
+\`\`\`python
+import pandas as pd
+\`\`\`
+
+---
+
+## 📦 Module 2: Series
+
+\`\`\`python
+s = pd.Series([10, 20, 30])
+print(s)
+\`\`\`
+
+Properties:
+- index
+- values
+- dtype
+
+---
+
+## 📊 Module 3: DataFrames
+
+\`\`\`python
+data = {
+  "name": ["Alex", "Sam"],
+  "age": [21, 22]
+}
+df = pd.DataFrame(data)
+print(df)
+\`\`\`
+
+---
+
+## 🔍 Module 4: Data Selection
+
+- loc[]
+- iloc[]
+- Column selection
+
+\`\`\`python
+print(df["name"])
+print(df.loc[0])
+\`\`\`
+
+---
+
+## 🧹 Module 5: Data Cleaning
+
+- Handling missing values
+- dropna()
+- fillna()
+
+\`\`\`python
+df.fillna(0, inplace=True)
+\`\`\`
+
+---
+
+## 🔁 Module 6: Filtering & Sorting
+
+\`\`\`python
+df[df["age"] > 21]
+df.sort_values("age")
+\`\`\`
+
+---
+
+## 📐 Module 7: Grouping & Aggregation
+
+\`\`\`python
+df.groupby("age").count()
+\`\`\`
+
+Functions:
+- sum()
+- mean()
+- count()
+- max()
+
+---
+
+## ⏱ Module 8: Time Series Basics
+
+\`\`\`python
+df["date"] = pd.to_datetime(df["date"])
+\`\`\`
+
+---
+
+## 📂 Module 9: Reading & Writing Data
+
+Supported formats:
+- CSV
+- Excel
+- JSON
+- SQL
+
+\`\`\`python
+df = pd.read_csv("data.csv")
+df.to_excel("data.xlsx")
+\`\`\`
+
+---
+
+## 🚀 Real-World Applications
+
+### 📊 Data Analytics
+- Reports
+- Dashboards
+- KPI analysis
+
+### 🤖 Machine Learning
+- Feature engineering
+- Data preprocessing
+
+### 💰 Finance
+- Stock data
+- Time-series analysis
+
+### 🧪 Research
+- Experiment data
+- Statistical studies
+
+---
+
+## 💼 Companies Using Pandas
+
+| Company | Usage |
+|--------|--------|
+| Google | Analytics |
+| Netflix | Recommendation systems |
+| Meta | Data processing |
+| Uber | Data pipelines |
+| Airbnb | Business analytics |
+
+---
+
+## 📊 Pandas vs Excel
+
+| Feature | Pandas | Excel |
+|------|-------|-------|
+| Automation | Yes | Limited |
+| Large Data | Handles millions | Slow |
+| Reproducibility | Code-based | Manual |
+| Integration | Python ecosystem | Limited |
+
+---
+
+## 🎯 Learning Outcomes
+
+By the end:
+
+✅ Clean and analyze datasets  
+✅ Manipulate DataFrames efficiently  
+✅ Perform aggregations & filtering  
+✅ Prepare data for ML models  
+✅ Work with real-world datasets  
+
+---
+
+## 📖 Practice Resources
+
+- Pandas Official Docs
+- Kaggle Datasets
+- LeetCode (Pandas)
+- DataCamp
+- Real Python
+
+---
+
+## 🏆 Career Opportunities
+
+- Data Analyst
+- Data Scientist
+- Business Analyst
+- ML Engineer
+- Research Analyst
+
+---
+
+## 🎓 Next Steps
+
+1️⃣ Learn NumPy deeply  
+2️⃣ Learn Data Visualization  
+3️⃣ Start Machine Learning  
+4️⃣ Work on real datasets  
+
+---
+
+*Analyze Smarter with Pandas 🐼📊*
+`,
+    test: [
+      {
+        id: "pd-q1",
+        question: "Pandas is mainly used for:",
+        options: [
+          "Game development",
+          "Data analysis and manipulation",
+          "UI design",
+          "Mobile apps",
+        ],
+        correctAnswer: 1,
+        explanation:
+          "Pandas is designed for data analysis and structured data handling.",
+      },
+      {
+        id: "pd-q2",
+        question: "Which structure represents tabular data?",
+        options: ["Series", "List", "DataFrame", "Tuple"],
+        correctAnswer: 2,
+        explanation: "DataFrame stores data in rows and columns.",
+      },
+      {
+        id: "pd-q3",
+        question: "Which function reads CSV files?",
+        options: ["read()", "open()", "read_csv()", "load_csv()"],
+        correctAnswer: 2,
+        explanation: "read_csv() is used to load CSV data.",
+      },
+      {
+        id: "pd-q4",
+        question: "Which method removes missing values?",
+        options: ["fillna()", "dropna()", "clean()", "remove()"],
+        correctAnswer: 1,
+        explanation: "dropna() removes rows with missing values.",
+      },
+      {
+        id: "pd-q5",
+        question: "Pandas is built on top of:",
+        options: ["Java", "C++", "NumPy", "Rust"],
+        correctAnswer: 2,
+        explanation: "Pandas uses NumPy for efficient numerical operations.",
+      },
+    ],
+  },
+  {
+    id: "dsa-beginner",
+    url: "https://www.youtube.com/embed/8hly31xKli0",
+    title: "Data Structures & Algorithms (DSA)",
+    description:
+      "Master Data Structures and Algorithms from scratch to build strong problem-solving skills, write optimized code, and crack technical interviews.",
+    language: "DSA",
+    difficulty: "beginner",
+    duration: 18,
+    thumbnail:
+      "https://campus.w3schools.com/cdn/shop/files/DSA_ff1c775d-aa56-4287-a25c-76a42c19a67a_1078x1078.png?v=1764575760",
+    instructor: "Rahul Verma",
+    notes: `# Data Structures & Algorithms (DSA)
+
+## 🧠 Introduction to DSA
+
+Data Structures and Algorithms (DSA) form the **core foundation of computer science**. DSA teaches you **how data is stored, accessed, and processed efficiently**, and how to **solve problems optimally**.
+
+Strong DSA skills are essential for:
+- Software Engineering
+- Competitive Programming
+- Product-based company interviews
+- Writing scalable and high-performance systems
+
+---
+
+## 🌟 Why Learn DSA?
+
+| Feature | Description |
+|-------|-------------|
+| 🧩 Problem Solving | Think logically & analytically |
+| ⚡ Optimized Code | Improve time & space efficiency |
+| 🧠 Interview Essential | Asked in almost all tech interviews |
+| 🏗 Strong Foundation | Core CS knowledge |
+| 🚀 Career Growth | Required for top tech roles |
+
+---
+
+## 🧠 What DSA Teaches You
+
+- How to break problems into steps
+- How to choose the best approach
+- How to analyze performance
+- How to scale solutions
+
+---
+
+## 📚 What You Will Learn
+
+---
+
+## 🔰 Module 1: Introduction to Algorithms
+
+- What is an algorithm?
+- Characteristics of good algorithms
+- Time Complexity
+- Space Complexity
+- Big-O Notation
+
+### Example
+\`\`\`
+O(1), O(n), O(log n), O(n log n), O(n²)
+\`\`\`
+
+---
+
+## 📦 Module 2: Arrays
+
+- Static vs Dynamic Arrays
+- Traversal
+- Insertion & Deletion
+- Searching
+
+---
+
+## 🔗 Module 3: Linked Lists
+
+- Singly Linked List
+- Doubly Linked List
+- Circular Linked List
+- Pointer manipulation
+
+---
+
+## 🧱 Module 4: Stacks
+
+- LIFO principle
+- Stack operations
+- Applications:
+  - Expression evaluation
+  - Undo/Redo
+  - Recursion
+
+---
+
+## 📬 Module 5: Queues
+
+- FIFO principle
+- Simple Queue
+- Circular Queue
+- Deque
+- Priority Queue
+
+---
+
+## 🌳 Module 6: Trees
+
+- Binary Tree
+- Binary Search Tree (BST)
+- Tree Traversals:
+  - Inorder
+  - Preorder
+  - Postorder
+- Height & Depth
+
+---
+
+## 🌲 Module 7: Heaps
+
+- Min Heap
+- Max Heap
+- Heap operations
+- Heap Sort
+
+---
+
+## 🔀 Module 8: Hashing
+
+- Hash Tables
+- Hash Functions
+- Collision Handling
+- Time complexity benefits
+
+---
+
+## 🧭 Module 9: Searching Algorithms
+
+- Linear Search
+- Binary Search
+- Applications & comparisons
+
+---
+
+## 🔄 Module 10: Sorting Algorithms
+
+- Bubble Sort
+- Selection Sort
+- Insertion Sort
+- Merge Sort
+- Quick Sort
+- Time & space comparison
+
+---
+
+## 🧠 Module 11: Recursion
+
+- Base case
+- Recursive calls
+- Call stack
+- Backtracking basics
+
+---
+
+## 🧮 Module 12: Dynamic Programming (Intro)
+
+- Overlapping subproblems
+- Optimal substructure
+- Memoization
+- Tabulation
+
+---
+
+## 🕸 Module 13: Graphs (Intro)
+
+- Graph representation
+- BFS
+- DFS
+- Applications
+
+---
+
+## 🚀 Real-World Applications
+
+### 🧠 Software Engineering
+- Efficient backend systems
+- Optimized APIs
+
+### 🤖 Competitive Programming
+- Fast problem solving
+
+### 🌐 System Design
+- Scalable architecture
+
+### 💰 Finance & AI
+- Optimization problems
+- Graph-based models
+
+---
+
+## 💼 Companies That Test DSA
+
+| Company | Importance |
+|--------|------------|
+| Google | Extremely High |
+| Amazon | Extremely High |
+| Microsoft | Very High |
+| Meta | Very High |
+| Apple | High |
+| Netflix | High |
+
+---
+
+## 📊 Why DSA Matters More Than Languages
+
+Languages change.  
+Frameworks change.  
+**DSA stays forever.**
+
+---
+
+## 🎯 Learning Outcomes
+
+By the end of this course:
+
+✅ Analyze time & space complexity  
+✅ Choose optimal data structures  
+✅ Solve real-world problems  
+✅ Crack coding interviews  
+✅ Build strong CS fundamentals  
+
+---
+
+## 📖 Practice Resources
+
+- LeetCode
+- CodeChef
+- Codeforces
+- GeeksForGeeks
+- HackerRank
+
+---
+
+## 🏆 Career Opportunities
+
+- Software Engineer
+- Backend Developer
+- SDE (Product Companies)
+- Competitive Programmer
+- Algorithm Engineer
+
+---
+
+## 🎓 Next Steps
+
+1️⃣ Practice daily problems  
+2️⃣ Learn Advanced DP  
+3️⃣ Learn Graph Algorithms  
+4️⃣ Mock Interviews  
+5️⃣ Apply to product companies  
+
+---
+
+*Think Better. Code Faster. Master DSA 🧠🚀*
+`,
+    test: [
+      {
+        id: "dsa-q1",
+        question: "DSA mainly helps in:",
+        options: [
+          "UI design",
+          "Problem solving and optimization",
+          "Graphic rendering",
+          "Styling websites",
+        ],
+        correctAnswer: 1,
+        explanation: "DSA improves problem-solving and optimized coding.",
+      },
+      {
+        id: "dsa-q2",
+        question: "Which notation is used to analyze algorithm performance?",
+        options: ["HTML", "Big-O", "CSS", "JSON"],
+        correctAnswer: 1,
+        explanation: "Big-O notation measures time and space complexity.",
+      },
+      {
+        id: "dsa-q3",
+        question: "Which data structure follows LIFO?",
+        options: ["Queue", "Stack", "Array", "Tree"],
+        correctAnswer: 1,
+        explanation: "Stack follows Last In First Out.",
+      },
+      {
+        id: "dsa-q4",
+        question: "Binary search works on:",
+        options: [
+          "Unsorted array",
+          "Sorted array",
+          "Linked list only",
+          "Graphs only",
+        ],
+        correctAnswer: 1,
+        explanation: "Binary search requires sorted data.",
+      },
+      {
+        id: "dsa-q5",
+        question: "Which is NOT a data structure?",
+        options: ["Array", "Stack", "Loop", "Queue"],
+        correctAnswer: 2,
+        explanation: "Loop is a control structure, not a data structure.",
+      },
+    ],
+  },
+  {
+    id: "git-beginner",
+    url: "https://www.youtube.com/embed/RGOj5yH7evk",
+    title: "Git & Version Control Essentials",
+    description:
+      "Learn Git from scratch to track code changes, collaborate with teams, manage versions, and work confidently with modern development workflows.",
+    language: "Git",
+    difficulty: "beginner",
+    duration: 7,
+    thumbnail:
+      "https://campus.w3schools.com/cdn/shop/files/Git_d2b633bb-ca3e-43e5-8536-1e9f21546c7d_1078x1078.png?v=1764575706",
+    instructor: "Chris Walker",
+    notes: `# Git & Version Control Essentials
+
+## 🔧 Introduction to Git
+
+Git is a **distributed version control system** that helps developers **track changes in code**, collaborate with teams, and manage project history efficiently. Created by Linus Torvalds, Git is the backbone of modern software development.
+
+Git is used everywhere:
+- Open-source projects
+- Company codebases
+- Solo projects
+- Large distributed teams
+
+Git + GitHub/GitLab/Bitbucket = Modern Collaboration.
+
+---
+
+## 🌟 Why Learn Git?
+
+| Feature | Description |
+|-------|-------------|
+| 🕒 Version History | Track every change |
+| 🤝 Team Collaboration | Multiple developers, same code |
+| 🔄 Easy Rollbacks | Revert mistakes safely |
+| 🌍 Industry Standard | Used by all tech companies |
+| 🚀 Faster Development | Parallel feature work |
+
+---
+
+## 🧠 What Git Solves
+
+- Accidentally deleting code
+- Overwriting teammate’s work
+- Managing multiple features
+- Tracking who changed what
+- Maintaining stable releases
+
+---
+
+## 📚 What You Will Learn
+
+---
+
+## 🔰 Module 1: Getting Started with Git
+
+- What is Version Control?
+- Centralized vs Distributed VCS
+- Installing Git
+- Git configuration
+
+\`\`\`bash
+git --version
+git config --global user.name "Your Name"
+git config --global user.email "you@email.com"
+\`\`\`
+
+---
+
+## 📁 Module 2: Git Repository Basics
+
+- git init
+- git status
+- git add
+- git commit
+
+\`\`\`bash
+git init
+git add .
+git commit -m "Initial commit"
+\`\`\`
+
+---
+
+## 📦 Module 3: Tracking Changes
+
+- Working directory
+- Staging area
+- Repository
+
+\`\`\`bash
+git status
+git diff
+git log
+\`\`\`
+
+---
+
+## 🔁 Module 4: Branching
+
+Branches allow parallel development.
+
+\`\`\`bash
+git branch feature-login
+git checkout feature-login
+\`\`\`
+
+Why branches?
+- New features
+- Bug fixes
+- Experiments
+
+---
+
+## 🔀 Module 5: Merging Branches
+
+\`\`\`bash
+git checkout main
+git merge feature-login
+\`\`\`
+
+Types:
+- Fast-forward
+- Three-way merge
+
+---
+
+## ⚔ Module 6: Merge Conflicts
+
+When Git can’t auto-merge changes.
+
+Steps:
+1. Open conflict file
+2. Resolve manually
+3. Add & commit
+
+\`\`\`bash
+git add .
+git commit -m "Resolve conflict"
+\`\`\`
+
+---
+
+## 🌐 Module 7: Remote Repositories
+
+Work with GitHub/GitLab.
+
+\`\`\`bash
+git remote add origin URL
+git push -u origin main
+git pull origin main
+\`\`\`
+
+---
+
+## 🔄 Module 8: Undoing Changes
+
+- git checkout
+- git reset
+- git revert
+
+\`\`\`bash
+git reset --hard HEAD~1
+\`\`\`
+
+---
+
+## 🏷 Module 9: Tags & Releases
+
+\`\`\`bash
+git tag v1.0
+git push origin v1.0
+\`\`\`
+
+Used for:
+- Releases
+- Stable versions
+
+---
+
+## 🚀 Real-World Applications
+
+### 👨‍💻 Development Teams
+- Feature-based workflows
+- Code reviews
+
+### 🌍 Open Source
+- Forks & pull requests
+
+### 🏗 CI/CD
+- Automated builds
+- Deployment pipelines
+
+---
+
+## 💼 Companies Using Git
+
+| Company | Usage |
+|--------|--------|
+| Google | Source control |
+| Microsoft | GitHub |
+| Meta | Large-scale repos |
+| Netflix | Microservices |
+| Amazon | DevOps workflows |
+
+---
+
+## 📊 Git vs Other VCS
+
+| Feature | Git | SVN |
+|-------|-----|-----|
+| Distributed | Yes | No |
+| Speed | Fast | Slower |
+| Branching | Powerful | Limited |
+| Offline Work | Yes | No |
+
+---
+
+## 🎯 Learning Outcomes
+
+By the end:
+
+✅ Track code changes confidently  
+✅ Use branches & merges  
+✅ Collaborate using GitHub  
+✅ Fix mistakes safely  
+✅ Work like a professional developer  
+
+---
+
+## 📖 Practice Resources
+
+- Git Official Docs
+- GitHub Learning Lab
+- Atlassian Git Tutorials
+- Learn Git Branching
+
+---
+
+## 🏆 Career Benefits
+
+- Essential for all developers
+- Required for internships & jobs
+- Improves team productivity
+- Industry-standard skill
+
+---
+
+## 🎓 Next Steps
+
+1️⃣ Learn GitHub deeply  
+2️⃣ Practice pull requests  
+3️⃣ Learn rebasing  
+4️⃣ Use Git daily  
+
+---
+
+*Version Your Code Like a Pro 🔧🚀*
+`,
+    test: [
+      {
+        id: "git-q1",
+        question: "Git is mainly used for:",
+        options: [
+          "Designing UI",
+          "Version control",
+          "Running servers",
+          "Styling web pages",
+        ],
+        correctAnswer: 1,
+        explanation: "Git tracks changes and manages code versions.",
+      },
+      {
+        id: "git-q2",
+        question: "Which command creates a new repository?",
+        options: ["git start", "git init", "git new", "git repo"],
+        correctAnswer: 1,
+        explanation: "git init initializes a new repository.",
+      },
+      {
+        id: "git-q3",
+        question: "Which command saves changes permanently?",
+        options: ["git add", "git commit", "git push", "git status"],
+        correctAnswer: 1,
+        explanation: "git commit saves changes to the repository history.",
+      },
+      {
+        id: "git-q4",
+        question: "Branches are used to:",
+        options: [
+          "Delete code",
+          "Run programs",
+          "Work on features separately",
+          "Compile projects",
+        ],
+        correctAnswer: 2,
+        explanation: "Branches allow parallel feature development.",
+      },
+      {
+        id: "git-q5",
+        question: "Which platform is commonly used with Git?",
+        options: ["Docker", "GitHub", "Figma", "Postman"],
+        correctAnswer: 1,
+        explanation: "GitHub hosts Git repositories for collaboration.",
+      },
+    ],
+  },
 ];
 
 // Language configurations for the compiler
