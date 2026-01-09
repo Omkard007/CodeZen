@@ -1,5 +1,5 @@
 "use client";
-
+import { createTestimonial } from "@/lib/actions";
 import Link from "next/link";
 import { useUser as useUserContext } from "@/context/user-context";
 import { useRef, useState } from "react";
@@ -22,9 +22,11 @@ import { CertificatePreview } from "@/components/certificate";
 import { downloadPDF } from "@/lib/downloadPDF";
 import { useUser } from "@clerk/nextjs";
 import { useIsMobile } from "@/hooks/use-mobile";
+import { Textarea } from "@/components/ui/textarea";
 
 export default function CourseTestPage() {
   const { id } = useParams();
+  const [message, setMessage] = useState("");
   const ref = useRef<HTMLDivElement>(null);
   const mobileRef = useRef<HTMLDivElement>(null);
   const { getCourseById } = useCourses();
@@ -38,6 +40,7 @@ export default function CourseTestPage() {
   >({});
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [score, setScore] = useState(0);
+  const [loading, setLoading] = useState(false);
 
   if (!course) return null;
 
@@ -85,6 +88,20 @@ export default function CourseTestPage() {
     } else if (ref.current) {
       await downloadPDF(ref.current);
     }
+  };
+
+
+  const addTestimonial = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setLoading(true);
+    if (message.trim() === "") return;
+    await createTestimonial(
+      user?.fullName || "Anonymous",
+      user?.emailAddresses[0].emailAddress || "",
+      message
+    );
+    setMessage("");
+    setLoading(false);
   };
 
   if (isSubmitted) {
@@ -210,6 +227,28 @@ export default function CourseTestPage() {
             certificateId={Math.random().toString(36).substring(2)}
           />
         </div>
+        <section>
+          <h2 className="text-2xl font-bold text-foreground mb-6">
+            Share Your Feedback
+          </h2>
+          <Card className="p-8 border border-border bg-card">
+            <form onSubmit={addTestimonial} className="space-y-4">
+              <Textarea
+                placeholder="Share your testimonial..."
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+                className="min-h-32 resize-none"
+              />
+              <Button
+                type="submit"
+                disabled={loading || !message.trim()}
+                className="w-full"
+              >
+                {loading ? "Submitting..." : "Submit Testimonial"}
+              </Button>
+            </form>
+          </Card>
+        </section>
       </div>
     );
   }

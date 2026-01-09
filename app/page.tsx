@@ -4,6 +4,7 @@ import { FeaturesGrid } from "@/components/landing/features-grid"
 import { Footer } from "@/components/landing/footer"
 import { AIAssistant } from "@/components/ai-assistant"
 import CoursesPage from "./courses/page"
+import TestimonialPage from "@/components/testimonials"
 
 export default function LandingPage() {
   return (
@@ -15,6 +16,7 @@ export default function LandingPage() {
       {/* <FeaturesGrid /> */}
       {/*<TestimonialsSection />*/}
       {/*<CTASection />*/}
+      <TestimonialPage/>
       <Footer />
       <AIAssistant />
     </main>
