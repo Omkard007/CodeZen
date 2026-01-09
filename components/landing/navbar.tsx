@@ -39,7 +39,7 @@ export function Navbar() {
           </nav><ClerkProvider>
 
             <div className="flex items-center gap-4">
-              <SignedOut> <SignInButton><Button className="bg-primary text-black hover:bg-primary/90 rounded-full cursor-pointer px-6">Login</Button></SignInButton>
+              <SignedOut> <SignInButton><Button className="bg-primary  hover:bg-primary/90 rounded-full cursor-pointer px-6">Login</Button></SignInButton>
 
               </SignedOut>
               <SignedIn>
