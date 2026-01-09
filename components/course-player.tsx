@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { useUser } from "@/context/user-context";
 import { type Course, LANGUAGE_CONFIGS } from "@/lib/data";
 import { Card, CardContent } from "@/components/ui/card";
@@ -25,7 +25,11 @@ interface CoursePlayerProps {
 
 export function CoursePlayer({ course }: CoursePlayerProps) {
   const isMobile = useIsMobile();
-
+  const [isButtonActive, setIsButtonActive] = useState(true);
+  const on75Percent = useCallback(() => {
+    setIsButtonActive(false);
+  }, []);
+  const router = useRouter();
   return (
     <div className="grid md:grid-cols-[1fr_400px] gap-6 h-[calc(100vh-120px)] px-4">
       {/* Main Content Area */}
@@ -49,23 +53,19 @@ export function CoursePlayer({ course }: CoursePlayerProps) {
                 <FileText className="h-4 w-4" />
                 <span className="hidden md:inline-flex">Study Notes</span>
               </TabsTrigger>
-              {
-                isMobile && (
-                  <TabsTrigger value="compiler" className="gap-2">
-                    <Code2 className="h-4 w-4" />
-                    <span className="hidden md:inline-flex">Compiler</span>
-                  </TabsTrigger>
-                )
-              }
+              {isMobile && (
+                <TabsTrigger value="compiler" className="gap-2">
+                  <Code2 className="h-4 w-4" />
+                  <span className="hidden md:inline-flex">Compiler</span>
+                </TabsTrigger>
+              )}
             </TabsList>
 
             <TabsContent value="video" className="mt-4">
               <div className="aspect-video rounded-xl bg-black overflow-hidden border border-border relative group">
-                <iframe
-                  src={course.url}
-                  className="w-full h-full"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
+                <YouTubeProgressPlayer
+                  videoId={course.url.split("embed/")[1]}
+                  on75Percent={on75Percent}
                 />
               </div>
             </TabsContent>
@@ -77,22 +77,23 @@ export function CoursePlayer({ course }: CoursePlayerProps) {
                 </CardContent>
               </Card>
             </TabsContent>
-            {
-              isMobile && (
-                <TabsContent value="compiler" className="mt-4">
-                  <MiniCompiler language={course.language} />
-                </TabsContent>
-              )
-            }
+            {isMobile && (
+              <TabsContent value="compiler" className="mt-4">
+                <MiniCompiler language={course.language} />
+              </TabsContent>
+            )}
           </Tabs>
 
           {/* Navigation Controls */}
           <div className="flex items-center justify-between py-4 border-t border-border">
             <div className="flex gap-2">
-              <Button className="gap-2" asChild size={isMobile ? "sm" : "default"}>
-                <a href={`/courses/${course.id}/test`} className="text-xs sm:text-sm">
-                  Take Final Test <Award className="h-4 w-4" />
-                </a>
+              <Button
+                disabled={isButtonActive}
+                className="gap-2"
+                size={isMobile ? "sm" : "default"}
+                onClick={() => router.push(`/courses/${course.id}/test`)}
+              >
+                Take Final Test <Award className="h-4 w-4" />
               </Button>
             </div>
           </div>
@@ -129,8 +130,8 @@ export function MiniCompiler({ language }: MiniCompilerProps) {
   const [output, setOutput] = useState("");
   const [isRunning, setIsRunning] = useState(false);
   const [selectedLanguage, setSelectedLanguage] = useState(
-    LANGUAGE_DATA.find((l) => l.name === language.toLocaleLowerCase())
-      ?.name || "javascript"
+    LANGUAGE_DATA.find((l) => l.name === language.toLocaleLowerCase())?.name ||
+      "javascript"
   );
   useEffect(() => {
     const boilerplate =
@@ -262,6 +263,8 @@ export function MiniCompiler({ language }: MiniCompilerProps) {
 import remarkGfm from "remark-gfm";
 import rehypeHighlight from "rehype-highlight";
 import "highlight.js/styles/github-dark.css";
+import YouTubeProgressPlayer from "./YTPlayer";
+import { useRouter } from "next/navigation";
 
 interface CourseNotesProps {
   notes: string;
@@ -277,30 +280,61 @@ export function CourseNotes({ notes }: CourseNotesProps) {
           //
           // TEXT AND SPACING
           //
-          p: (props) => <p className="my-3 sm:my-4 leading-relaxed text-sm sm:text-base" {...props} />,
+          p: (props) => (
+            <p
+              className="my-3 sm:my-4 leading-relaxed text-sm sm:text-base"
+              {...props}
+            />
+          ),
 
           //
           // HEADINGS
           //
-          h1: (props) => <h1 className="mt-6 mb-4 text-2xl sm:text-3xl md:text-4xl font-bold" {...props} />,
-          h2: (props) => (
-            <h2 className="mt-6 mb-3 text-xl sm:text-2xl md:text-3xl font-bold border-b pb-2" {...props} />
+          h1: (props) => (
+            <h1
+              className="mt-6 mb-4 text-2xl sm:text-3xl md:text-4xl font-bold"
+              {...props}
+            />
           ),
-          h3: (props) => <h3 className="mt-5 mb-2 text-lg sm:text-xl md:text-2xl font-semibold" {...props} />,
+          h2: (props) => (
+            <h2
+              className="mt-6 mb-3 text-xl sm:text-2xl md:text-3xl font-bold border-b pb-2"
+              {...props}
+            />
+          ),
+          h3: (props) => (
+            <h3
+              className="mt-5 mb-2 text-lg sm:text-xl md:text-2xl font-semibold"
+              {...props}
+            />
+          ),
 
           //
           // TABLES
           //
           table: (props) => (
             <div className="overflow-x-auto my-4 sm:my-6 -mx-4 sm:mx-0 px-4 sm:px-0">
-              <table className="min-w-full border border-gray-300 rounded-lg text-sm sm:text-base" {...props} />
+              <table
+                className="min-w-full border border-gray-300 rounded-lg text-sm sm:text-base"
+                {...props}
+              />
             </div>
           ),
-          thead: (props) => <thead className="bg-gray-100 dark:bg-gray-800" {...props} />,
-          th: (props) => (
-            <th className="px-2 sm:px-4 py-2 text-left font-semibold border text-xs sm:text-sm" {...props} />
+          thead: (props) => (
+            <thead className="bg-gray-100 dark:bg-gray-800" {...props} />
           ),
-          td: (props) => <td className="px-2 sm:px-4 py-2 border text-xs sm:text-sm" {...props} />,
+          th: (props) => (
+            <th
+              className="px-2 sm:px-4 py-2 text-left font-semibold border text-xs sm:text-sm"
+              {...props}
+            />
+          ),
+          td: (props) => (
+            <td
+              className="px-2 sm:px-4 py-2 border text-xs sm:text-sm"
+              {...props}
+            />
+          ),
 
           //
           // CODE BLOCKS
@@ -321,6 +355,5 @@ export function CourseNotes({ notes }: CourseNotesProps) {
         {notes}
       </ReactMarkdown>
     </div>
-  )
+  );
 }
-
