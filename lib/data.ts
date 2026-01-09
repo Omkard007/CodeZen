@@ -2317,8 +2317,7 @@ By the end:
     language: "Swift",
     difficulty: "beginner",
     duration: 14,
-    thumbnail:
-      "https://chatgpt.com/backend-api/estuary/content?id=file_00000000188871fa878575f6041c3aa4&ts=491101&p=fs&cid=1&sig=fcfe400cf1d17a38888241d2d73974c6a83bf8e23ea0c58d4678f02790a8b084&v=0",
+    thumbnail: "/swift.png",
     instructor: "Emma Williams",
     notes: `# Swift Programming for iOS Development
 
@@ -3064,14 +3063,14 @@ By the end:
   },
   {
     id: "ruby-beginner",
-    url: "https://chatgpt.com/backend-api/estuary/content?id=file_00000000fee071fa99512e31c3852900&ts=491101&p=fs&cid=1&sig=3fa49d5b00326cc9449ff3155006167a7f111cc0352802688e788dfc5b3e98a8&v=0",
+    url: "https://www.youtube.com/embed/t_ispmWmdjY",
     title: "Ruby Programming Basics",
     description:
       "Learn Ruby programming fundamentals including syntax, object-oriented concepts, and the foundation for modern web development using Ruby on Rails.",
     language: "Ruby",
     difficulty: "beginner",
     duration: 11,
-    thumbnail: "/placeholder.svg?key=kvhij",
+    thumbnail: "/ruby.png",
     instructor: "Jessica Martinez",
     notes: `# Ruby Programming Basics
 

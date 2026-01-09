@@ -17,6 +17,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { BookOpen, Award, CheckCircle2 } from "lucide-react";
 import { Navbar } from "@/components/landing/navbar";
 import { Footer } from "@/components/landing/footer";
+import Image from "next/image";
 
 export default function CoursesPage() {
   const { courses, isLoading } = useCourses();
@@ -66,9 +67,13 @@ export default function CoursesPage() {
                 className="flex flex-col h-full hover:border-primary transition-all group"
               >
                 <CardHeader className="relative pb-0">
-                  {/* <div className="flex items-center justify-between mb-2">
-                  <Badge variant="secondary">{course.language}</Badge>
-                </div> */}
+                  <div className="flex items-center justify-between mb-2 aspect-square relative">
+                  <Image
+                    src={course.thumbnail}
+                    alt={course.title}
+                    fill
+                  />
+                </div>
                   <CardTitle className="text-xl group-hover:text-primary transition-colors">
                     {course.title}
                   </CardTitle>
