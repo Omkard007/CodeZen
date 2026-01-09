@@ -25,16 +25,16 @@ export default function CoursesPage() {
 
   if (isLoading) {
     return (
-      <div className="p-8 space-y-8">
+      <div className="p-8 space-y-8 bg-white text-black">
         <h1 className="text-3xl font-bold">All Courses</h1>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {[1, 2, 3, 4, 5, 6].map((i) => (
-            <Card key={i} className="h-[300px]">
+            <Card key={i} className="h-[300px] bg-white border-muted/20 text-black transition-all group">
               <CardHeader>
-                <Skeleton className="h-6 w-3/4" />
+                <Skeleton className="h-6 w-3/4 bg-primary text-white" />
               </CardHeader>
               <CardContent>
-                <Skeleton className="h-20 w-full" />
+                <Skeleton className="h-20 w-full bg-primary text-white" />
               </CardContent>
             </Card>
           ))}
@@ -45,8 +45,8 @@ export default function CoursesPage() {
 
   return (
     <>
-      <Navbar />
-      <div className="p-8 space-y-8 max-w-6xl mx-auto py-15">
+      {/* <Navbar /> */}
+      <div className="p-8 space-y-8 max-w-6xl mx-auto py-15 bg-white text-black">
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
           <div className="w-full">
             <h1 className="text-3xl font-bold mb-2 text-center w-full">
@@ -64,7 +64,7 @@ export default function CoursesPage() {
             return (
               <Card
                 key={course.id}
-                className="flex flex-col h-full hover:border-primary transition-all group"
+                className="flex flex-col h-full bg-white border-muted/20 text-black transition-all group"
               >
                 <CardHeader className="relative pb-0">
                   <div className="flex items-center justify-between mb-2 aspect-square relative">
@@ -74,7 +74,7 @@ export default function CoursesPage() {
                     fill
                   />
                 </div>
-                  <CardTitle className="text-xl group-hover:text-primary transition-colors">
+                  <CardTitle className="text-xl text-black transition-colors">
                     {course.title}
                   </CardTitle>
                 </CardHeader>
@@ -105,7 +105,7 @@ export default function CoursesPage() {
           })}
         </div>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }

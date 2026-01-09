@@ -124,9 +124,9 @@ export default function CompilerPage() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-background">
+    <div className="min-h-screen flex flex-col bg-white">
       {/* Top Bar */}
-      <div className="border-b border-border bg-card px-6 py-4 flex items-center justify-between">
+      <div className="border-b border-border  px-6 py-4 flex items-center justify-between bg-white">
         <div className="flex items-center gap-3">
           <div
             dangerouslySetInnerHTML={{

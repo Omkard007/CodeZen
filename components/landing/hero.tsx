@@ -9,28 +9,16 @@ export function Hero() {
   const dev = { name: "Zen User", status: "Mastering Python" } // Declare the dev variable
 
   return (
-    <section className="relative pt-20 pb-20 md:pt-32 md:pb-40 overflow-hidden">
+    <section className="relative pt-20 pb-20 md:pt-32 md:pb-20 overflow-hidden">
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:40px_40px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]" />
 
       <div className="container mx-auto px-4 relative">
         <div className="max-w-[900px] mx-auto text-center space-y-10">
-          <motion.div
-            initial={{ scale: 0.9, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-primary/20 bg-primary/5 text-xs sm:text-sm font-medium text-primary glow-cyan "
-          >
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
-            </span>
-            New: Interactive Rust Path is live
-          </motion.div>
           <motion.h1
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.2, duration: 0.8 }}
-            className="text-6xl md:text-9xl font-bold tracking-tight text-white leading-[0.85] py-2"
+            className="text-6xl md:text-9xl font-bold tracking-tight text-black leading-[0.85] py-2"
           >
             Learn to Code <br />
             <span className="text-primary text-glow-cyan">the Zen Way.</span>
@@ -53,7 +41,7 @@ export function Hero() {
           >
             <Button
               size="lg"
-              className="bg-primary text-black hover:bg-primary/90 px-10 rounded-full h-14 text-lg font-semibold glow-cyan group w-full sm:w-auto"
+              className="  hover:bg-primary/90 px-10 rounded-full h-14 text-lg font-semibold glow-cyan group w-full sm:w-auto"
               asChild
             >
               <Link href="/courses">
@@ -74,7 +62,7 @@ export function Hero() {
           </motion.div>
         </div>
 
-        <motion.div
+        {/* <motion.div
           initial={{ y: 100, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.8, duration: 1 }}
@@ -112,7 +100,7 @@ export function Hero() {
               </p>
             </div>
           </div>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   )

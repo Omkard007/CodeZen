@@ -24,7 +24,7 @@ export function Logo({ size = "md", showText = true, className = "" }: LogoProps
       </div>
       {showText && (
         <span
-          className={`${currentSize.text} font-bold tracking-tight bg-gradient-to-r from-white to-white/80 bg-clip-text text-transparent`}
+          className={`${currentSize.text} font-bold tracking-tight bg-gradient-to-r from-black to-black/80 bg-clip-text text-transparent`}
         >
           CodeZen
         </span>
