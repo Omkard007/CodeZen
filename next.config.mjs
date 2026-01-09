@@ -5,6 +5,10 @@ const nextConfig = {
   },
   images: {
     unoptimized: true,
+    remotePatterns:[
+      new URL("https://campus.w3schools.com"),
+      new URL("https://chatgpt.com"),
+    ]
   },
  
 }

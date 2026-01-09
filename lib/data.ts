@@ -42,7 +42,8 @@ export const COURSES: Course[] = [
     language: "Python",
     difficulty: "beginner",
     duration: 12,
-    thumbnail: "/placeholder.svg?key=ld672",
+    thumbnail:
+      "https://campus.w3schools.com/cdn/shop/files/Python_d3889400-7dfd-4be0-b42e-be4b186555a3_1078x1078.png?v=1764577019",
     instructor: "Dr. Sarah Chen",
     notes: `# Python Programming for Beginners
 
@@ -314,7 +315,8 @@ By the end of this course, you will be able to:
     language: "JavaScript",
     difficulty: "beginner",
     duration: 14,
-    thumbnail: "/placeholder.svg?key=h1qs8",
+    thumbnail:
+      "https://campus.w3schools.com/cdn/shop/files/JavaScript_2dab2810-0f6f-4f72-af24-81c0cbda5e12_1078x1078.png?v=1764577028",
     instructor: "Michael Rodriguez",
     notes: `# JavaScript Fundamentals
 
@@ -637,7 +639,8 @@ By the end of this course:
     language: "Java",
     difficulty: "beginner",
     duration: 16,
-    thumbnail: "/placeholder.svg?key=r6sqa",
+    thumbnail:
+      "https://campus.w3schools.com/cdn/shop/files/Java_2e10524c-62ee-4383-972b-d28ae2ba9c2c_1078x1078.png?v=1764576940",
     instructor: "Prof. David Kim",
     notes: `# Java Programming Essentials
 
@@ -976,7 +979,8 @@ By the end:
     language: "C++",
     difficulty: "beginner",
     duration: 15,
-    thumbnail: "/placeholder.svg?key=ox15q",
+    thumbnail:
+      "https://campus.w3schools.com/cdn/shop/files/C_90973bf1-bebb-48d4-8818-603e177f5b0a_1078x1078.png?v=1764576919",
     instructor: "Dr. Emily Watson",
     notes: `# C++ Programming Basics
 
@@ -1320,7 +1324,8 @@ By the end of this course:
     language: "C",
     difficulty: "beginner",
     duration: 13,
-    thumbnail: "/placeholder.svg?key=rypdo",
+    thumbnail:
+      "https://campus.w3schools.com/cdn/shop/files/C_46bc7d0d-86d0-4991-a1c9-fc0dd025c006_1078x1078.png?v=1764575781",
     instructor: "Prof. Robert Johnson",
     notes: `# C Programming Foundation
 
@@ -1647,7 +1652,8 @@ By the end of this course:
     language: "Go",
     difficulty: "beginner",
     duration: 12,
-    thumbnail: "/placeholder.svg?key=415ai",
+    thumbnail:
+      "https://campus.w3schools.com/cdn/shop/files/GO_Exam_1078x1078.png?v=1764575680",
     instructor: "Alex Thompson",
     notes: `# Go Programming Essentials
 
@@ -1990,7 +1996,8 @@ By the end:
     language: "PHP",
     difficulty: "beginner",
     duration: 13,
-    thumbnail: "/placeholder.svg?key=hbmnz",
+    thumbnail:
+      "https://campus.w3schools.com/cdn/shop/files/PHP_582f1a79-dd8e-4762-9394-e359831e162e_203x203.png?v=1764576978",
     instructor: "Marco Rossi",
     notes: `# PHP Web Development
 
@@ -2310,7 +2317,8 @@ By the end:
     language: "Swift",
     difficulty: "beginner",
     duration: 14,
-    thumbnail: "/placeholder.svg?key=lfl1r",
+    thumbnail:
+      "https://chatgpt.com/backend-api/estuary/content?id=file_00000000188871fa878575f6041c3aa4&ts=491101&p=fs&cid=1&sig=fcfe400cf1d17a38888241d2d73974c6a83bf8e23ea0c58d4678f02790a8b084&v=0",
     instructor: "Emma Williams",
     notes: `# Swift Programming for iOS Development
 
@@ -2662,7 +2670,8 @@ By the end of this course:
     language: "Rust",
     difficulty: "beginner",
     duration: 15,
-    thumbnail: "/placeholder.svg?key=0kef0",
+    thumbnail:
+      "https://campus.w3schools.com/cdn/shop/files/Rust_Exam_1078x1078.png?v=1764575031",
     instructor: "Dr. Thomas Anderson",
     notes: `# Rust Programming Fundamentals
 
@@ -3055,7 +3064,7 @@ By the end:
   },
   {
     id: "ruby-beginner",
-    url: "https://www.youtube.com/embed/t_ispmWmdjY",
+    url: "https://chatgpt.com/backend-api/estuary/content?id=file_00000000fee071fa99512e31c3852900&ts=491101&p=fs&cid=1&sig=3fa49d5b00326cc9449ff3155006167a7f111cc0352802688e788dfc5b3e98a8&v=0",
     title: "Ruby Programming Basics",
     description:
       "Learn Ruby programming fundamentals including syntax, object-oriented concepts, and the foundation for modern web development using Ruby on Rails.",
