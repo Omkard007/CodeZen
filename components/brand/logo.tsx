@@ -1,4 +1,5 @@
 import { Code2 } from "lucide-react"
+import Image from "next/image"
 
 interface LogoProps {
   size?: "sm" | "md" | "lg"
@@ -8,20 +9,16 @@ interface LogoProps {
 
 export function Logo({ size = "md", showText = true, className = "" }: LogoProps) {
   const sizes = {
-    sm: { icon: "h-4 w-4", text: "text-base", padding: "p-1" },
-    md: { icon: "h-5 w-5", text: "text-xl", padding: "p-1.5" },
-    lg: { icon: "h-7 w-7", text: "text-3xl", padding: "p-2" },
+    sm: { icon: "size-8", text: "text-base", padding: "p-1" },
+    md: { icon: "size-10", text: "text-xl", padding: "p-1.5" },
+    lg: { icon: "size-12", text: "text-3xl", padding: "p-2" },
   }
 
   const currentSize = sizes[size]
 
   return (
     <div className={`flex items-center gap-2 ${className}`}>
-      <div
-        className={`${currentSize?.padding} rounded-lg bg-primary/20 border border-primary/30 group-hover:glow-cyan transition-all`}
-      >
-        <Code2 className={`${currentSize.icon} text-primary`} />
-      </div>
+     <Image src="/logo.png" alt="CodeZen" width={30} height={30} className={currentSize.icon} />
       {showText && (
         <span
           className={`${currentSize.text} font-bold tracking-tight bg-gradient-to-r from-black to-black/80 bg-clip-text text-transparent`}
