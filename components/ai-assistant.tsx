@@ -1,61 +1,71 @@
-"use client"
+"use client";
 
-import type React from "react"
+import type React from "react";
 
-import { useState, useRef, useEffect } from "react"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { ScrollArea } from "@/components/ui/scroll-area"
-import { Bot, Send, X, Sparkles, ChevronDown } from "lucide-react"
+import { useState, useRef, useEffect } from "react";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { ScrollArea } from "@/components/ui/scroll-area";
+import { Bot, Send, X, Sparkles, ChevronDown } from "lucide-react";
+import MarkdownRenderer from "./markdown-renderer";
 
 interface Message {
-  role: "user" | "assistant"
-  content: string
+  role: "user" | "assistant";
+  content: string;
 }
 
 export function AIAssistant() {
-  const [isOpen, setIsOpen] = useState(false)
-  const [input, setInput] = useState("")
+  const [isOpen, setIsOpen] = useState(false);
+  const [input, setInput] = useState("");
   const [messages, setMessages] = useState<Message[]>([
     {
       role: "assistant",
-      content: "Hello! I'm CodeZen, your AI coding mentor. How can I help you with your coding journey today?",
+      content:
+        "Hello! I'm CodeZen, your AI coding mentor. How can I help you with your coding journey today?",
     },
-  ])
-  const [isTyping, setIsTyping] = useState(false)
-  const [isAutoScrollEnabled, setIsAutoScrollEnabled] = useState(true)
-  const scrollViewportRef = useRef<HTMLDivElement>(null)
-  const messagesEndRef = useRef<HTMLDivElement>(null)
+  ]);
+  const [isTyping, setIsTyping] = useState(false);
+  const [isAutoScrollEnabled, setIsAutoScrollEnabled] = useState(true);
+  const scrollViewportRef = useRef<HTMLDivElement>(null);
+  const messagesEndRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (isAutoScrollEnabled && messagesEndRef.current) {
-      messagesEndRef.current.scrollIntoView({ behavior: "smooth" })
+      messagesEndRef.current.scrollIntoView({ behavior: "smooth" });
     }
-  }, [messages, isTyping, isAutoScrollEnabled])
+  }, [messages, isTyping, isAutoScrollEnabled]);
 
   useEffect(() => {
-    const viewport = scrollViewportRef.current
-    if (!viewport) return
+    const viewport = scrollViewportRef.current;
+    if (!viewport) return;
 
     const handleScroll = () => {
-      const isNearBottom = viewport.scrollHeight - viewport.scrollTop - viewport.clientHeight < 100
-      setIsAutoScrollEnabled(isNearBottom)
-    }
+      const isNearBottom =
+        viewport.scrollHeight - viewport.scrollTop - viewport.clientHeight <
+        100;
+      setIsAutoScrollEnabled(isNearBottom);
+    };
 
-    viewport.addEventListener("scroll", handleScroll)
-    return () => viewport.removeEventListener("scroll", handleScroll)
-  }, [])
+    viewport.addEventListener("scroll", handleScroll);
+    return () => viewport.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const handleSend = async (e?: React.FormEvent) => {
-    if (e) e.preventDefault()
-    if (!input.trim() || isTyping) return
+    if (e) e.preventDefault();
+    if (!input.trim() || isTyping) return;
 
-    const userMessage = input.trim()
-    setInput("")
-    setMessages((prev) => [...prev, { role: "user", content: userMessage }])
-    setIsTyping(true)
-    setIsAutoScrollEnabled(true)
+    const userMessage = input.trim();
+    setInput("");
+    setMessages((prev) => [...prev, { role: "user", content: userMessage }]);
+    setIsTyping(true);
+    setIsAutoScrollEnabled(true);
     try {
       const response = await fetch("/api/chat-bot", {
         method: "POST",
@@ -65,16 +75,25 @@ export function AIAssistant() {
         body: JSON.stringify({
           message: userMessage,
         }),
-      })
-      const data = await response.json()
-      setMessages((prev) => [...prev, { role: "assistant", content: data.message }])
+      });
+      const data = await response.json();
+      setMessages((prev) => [
+        ...prev,
+        { role: "assistant", content: data.message },
+      ]);
     } catch (error) {
-      console.error("Error:", error)
-      setMessages((prev) => [...prev, { role: "assistant", content: "Sorry, something went wrong. Please try again." }])
+      console.error("Error:", error);
+      setMessages((prev) => [
+        ...prev,
+        {
+          role: "assistant",
+          content: "Sorry, something went wrong. Please try again.",
+        },
+      ]);
     } finally {
-      setIsTyping(false)
+      setIsTyping(false);
     }
-  }
+  };
 
   return (
     <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50">
@@ -109,13 +128,18 @@ export function AIAssistant() {
             <ScrollArea className="h-full p-4" ref={scrollViewportRef}>
               <div className="space-y-4">
                 {messages.map((m, i) => (
-                  <div key={i} className={`flex ${m.role === "user" ? "justify-end" : "justify-start"}`}>
+                  <div
+                    key={i}
+                    className={`flex ${m.role === "user" ? "justify-end" : "justify-start"} w-full`}
+                  >
                     <div
-                      className={`max-w-[85%] sm:max-w-[80%] rounded-2xl px-4 py-2 text-sm ${
-                        m.role === "user" ? "bg-primary text-primary-foreground" : "bg-muted border border-border"
+                      className={`max-w-[85%] sm:max-w-[80%] rounded-2xl px-4 py-2 text-sm break-words [overflow-wrap:anywhere] min-w-0 ${
+                        m.role === "user"
+                          ? "bg-primary text-primary-foreground"
+                          : "bg-muted border border-border"
                       }`}
                     >
-                      {m.content}
+                      <MarkdownRenderer content={m.content} />
                     </div>
                   </div>
                 ))}
@@ -135,8 +159,10 @@ export function AIAssistant() {
             {!isAutoScrollEnabled && (
               <Button
                 onClick={() => {
-                  setIsAutoScrollEnabled(true)
-                  messagesEndRef.current?.scrollIntoView({ behavior: "smooth" })
+                  setIsAutoScrollEnabled(true);
+                  messagesEndRef.current?.scrollIntoView({
+                    behavior: "smooth",
+                  });
                 }}
                 className="absolute bottom-4 left-1/2 -translate-x-1/2 gap-1 bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg animate-in fade-in slide-in-from-bottom-2 duration-300"
                 size="sm"
@@ -148,14 +174,21 @@ export function AIAssistant() {
           </CardContent>
 
           <CardFooter className="p-4 border-t border-border bg-muted/30">
-            <form onSubmit={handleSend} className="flex w-full items-center gap-2">
+            <form
+              onSubmit={handleSend}
+              className="flex w-full items-center gap-2"
+            >
               <Input
                 placeholder="Ask Zen a question..."
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
                 className="flex-1 bg-background border-border"
               />
-              <Button type="submit" size="icon" disabled={!input.trim() || isTyping}>
+              <Button
+                type="submit"
+                size="icon"
+                disabled={!input.trim() || isTyping}
+              >
                 <Send className="h-4 w-4" />
               </Button>
             </form>
@@ -163,5 +196,5 @@ export function AIAssistant() {
         </Card>
       )}
     </div>
-  )
+  );
 }
