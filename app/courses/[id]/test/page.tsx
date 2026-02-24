@@ -17,7 +17,7 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Label } from "@/components/ui/label";
 import { Progress } from "@/components/ui/progress";
 import { Badge } from "@/components/ui/badge";
-import { Award, XCircle, ChevronRight, Home, Download } from "lucide-react";
+import { Award, XCircle, ChevronRight, Home, Download, CheckCircle2 } from "lucide-react";
 import { CertificatePreview } from "@/components/certificate";
 import { downloadPDF } from "@/lib/downloadPDF";
 import { useUser } from "@clerk/nextjs";
@@ -227,6 +227,77 @@ export default function CourseTestPage() {
             certificateId={Math.random().toString(36).substring(2)}
           />
         </div>
+
+        <section className="space-y-6">
+          <h2 className="text-2xl font-bold text-foreground">Review Your Answers</h2>
+          <div className="grid gap-4">
+            {course.test.map((q, qIndex) => {
+              const userChoice = selectedAnswers[q.id];
+              const isCorrect = userChoice === q.correctAnswer;
+              return (
+                <Card
+                  key={q.id}
+                  className={`overflow-hidden border-l-4 ${
+                    isCorrect ? "border-l-green-500" : "border-l-destructive"
+                  }`}
+                >
+                  <CardHeader className="pb-2 p-4 md:p-6">
+                    <div className="flex items-start justify-between gap-4">
+                      <CardTitle className="text-base md:text-lg">
+                        {qIndex + 1}. {q.question}
+                      </CardTitle>
+                      {isCorrect ? (
+                        <CheckCircle2 className="h-5 w-5 text-green-500 shrink-0 mt-1" />
+                      ) : (
+                        <XCircle className="h-5 w-5 text-destructive shrink-0 mt-1" />
+                      )}
+                    </div>
+                  </CardHeader>
+                  <CardContent className="space-y-2 p-4 md:p-6 pt-0">
+                    {q.options.map((option, oIndex) => {
+                      const isUserSelection = userChoice === oIndex;
+                      const isCorrectAnswer = q.correctAnswer === oIndex;
+
+                      return (
+                        <div
+                          key={oIndex}
+                          className={`p-3 rounded-md text-sm border transition-colors flex items-center justify-between gap-2 ${
+                            isCorrectAnswer
+                              ? "bg-green-500/10 border-green-500/50 text-green-700 dark:text-green-400 font-medium"
+                              : isUserSelection && !isCorrect
+                              ? "bg-destructive/10 border-destructive/50 text-destructive font-medium"
+                              : "bg-muted/30 border-transparent text-muted-foreground"
+                          }`}
+                        >
+                          <span>{option}</span>
+                          <div className="flex gap-1">
+                            {isCorrectAnswer && (
+                              <Badge
+                                variant="outline"
+                                className="text-[10px] h-4 bg-green-500/20 text-green-700 border-green-500/30 px-1"
+                              >
+                                Correct
+                              </Badge>
+                            )}
+                            {isUserSelection && !isCorrect && (
+                              <Badge
+                                variant="outline"
+                                className="text-[10px] h-4 bg-destructive/20 text-destructive border-destructive/30 px-1"
+                              >
+                                Your Choice
+                              </Badge>
+                            )}
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </CardContent>
+                </Card>
+              );
+            })}
+          </div>
+        </section>
+
         <section>
           <h2 className="text-2xl font-bold text-foreground mb-6">
             Share Your Feedback
